@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2? family= Open+Sans:wght@300;400 & display=swap');
+
+.elementWish{
+    display: flex;
+    background-color: white;
+    margin-bottom: 30px;
+    position: relative;
+
+    .img{
+        background-color: #F8F8F8 ;
+        img{
+            width: 100px;
+            height: 120px;
+        }
+    }
+
+
+    .description{
+        padding: 13px 0 13px 8px;
+        width: 196px;
+
+        p{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            margin-bottom: 12px;
+        }
+
+        h2{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: black;
+
+        }
+    }
+
+    .close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,192 @@
+ $btn-color: #FFD600;
+ $color-seconds: #272727;
+ $width: 1420px;
+
+ @mixin btn{
+     border: 0;
+     background-color: transparent;
+     cursor: pointer;
+ }
+ 
+@mixin btn_click{
+    width: 300px;
+    height: 50px;
+    background-color: $btn-color;
+    color: $color-seconds;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.center{
+    width: 100%;
+    max-width: $width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+
+.active_slide{
+    color: $btn-color;
+}
+
+
+
+
+.section_slider{
+    position: relative;
+    margin-top: 87px;
+    
+
+    .center_slider{
+
+        padding-top: 70px;
+        .right{
+            grid-column: 1/6;
+
+            h1{
+                margin-bottom: 36px
+            }
+
+            p{
+                font-family: Open Sans;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 38px;
+                letter-spacing: 0em;
+                text-align: left;
+
+                margin-bottom: 36px
+            }
+
+            .btn{
+                @include btn_click;
+                margin-bottom: 54px
+            }
+
+            .indicator{
+
+                button{
+                    @include btn;
+
+                }
+            }
+
+        }
+    }
+
+
+
+
+    .right_img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 45%;
+        height: 646px;
+        z-index: -1;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+    .section_instruments_bottom{
+        margin-top: 75px;
+        display: flex;
+
+        .first_item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 340px;
+            height: 290px;
+            background-color: white;
+            box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.08);
+            margin-right: 40px;
+            position: relative;
+
+              .img{
+                  width: 70%;
+              }
+
+
+            .hover_item{
+                display: none;
+            }
+
+
+            &:hover .hover_item{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #FFD600;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+
+                .img{
+                    opacity: .2;
+                    position: absolute;
+                    width: 70%;
+                   
+                }
+                
+
+                ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    li{
+                        width: 66px;
+                        height: 66px;
+                        background-color: $color-seconds;
+                        border-radius: 100px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin:  0 15px;
+                        cursor: pointer;
+                        z-index: 1;
+
+                        img{
+                            font-weight: 400;
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+        .number_slider{
+            display: flex;
+            align-self: center;
+
+            ul{
+                display: flex;
+
+                li{
+                    margin-right: 31px;
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: rgba(39, 39, 39, 0.50);
+                    font-family: 'Montserrat', sans-serif;
+                    
+                }
+            }
+        }
+    }
+}

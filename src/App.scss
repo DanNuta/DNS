@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import "reset";
+
+$btn-color: #FFD600;
+$color-seconds: #272727;
+$width: 1420px;
+
+
+@mixin btn_click($background){
+    padding: 15px 70px;
+    background-color: $background;
+    color: $color-seconds;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: extra-bold;
+    font-size: 54px;
+    line-height: 122%;
+    color: $color-seconds;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 200;
+    color: $color-seconds;
+    line-height: 38px;
+}
+
+
+
+
+
+
+.react_project{
+    background: rgba(39, 39, 39, 0.64);
+    
+
+
+     
+     
+
+    .cookie{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 500px;
+        background-color: $color-seconds;
+        z-index: 9990;
+    
+    .inside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 100px;
+    
+        h1{
+            font-family: Montserrat;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 42px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: white;
+        }
+    
+        p{
+            font-family: Open Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: white;
+            margin: 20px 0 45px 0;
+        }
+    
+        span{
+    
+            .confidentialitate{
+                color: $btn-color;
+            }
+        }
+    
+    
+    
+        button{
+            @include btn_click($btn-color)
+        }
+    }
+
+}
+
+}
+
+
+
+
+
