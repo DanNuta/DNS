@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ProductsItem from './ProdusctItem';
 import "./Products.scss";
 import descriereProdus from "../../Pages/instalarea/despre_produse.png"
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 
 class Products extends Component {
 
@@ -12,7 +13,8 @@ class Products extends Component {
     state = {
         produse: this.props.products,
         filterData: this.props.products,
-        dataItems: []
+        dataItems: [],
+        radioBtnCheck: ""
     }
 
 
@@ -22,11 +24,7 @@ class Products extends Component {
 
 
     elementFromItems = (dataItem) =>{
-
         this.props.onelementFromProducts(dataItem)
-
-
-        
 
     }
 
@@ -37,9 +35,9 @@ class Products extends Component {
    
 
     filterProducts = (elFilter) =>{
-
         let pda = this.state.produse.filter(el => el.filter === elFilter);
         this.setState({filterData: pda})
+        this.setState({radioBtnCheck: elFilter})
         console.log(elFilter)
 
     }
@@ -65,9 +63,11 @@ class Products extends Component {
             }else{
                 newArray.push(el.filter)
             }
+
+            console.log(this.state.radioBtnCheck === el.filter)
         })}
 
-        console.log(newArray)
+       
         
         
         
@@ -75,7 +75,14 @@ class Products extends Component {
 
 
         return ( 
+
+           
+
+
+
             <div className="produse  center">
+
+                
 
 
                 <div className="text_top">
@@ -96,7 +103,13 @@ class Products extends Component {
                                <ul>
 
                                    {newArray.map(el =>(
-                                       <li onClick={() =>this.filterProducts(el)}>{el}</li>
+                                       <li onClick={() =>this.filterProducts(el)}>
+                                           <div className='border_li'>
+                                               <div className={this.state.radioBtnCheck === el ? "check_inside_li" : ""}></div>
+
+                                           </div>
+                                           <p>{el}</p>
+                                       </li>
                                    ))}
                                    
                                     

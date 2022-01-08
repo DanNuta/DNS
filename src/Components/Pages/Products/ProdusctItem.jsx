@@ -39,7 +39,7 @@ class ProductsItem extends Component {
 
                     <div className="element_bottom_prodicts">
                             <div className="price">
-                                    <h2>{this.props.element.price} lei</h2>
+                                    <h2>{this.props.element.curentPrice} lei</h2>
                             </div>
 
                             <div className="buy_wishList">

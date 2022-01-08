@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './Components/NavBar';
-import { BrowserRouter as Router, Switch, Routes, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import "./App.scss";
 import Home from './Components/Pages/Home/home';
 import Footer from './Components/Footer';

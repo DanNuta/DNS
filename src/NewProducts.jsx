@@ -110,7 +110,7 @@ class NewProducts extends Component {
                     <input onChange={this.title} type="text" value={this.state.title} placeholder='title' />
                     <input onChange={this.img} type="file" value={this.state.img} accept='images/*' onChange={this.filesFromImg} placeholder='img' />
                     <textarea onChange={this.description} value={this.state.description} placeholder='description'></textarea>
-                    <input onChange={this.filter} type="text"  placeholder='filter' />
+                    <input onChange={this.filter} type="text" value={this.state.filter}  placeholder='filter' />
                     <input onChange={this.curentPrice} type="number" value={this.state.curentPrice} placeholder='curentPrice' />
                     <input onChange={this.link} type="text" value={this.state.link} placeholder='link'/>
 
