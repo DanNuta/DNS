@@ -65,12 +65,17 @@ class NewProducts extends Component {
         e.preventDefault();
 
 
-        const obj = {
-            ...this.state,
-            nume:"danu"
-        }
-
         this.props.onAddNewProducts(this.state)
+
+        this.setState({ id: "",
+        title: "",
+        counter: 1, /* */
+        img: "",
+        price: 0,   /* */
+        description: "",
+        filter: "",
+        curentPrice: 0,
+        link: ""})
 
     }
 
@@ -101,13 +106,13 @@ class NewProducts extends Component {
 
 
                 <form onSubmit={this.submit} action="">
-                    <input onChange={this.id} type="text" placeholder='id' />
-                    <input onChange={this.title} type="text" placeholder='title' />
-                    <input onChange={this.img} type="file" accept='images/*' onChange={this.filesFromImg} placeholder='img' />
-                    <textarea onChange={this.description} placeholder='description'></textarea>
-                    <input onChange={this.filter} type="text" placeholder='filter' />
-                    <input onChange={this.curentPrice} type="number" placeholder='curentPrice' />
-                    <input onChange={this.link} type="text" placeholder='link'/>
+                    <input onChange={this.id} value={this.state.id} type="text" placeholder='id' />
+                    <input onChange={this.title} type="text" value={this.state.title} placeholder='title' />
+                    <input onChange={this.img} type="file" value={this.state.img} accept='images/*' onChange={this.filesFromImg} placeholder='img' />
+                    <textarea onChange={this.description} value={this.state.description} placeholder='description'></textarea>
+                    <input onChange={this.filter} type="text"  placeholder='filter' />
+                    <input onChange={this.curentPrice} type="number" value={this.state.curentPrice} placeholder='curentPrice' />
+                    <input onChange={this.link} type="text" value={this.state.link} placeholder='link'/>
 
                     <button onClick={this.submit}>Sumbit</button>
                 </form>

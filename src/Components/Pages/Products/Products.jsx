@@ -34,36 +34,42 @@ class Products extends Component {
 
 
 
-    filterPda = () =>{
-        let pdaSensor = this.state.produse.filter(el => el.filter === "pda");
+   
 
-        this.setState({filterData: pdaSensor})
-        
-    }
+    filterProducts = (elFilter) =>{
 
-    filterPdaSensor = () =>{
-
-        
-        let pda = this.state.produse.filter(el => el.filter === "pda_sensor");
-
+        let pda = this.state.produse.filter(el => el.filter === elFilter);
         this.setState({filterData: pda})
+        console.log(elFilter)
+
     }
+
+
 
 
     elementShop = (data) =>{
-
         this.props.onProductShop(data)
-  
+
     }
 
 
 
    
-    render() { 
+    render() {
 
-        let filterElement = new Set();
+        let newArray = [];
+
+        {this.state.produse.filter(el => {
+            if(newArray.includes(el.filter)){
+                return
+            }else{
+                newArray.push(el.filter)
+            }
+        })}
+
+        console.log(newArray)
         
-
+        
         
 
 
@@ -88,28 +94,16 @@ class Products extends Component {
                             <div className="radion_btn">
                                
                                <ul>
+
+                                   {newArray.map(el =>(
+                                       <li onClick={() =>this.filterProducts(el)}>{el}</li>
+                                   ))}
                                    
-                                    {this.state.produse.map((el) => {
+                                    
 
-                                            filterElement.add(el.filter)
+ 
 
-
-                                            for(let item of filterElement){
-                                                
-
-                                                return <li>{item}</li>
-                                            }
-
-                                            
-
-
-                                     
-
-                                        
-                                       
-
-
-                                    })}
+                                    
                                </ul>
 
 
@@ -122,7 +116,7 @@ class Products extends Component {
 
                     <div className="products_filters">
 
-                        {(this.props.products).map(el => (
+                        {this.state.filterData.map(el => (
                                 
                                 <ProductsItem 
                                     element={el}
