@@ -108,7 +108,7 @@ class Products extends Component {
                                                <div className={this.state.radioBtnCheck === el ? "check_inside_li" : ""}></div>
 
                                            </div>
-                                           <p>{el}</p>
+                                           <p className='paragraph'>{el}</p>
                                        </li>
                                    ))}
                                    
