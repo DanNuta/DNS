@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import shop from "../../Pages/icon/buy.svg";
 import wishList from "../../Pages/icon/heart_icon.svg";
 import "./ProductsItem.scss";
+import { BrowserRouter as Router, Routes, Route, NavLink, Outlet, useHistory  } from 'react-router-dom';
+
 
 class ProductsItem extends Component {
 
@@ -48,6 +50,8 @@ class ProductsItem extends Component {
 
                             </div>
                     </div>
+
+                    <Outlet/>
 
                </div>
                 

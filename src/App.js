@@ -13,6 +13,8 @@ import Shop from './Components/Pages/Shop/Shop';
 import Contacte from './Components/Pages/Home/Contacte';
 import Pages1 from './Components/Pages/PagesProducts/Page1';
 import NewProducts from './NewProducts';
+import ProductsItem from './Components/Pages/Products/ProdusctItem';
+import Pages from './Pages';
 
 
 
@@ -289,6 +291,13 @@ class App extends Component {
                                                    onAddNewProducts={this.newProducts}/>}>
 
                         </Route>
+
+
+
+
+                            
+                            <Route path="/produse/:slug" element={<Pages/>}></Route>
+                        
 
 
 

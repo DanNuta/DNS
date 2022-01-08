@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ProductsItem from './ProdusctItem';
 import "./Products.scss";
 import descriereProdus from "../../Pages/instalarea/despre_produse.png"
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink, Outlet, useParams } from 'react-router-dom';
 
 class Products extends Component {
 
@@ -130,13 +130,18 @@ class Products extends Component {
                     <div className="products_filters">
 
                         {this.state.filterData.map(el => (
-                                
+
+                           <NavLink to={`/produse/${el.id}`}>
+
                                 <ProductsItem 
                                     element={el}
                                     onDataItems={this.elementFromItems}
-                                    onElementShop={this.elementShop}
-                                    
+                                    onElementShop={this.elementShop} 
                                 />
+
+                           </NavLink>
+                                
+                               
                             
                         ))}
                     </div>
@@ -164,12 +169,6 @@ class Products extends Component {
 
 
                     
-                        
-                    
-                
-
-                
-               
             </div>
          );
     }
