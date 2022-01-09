@@ -9,6 +9,9 @@ import { useState } from "react";
 import { send } from 'emailjs-com';
 import heart from "../src/Components/Pages/icon/header_icon/heart.svg";
 import "./Pages.scss";
+import calitate from "../src/Components/Pages/icon/calitate.svg";
+import like from "../src/Components/Pages/icon/like.svg";
+import garantie from "../src/Components/Pages/icon/garantie.svg";
 
 
 
@@ -289,6 +292,26 @@ const Pages = (props) => {
             </div>
 
         </div>
+
+
+        <div className="calitate_garantie">
+
+            <div className="calitate">
+                <img src={calitate} alt="" />
+                <h2>Calitate inalta</h2>
+            </div>
+
+            <div className="like">
+                <img src={like} alt="" />
+                <h2>Protectie exceptionala</h2>
+                <p>Paratrasnetul nostru protejeaza de la cele mai mari tensiuni</p>
+            </div>
+            <div className="garantie"></div>
+        </div>
+
+        
+
+
 
 
 
