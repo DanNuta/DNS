@@ -12,6 +12,7 @@ import "./Pages.scss";
 import calitate from "../src/Components/Pages/icon/calitate.svg";
 import like from "../src/Components/Pages/icon/like.svg";
 import garantie from "../src/Components/Pages/icon/garantie.svg";
+import {ImagesCalitateSVG} from "./CalitateLikeSVG";
 
 
 
@@ -300,13 +301,16 @@ const Pages = (props) => {
                 <img src={calitate} alt="" />
                 <h2>Calitate inalta</h2>
             </div>
-
             <div className="like">
-                <img src={like} alt="" />
+                <ImagesCalitateSVG/>
                 <h2>Protectie exceptionala</h2>
                 <p>Paratrasnetul nostru protejeaza de la cele mai mari tensiuni</p>
             </div>
-            <div className="garantie"></div>
+
+            <div className="garantie">
+                <img src={garantie} alt="" />
+                <h2>Garantie de lunga durata</h2>
+            </div>
         </div>
 
         
