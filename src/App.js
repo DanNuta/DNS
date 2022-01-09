@@ -29,7 +29,7 @@ class App extends Component {
 
         produse: [
             { 
-              id: "SLC 01",
+              id: "SLC_01",
               title: "Contor de lovituri mecanic SCHWÆRTZ SLC 01",
               counter: 1,
               img: product1,
@@ -41,7 +41,7 @@ class App extends Component {
             },
 
             {
-                id: "SLC 02",
+                id: "SLC_02",
                 title: "Contor de lovituri mecanic SCHWÆRTZ SLC 01",
                 counter: 1,
                 img: product2,
@@ -53,7 +53,7 @@ class App extends Component {
             },
 
             {
-                id: "SLC 03",
+                id: "SLC_03",
                 title: "Contor de lovituri mecanic SCHWÆRTZ SLC 01",
                 counter: 1,
                 img: product3,
@@ -65,7 +65,7 @@ class App extends Component {
             },
 
             {
-                id: "SLC 04",
+                id: "SLC_04",
                 title: "Contor de lovituri mecanic SCHWÆRTZ SLC 01",
                 counter: 1,
                 img: product1,
@@ -77,7 +77,7 @@ class App extends Component {
             },
 
             {
-                id: "SLC 05",
+                id: "SLC_05",
                 title: "Contor de lovituri mecanic SCHWÆRTZ SLC 01",
                 counter: 1,
                 img: product1, 
@@ -296,7 +296,11 @@ class App extends Component {
 
 
                             
-                            <Route path="/produse/:slug" element={<Pages/>}></Route>
+                            <Route  path="/produse/:slug" element={<Pages element={this.props.produse}
+                                                                          onCos={this.cos}
+                                                                          onShop={this.shop}/>}>
+
+                            </Route>
                         
 
 
