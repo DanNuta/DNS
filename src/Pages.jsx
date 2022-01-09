@@ -8,6 +8,7 @@ import heartBlack from "../src/Components/Pages/icon/heartBlack.svg";
 import { useState } from "react";
 import { send } from 'emailjs-com';
 import heart from "../src/Components/Pages/icon/header_icon/heart.svg";
+import "./Pages.scss";
 
 
 
@@ -53,6 +54,11 @@ const Pages = (props) => {
 
     const adaugaInCos = () => {
            props.onCos(curentItem)
+     }
+
+
+     const adaugaInCosPreferate = (element) =>{
+        props.onCos(element)
      }
 
 
@@ -258,21 +264,23 @@ const Pages = (props) => {
                      .map((item) => {
                          return (
                              
-                            <NavLink to={`/produse/${item.id}`}>
+                            
                                  <div className="item_p">
+                                 <NavLink to={`/produse/${item.id}`}>
                                      <div className="products_el">
                                          <div className="images_products">
                                             <img src={item.img} alt="" />
                                          </div>
                                          <p className='description_i'>{item.description}</p>
                                      </div>
+                                     </NavLink>
 
-                                     <div className="hover_preferinte">
+                                     <div onClick={() => adaugaInCosPreferate(item)} className="hover_preferinte">
                                         <img src={heart} alt="" />
                                         <p className='preferinte'>In preferinte</p>
                                      </div>
                                  </div>
-                            </NavLink>
+                            
                                 
                             
                          )

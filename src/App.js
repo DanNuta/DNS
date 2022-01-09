@@ -11,7 +11,6 @@ import product2 from "../src/Components/Pages/produse/img2.png";
 import product3 from "../src/Components/Pages/produse/img3.png";
 import Shop from './Components/Pages/Shop/Shop';
 import Contacte from './Components/Pages/Home/Contacte';
-import Pages1 from './Components/Pages/PagesProducts/Page1';
 import NewProducts from './NewProducts';
 import ProductsItem from './Components/Pages/Products/ProdusctItem';
 import Pages from './Pages';
@@ -279,12 +278,9 @@ class App extends Component {
                         
 
 
-                        <Route exact path="/service/pr1" element={<Pages1 el={this.state.localStorageElement}
-                                                                         onCos={this.cos}
-                                                                         onShop={this.shop}/>
-                                                                         }>
+                        
 
-                        </Route>
+                        
 
 
                         <Route path="/d" element={<NewProducts
