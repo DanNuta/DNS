@@ -10,35 +10,44 @@ import { send } from 'emailjs-com';
 
 
 
+
 const Pages = (props) => {
 
     const { slug } = useParams();
     let products = props.element;
     let curentItem = products.find(item => item.id === slug);
 
+    
     const [nume, setNume] = useState("");
     const [email, setEmail] = useState("");
     const [telefon, setTelefon] = useState("");
-    const [valueElement, setValueElement] = useState("");
+    const [valueElement, setValueElement] = useState(0);
     const [achitaOnline, setAchitaOnline] = useState(false);
+    const [btnClick, setBtnClick] = useState(true)
 
 
-     const changeNume = (e) => {
+    const elementForm = {
+        nume: nume,
+        email: email,
+        telefon: telefon
+    }
+
+    const disableBtn = () =>{
+        setBtnClick(false)
+    }
+
+
+    const numeChange = (e) =>{
         setNume(e.target.value)
-     }
-      
+    }
 
-
-     const changeEmail = (e) => {
+    const emailChange = (e) =>{
         setEmail(e.target.value)
-     }
+    }
 
-     const changeTelefon = (e) => {
+    const telefonChange = (e) =>{
         setTelefon(e.target.value)
-     }
-
-
-
+    }
 
 
     const adaugaInCos = () => {
@@ -60,13 +69,18 @@ const Pages = (props) => {
   }
 
 
+ 
+
+
 
   const achitaOnlineForm = () => {
     setAchitaOnline(true)
 }
 
 
-
+ const cancel = () =>{
+    setAchitaOnline(false)
+ }
 
 
 
@@ -74,37 +88,74 @@ const Pages = (props) => {
 
 
 
+ const sendEmail = (e) =>{
+
+    e.preventDefault();
+
+    if(nume.length === 0){
+        alert("Introdu un nume")
+        return
+    }
+
+
+    if (!email){
+        alert("Introdu o adresa de mail corecta")
+        return
+    }
+
+    if(isNaN(telefon) || telefon.length < 9 || telefon.length >= 10 ){
+        alert("Introdu un un nr de telefon valid")
+        return
+    }
+
+
+    send(
+        'service_v186ofd',
+        'template_m0n6104',
+        elementForm,
+        'user_HhwPsdYuSdseFT3DDVWkC'
+      )
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+        })
+        .catch((err) => {
+          console.log('FAILED...', err);
+        });
+
+      e.target.reset();
 
 
 
-  
-
-
-
+      
+        setTimeout(() => {
+          setAchitaOnline(false)
+        }, 200);
     
-
-
-
-
-
-
-    
-
-
-
-
-
-    
-
+      
+      
+   }
 
 
    
-    
+
+
+
 
   
     return (
 
         <div className='center'>
+
+
+            <div className="element_top_item">
+                <div className="item_id">
+                    <p>servici</p>
+                    <p>|</p>
+                    <p>produse si accesorii</p>
+                    <p>|</p>
+                    <p>{curentItem.title}</p>
+                </div>
+            </div>
                 
 
 
@@ -170,7 +221,7 @@ const Pages = (props) => {
                             
                             <div className="input_contacteaza">
                                         <input onChange={inputNumber} min={1} type="number" />
-                                        <button onClick={achitaOnlineForm}>Achita online</button>
+                                        <button disabled={!btnClick} className="btn_cos" onClick={achitaOnlineForm}>Achita online</button>
                                     </div>
                                 
                             
@@ -197,12 +248,72 @@ const Pages = (props) => {
 
 
 
+        <div className="prosude_similare">
+            <h1>PRODUSE SIMILARE</h1>
 
+
+            <div className='item_sililar'>
+            {products.filter((item, index) => (index < 4))
+                     .map((item) => {
+                         return (
+                             
+                            <NavLink to={`/produse/${item.id}`}>
+                                 <div className="item_p">
+                                     <div className="products_el">
+                                         <img src={item.img} alt="" />
+                                         <p>{item.description}</p>
+                                     </div>
+
+                                     <div className="hover_preferinte">
+                                         <h2>In preferinte</h2>
+                                     </div>
+                                 </div>
+                            </NavLink>
+                                
+                            
+                         )
+                     })
+            }
+            </div>
+
+        </div>
+
+
+
+
+
+
+        {achitaOnline && <div className="form">
+            <form onSubmit={sendEmail} className=' form_item' action="">
+
+        <h2>COMPLETEAZA  DATELE PENTRU A FI CONTACTAT</h2>
+
+        <div className="form_element">
+            <div className="nume div">
+                <label htmlFor="nume">Nume</label>
+                <input onChange={numeChange} type="text" name='nume' id='nume' placeholder='Ignatiuc Anastasia' />
+            </div>
+
+            <div className="email div">
+                <label htmlFor="email">Email</label>
+                <input onChange={emailChange} type="email" name="email" id='email' placeholder='ignatiucanastasia@gmail.com' />
+            </div>
+
+            <div className="tel div">
+                <label htmlFor="tel">Telefon</label>
+                <input onChange={telefonChange} type="tel" name="valueElement"  id='tel' placeholder='+37369640087' />
+            </div>
+        </div>    
+
+           <div className="button">
+                <input onClick={disableBtn}   className="input_btn" type="submit" value="Achita online" />
+                <button onClick={cancel}>Cancel</button>
+            </div>
 
         
-
-        
-
+           </form>
+        </div>
+        }
 
        
     </div>

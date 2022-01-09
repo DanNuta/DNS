@@ -16,6 +16,20 @@ text-align: left;
 }
 
 
+.element_top_item{
+    grid-column: 1/13;
+    margin: 50px 0 118px 0;
+
+    .item_id{
+        display: grid;
+        grid-auto-columns: max-content;
+        grid-auto-flow: column;
+        grid-gap: 1rem;
+
+    }
+}
+
+
 
 .item{
     grid-column: 1/13;
@@ -190,7 +204,7 @@ text-align: left;
 
                     }
 
-                    button{
+                    .btn_cos{
                         
                         border: 0;
                         padding: 14px 57px;
@@ -205,8 +219,18 @@ text-align: left;
                         background-color: rgba(39, 39, 39, 1);
                         cursor: pointer;
 
+
+                        &:disabled{
+                            background-color: rgba(39, 39, 39, 0.836);
+                            color: #ccc;
+                            cursor: no-drop;
+                         }
+
                         
                     }
+
+
+                    
                 }
             }
 
@@ -234,6 +258,46 @@ text-align: left;
 
     
 }
+
+
+
+.prosude_similare{
+
+    grid-column: 1/13;
+
+    .item_sililar{
+
+        display: grid;
+        grid-auto-columns: max-content;
+        grid-auto-flow: column;
+        grid-gap: 1rem;
+      
+        
+        
+
+        .item_p{
+            width: 340px;
+            height: 490px;
+            background-color: #F8F8F8;
+            box-shadow: -2px 2px 12px 2px rgba(0, 0, 0, 0.1);
+        
+           
+
+            .products_el{
+                padding: 0 20px 30px 20px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
 
 .form{
     position: absolute;
