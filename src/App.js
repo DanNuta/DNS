@@ -41,25 +41,25 @@ class App extends Component {
 
             {
                 id: "SLC_02",
-                title: "Contor de lovituri mecanic SCHWÆRTZ SLC 01",
+                title: "Contor de lovituri mecanic SCHWÆRTZ SLC 02",
                 counter: 1,
                 img: product2,
-                price: 892,
+                price: 1000,
                 description: "Paratrasnet PDA Schwaertz Compact S ΔT=25 µs raza Rp 42-65m",
                 filter: "pda",
-                curentPrice: 892,
+                curentPrice: 1000,
                 link: "products1"
             },
 
             {
                 id: "SLC_03",
-                title: "Contor de lovituri mecanic SCHWÆRTZ SLC 01",
+                title: "Contor de lovituri mecanic SCHWÆRTZ SLC 03",
                 counter: 1,
                 img: product3,
                 price: 892,
                 description: "Paratrasnet PDA Schwaertz Compact S ΔT=25 µs raza Rp 42-65m",
                 filter: "pda",
-                curentPrice: 892,
+                curentPrice: 398,
                 link: "products1"
             },
 
