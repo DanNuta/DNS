@@ -7,6 +7,7 @@ import verify from "../src/Components/Pages/icon/verify.svg";
 import heartBlack from "../src/Components/Pages/icon/heartBlack.svg";
 import { useState } from "react";
 import { send } from 'emailjs-com';
+import heart from "../src/Components/Pages/icon/header_icon/heart.svg";
 
 
 
@@ -249,7 +250,7 @@ const Pages = (props) => {
 
 
         <div className="prosude_similare">
-            <h1>PRODUSE SIMILARE</h1>
+            <h4>PRODUSE SIMILARE</h4>
 
 
             <div className='item_sililar'>
@@ -260,12 +261,15 @@ const Pages = (props) => {
                             <NavLink to={`/produse/${item.id}`}>
                                  <div className="item_p">
                                      <div className="products_el">
-                                         <img src={item.img} alt="" />
-                                         <p>{item.description}</p>
+                                         <div className="images_products">
+                                            <img src={item.img} alt="" />
+                                         </div>
+                                         <p className='description_i'>{item.description}</p>
                                      </div>
 
                                      <div className="hover_preferinte">
-                                         <h2>In preferinte</h2>
+                                        <img src={heart} alt="" />
+                                        <p className='preferinte'>In preferinte</p>
                                      </div>
                                  </div>
                             </NavLink>

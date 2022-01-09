@@ -1,3 +1,4 @@
+
 body{
 
     li{
@@ -265,27 +266,102 @@ text-align: left;
 
     grid-column: 1/13;
 
+    h4{
+        //styleName: H2;
+        font-family: Montserrat;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 63px;
+        margin-bottom: 46px;
+
+    }
+
     .item_sililar{
 
-        display: grid;
-        grid-auto-columns: max-content;
-        grid-auto-flow: column;
-        grid-gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
       
         
         
 
         .item_p{
-            width: 340px;
-            height: 490px;
+            position: relative;
+            width: 320px;
             background-color: #F8F8F8;
             box-shadow: -2px 2px 12px 2px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 20px 20px 0;
         
            
 
             .products_el{
-                padding: 0 20px 30px 20px;
+                width: 100%;
+
+                .images_products{
+                    width: 100%;
+                    height: 320px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .description_i{
+                    font-family: "Montserrat";
+                    font-size: 18px;
+                    font-weight: 100;
+                    line-height: 25px;
+                    font-weight: lighter;
+                    padding: 0 20px 30px 20px;
+
+
+                    &:hover{
+                        padding-bottom: 55px;
+                    }
+                    
+
+                }
+                
+
             }
+
+            .hover_preferinte{
+                display: none;
+                transition: .3s;
+            }
+
+            &:hover .hover_preferinte{
+                display: block;
+                position: absolute;
+                bottom: 0;
+                display: flex;
+                align-items: center;
+                padding: 10px 0;
+                background-color: #272727;
+                width: 100%;
+                justify-content: center;
+                
+                 .preferinte{
+                     color: white;
+                     margin-left: 20px;
+                     font-family: Montserrat;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 22px;
+                        
+
+                 }
+
+                 
+                
+            }
+
+
+
+
         }
     }
 }
