@@ -76,51 +76,56 @@
                 display: flex;
                 align-items: center;
 
-                .slider_btn_prev, .slider_btn_next{
-                    display: inline-flex;
+                button{
+                    display: flex;
                     align-items: center;
-                    width: 2.5rem;
-                    height: 1rem;
-                    padding: 0;
+                    width: 3rem;
                     cursor: pointer;
-                    overflow-x: hidden;
-                    background: transparent;
+                    overflow: hidden;
                     transition: 0.2s linear;
                     @include btn;
+                    margin-right: 5px;
+
+                    &:first-of-type {
+                        justify-content: flex-start;
+                    }
+                    
+                    &:last-of-type {
+                        justify-content: flex-end;
+                    }
+
+                
 
 
                     &:hover{
-                        width: 3.5rem;
+                        width: 4.3rem;
                     }
 
 
                     .slider__button-inner{
-                        min-width: 3.5rem;
-                        width: 3.5rem;
+                        min-width: 3.9rem;
+                        width: 3.9rem;
                         height: 1rem;
+
+                        svg{
+                            path{
+                                transition: .2s linear;
+                            }
+                        }
+
+                        &:hover{
+                            svg{
+                                path{
+                                    fill-opacity: 1;
+                                }
+                            }
+                        }
                     }
                  
 
-                    
-
-                    
-
-                      
-
-                   
-
-                    
-
-    
                 }
 
-                .slider__button-prev {
-                    justify-content: flex-start;
-                }
                 
-                .slider__button-next {
-                    justify-content: flex-end;
-                }
             }
 
         }
