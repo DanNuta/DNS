@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import "./Shop.scss";
 import ItemShopItself from './ShopItemsItself';
 import { send } from 'emailjs-com';
+import heart from "../../Pages/icon/heart.svg";
+import { BrowserRouter as Router, Routes, Route, NavLink, Outlet, useParams, useHistory  } from 'react-router-dom';
+
 
 class Shop extends Component {
 
@@ -13,6 +16,15 @@ class Shop extends Component {
         id: this.props.shop.map(el =>el.id),
         
     }
+
+
+    adaugaInCosPreferate = (products) =>{
+        this.props.onCos(products)
+
+        console.log(products)
+    }
+
+
 
     nume = (e) =>{
         let value = e.target.value;
@@ -178,6 +190,44 @@ class Shop extends Component {
 
                               <input className='input_btn' type="submit" value="Achita online" />
                         </form>
+
+
+
+
+                        <div className="prosude_similare">
+            <h4>PRODUSE SIMILARE</h4>
+
+
+            <div className='item_sililar'>
+            {this.props.products.filter((item, index) => (index < 4))
+                     .map((item) => {
+                         return (
+                             
+                            
+                                 <div className="item_p">
+                                 <NavLink to={`/produse/${item.id}`}>
+                                     <div className="products_el">
+                                         <div className="images_products">
+                                            <img src={item.img} alt="" />
+                                         </div>
+                                         <p className='description_i'>{item.description}</p>
+                                     </div>
+                                     </NavLink>
+
+                                     <div onClick={() => this.adaugaInCosPreferate(item)} className="hover_preferinte">
+                                        <img src={heart} alt="" />
+                                        <p className='preferinte'>In preferinte</p>
+                                     </div>
+                                 </div>
+                            
+                                
+                            
+                         )
+                     })
+            }
+            </div>
+
+        </div>
 
 
 

@@ -263,7 +263,10 @@ class App extends Component {
                                 shop={this.state.dataShop}
                                 deleteItemFromShop={this.deleteItemFromShop}
                                 expenseElement={this.addNewPrice}
-                                onElementWislist={this.state.elementWishListShop}/>
+                                onElementWislist={this.state.elementWishListShop}
+                                products={this.props.produse}
+                                onCos={this.cos}
+                                onShop={this.shop}/>
                                 }>
 
                         </Route>

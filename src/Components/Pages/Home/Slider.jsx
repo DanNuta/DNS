@@ -143,7 +143,7 @@ class Slider extends Component {
 
                              <img className="img" src={this.state.products[0].img} alt="Sfredel"  />
                             <ul>
-                                <li onClick={this.searchItem1}><NavLink to="/service/pr1"><img src={search} alt="search"/></NavLink></li>
+                                <li onClick={this.searchItem1}><NavLink to={`/produse/${this.props.products[0].id}`}><img src={search} alt="search"/></NavLink></li>
                                 <li onClick={this.selectFirstItem}><img src={heart} alt="search"/></li>
                             </ul>
                             
