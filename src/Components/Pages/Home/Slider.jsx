@@ -43,7 +43,7 @@ class Slider extends Component {
         leftArrow: this.props.arrowCurent[0],
         rightArrow: this.props.arrowCurent[1],
 
-        products: this.props.products
+        products: this.props.produse
 
         
         
@@ -143,7 +143,7 @@ class Slider extends Component {
 
                              <img className="img" src={this.state.products[0].img} alt="Sfredel"  />
                             <ul>
-                                <li onClick={this.searchItem1}><NavLink to={`/produse/${this.props.products[0].id}`}><img src={search} alt="search"/></NavLink></li>
+                                <li onClick={this.searchItem1}><NavLink to={`/produse/${this.state.products[0].id}`}><img src={search} alt="search"/></NavLink></li>
                                 <li onClick={this.selectFirstItem}><img src={heart} alt="search"/></li>
                             </ul>
                             
@@ -157,7 +157,7 @@ class Slider extends Component {
 
                              <img className="img" src={this.state.products[1].img} alt="Sfredel"  />
                             <ul>
-                                <li><NavLink to="/service/pr2"><img src={search} alt="search"/></NavLink></li>
+                                <li><NavLink to={`/produse/${this.state.products[1].id}`}><img src={search} alt="search"/></NavLink></li>
                                 <li onClick={this.selectFirstItem2}><img src={heart} alt="search"/></li>
                             </ul>
                             
@@ -173,7 +173,7 @@ class Slider extends Component {
 
                               <img className="img" src={this.state.products[2].img} alt="Sfredel"  />
                             <ul>
-                                <li ><NavLink to="/service/pr3"><img src={search} alt="search"/></NavLink></li>
+                                <li ><NavLink to={`/produse/${this.state.products[2].id}`}><img src={search} alt="search"/></NavLink></li>
                                 <li onClick={this.selectFirstItem3}><img src={heart} alt="search"/></li>
                             </ul>
                             

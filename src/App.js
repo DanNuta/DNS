@@ -243,6 +243,7 @@ class App extends Component {
                         <Route exact path='/' element={<Home 
                                onExportData={this.exportDataFromHome}
                                onSearchItem={this.searchItem}
+                               products={this.props.produse}
                               />}>
 
                         </Route>

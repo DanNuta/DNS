@@ -222,6 +222,7 @@ class Home extends Component {
                     onExportDate={this.exportDate} 
                     products={this.props.produse}
                     onSearchItem={this.searchItem}
+                    produse={this.props.products}
                 />
 
 
