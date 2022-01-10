@@ -12,6 +12,9 @@ import rightArrowHover from "../../Pages/icon/header_arrow/right_arrow_hover.svg
 import leftArrowHover from "../../Pages/icon/header_arrow/left_arrow_hover.svg";
 import {ImagesArrowSvg, ImagesArrowSvg2} from "./ArrowSvg";
 import AnimatePhoto from "../../Pages/home_section1/home_animation.png";
+import AnimatePhoto2 from "../../Pages/home_section1/home_animation2.png";
+import AnimatePhoto3 from "../../Pages/home_section1/home_animation3.png";
+import AnimatePhoto4 from "../../Pages/home_section1/home_animation4.png";
 
 
 
@@ -25,6 +28,9 @@ class Slider extends Component {
             {id:1, img: Fist_Img, alt: "fist"},
             {id:2, img: Seconds_Img, alt: "second"},
             {id:3, img: AnimatePhoto, alt: "second"},
+            {id:4, img: AnimatePhoto2, alt: "second"},
+            {id:5, img: AnimatePhoto3, alt: "second"},
+
         ],
 
         arrowCurent: [
