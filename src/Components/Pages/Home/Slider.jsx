@@ -173,6 +173,49 @@ class Slider extends Component {
                                     </div>
                         }
 
+
+
+
+
+
+                        {this.state.curentSlide.id === 4 && 
+                                    <div className='animated_photo2'>
+                                        <div className="animation_top2">
+                                            <div className="circle_animation2">
+                                               <div className="line_animation2"></div>
+                                            </div>
+                                            
+                                            <div className="text_animation2">
+                                                <p>Paratrasnet PDA Sensor</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div className="fii_in_siguranta">
+                                            <div className="circle_animation2">
+                                                <div className="line_animation2"></div>
+                                            </div>
+
+                                                <div className="text_animation_bottom2">
+                                                    <p>Fii in suguranta cu DNA</p>
+                                                </div>
+
+                                        </div>
+
+
+                                        <div className="animation_bottom2 animation_delay_button2">
+                                                <div className="circle_animation2">
+                                                   <div className="line_animation2"></div>
+                                                </div>
+                                                
+                                                <div className="text_animation_bottom2">
+                                                    <p>Catarg fixare Paratrasnet PDA</p>
+                                                </div>
+                                        </div>
+
+                                    </div>
+                        }
+
                     </div>
                 </div>
 

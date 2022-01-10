@@ -297,6 +297,230 @@
         
                 }
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            .animated_photo2{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                .animation_top2{
+                    position: absolute;
+                    z-index: 20;
+                    top: 4vw;
+                    left: 25vw;
+                    animation-name: page_animation;
+                    animation-fill-mode: forwards;
+                    animation-duration: 1s;
+    
+
+                    .circle_animation2{
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 100px;
+                        background-color: white;
+                        border: 8px solid #FFD600;
+                        box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                        .line_animation2{
+                            position: absolute;
+                            width: 251px;
+                            height: 2px;
+                            background-color: white;
+                            top: 50%;
+
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                height: 2px;
+                                background-color: rgb(255, 255, 255);
+                                width: 95px;
+                                transform: rotate(45deg);
+                                top: 33px;
+                                left: 94%;
+                                } 
+    
+                           
+                        }
+                    }
+
+
+
+                }
+
+
+                @keyframes page_animation {
+                    from { 
+                        opacity: 0;
+                    } 
+                    to { 
+                        opacity: 1;
+                    } 
+                    
+                }
+
+
+                .text_animation2{
+                    position: absolute;
+                    top: 100px;
+                    left: 250px;
+
+                    p{
+                        color: white;
+                        white-space: nowrap;
+                    }
+                }
+
+
+
+
+                .animation_bottom2{
+                    position: absolute;
+                    z-index: 20;
+                    top: 22vw;
+                    left: 25vw;
+                    
+                    
+                    
+
+                    .circle_animation2{
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 100px;
+                        background-color: white;
+                        border: 8px solid #FFD600;
+                        box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                        .line_animation2{
+                            position: absolute;
+                            width: 114px;
+                            height: 2px;
+                            background-color: white;
+                            top: 50%;
+
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                height: 2px;
+                                background-color: rgb(255, 255, 255);
+                                width: 95px;
+                                transform: rotate(-25deg);
+                                top: -20px;
+                                left: 95%;
+                                } 
+    
+                           
+                        }
+                    }
+
+
+                    .text_animation_bottom2{
+                        position: absolute;
+                        top: -59px;
+                        left: 118px;
+                        
+                        p{
+                            color: white;
+                            white-space: nowrap;
+                        }
+
+                    }
+
+                }
+
+                .animation_delay_button2{
+                    animation-name: page_animation;
+                    animation-fill-mode: forwards;
+                    animation-duration: 3s;
+        
+                }
+
+
+                .fii_in_siguranta{
+                    animation-name: page_animation;
+                    animation-fill-mode: forwards;
+                    animation-duration: 4s;
+                    position: absolute;
+                    z-index: 20;
+                    top: 13vw;
+                    left: 20vw;
+
+                    .circle_animation2{
+                        position: absolute;
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 100px;
+                        background-color: white;
+                        border: 8px solid #FFD600;
+                        box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                        .line_animation2{
+                            position: absolute;
+                            width: 114px;
+                            height: 2px;
+                            background-color: white;
+                            bottom: 50%;
+                            right: 100%;
+
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                height: 2px;
+                                background-color: rgb(255, 255, 255);
+                                width: 50px;
+                                transform: rotate(90deg);
+                                right: 79%;
+                                top: -24px;
+                                } 
+    
+                           
+                        }
+                    }
+
+
+                    .text_animation_bottom2{
+                        position: absolute;
+                        top: -61px;
+                        left: -180px;
+                        
+                        p{
+                            color: white;
+                            white-space: nowrap;
+                        }
+
+                    }
+
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 
