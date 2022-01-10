@@ -132,6 +132,13 @@
 
 
 
+
+
+
+
+
+
+
     .right_img{
         position: absolute;
         top: 0;
@@ -140,12 +147,173 @@
         height: 646px;
         z-index: -1;
 
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .photo, .animated{
+            position: relative;
+           
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+
+
+            .animated_photo{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                .animation_top{
+                    position: absolute;
+                    z-index: 20;
+                    top: 6vw;
+                    left: 19vw;
+                    animation-name: page_animation;
+                    animation-fill-mode: forwards;
+                    animation-duration: 1s;
+    
+
+                    .circle_animation{
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 100px;
+                        background-color: white;
+                        border: 8px solid #FFD600;
+                        box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                        .line_animation{
+                            position: absolute;
+                            width: 251px;
+                            height: 2px;
+                            background-color: white;
+                            top: 50%;
+
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                height: 2px;
+                                background-color: rgb(255, 255, 255);
+                                width: 95px;
+                                transform: rotate(45deg);
+                                top: 33px;
+                                left: 94%;
+                                } 
+    
+                           
+                        }
+                    }
+
+
+
+                }
+
+
+                @keyframes page_animation {
+                    from { 
+                        opacity: 0;
+                    } 
+                    to { 
+                        opacity: 1;
+                    } 
+                    
+                }
+
+
+                .text_animation{
+                    position: absolute;
+                    top: 100px;
+                    left: 250px;
+
+                    p{
+                        color: white;
+                        white-space: nowrap;
+                    }
+                }
+
+
+
+
+                .animation_bottom{
+                    position: absolute;
+                    z-index: 20;
+                    top: 22vw;
+                    left: 19vw;
+                    
+                    
+                    
+
+                    .circle_animation{
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 100px;
+                        background-color: white;
+                        border: 8px solid #FFD600;
+                        box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                        .line_animation{
+                            position: absolute;
+                            width: 114px;
+                            height: 2px;
+                            background-color: white;
+                            top: 50%;
+
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                height: 2px;
+                                background-color: rgb(255, 255, 255);
+                                width: 95px;
+                                transform: rotate(-25deg);
+                                top: -20px;
+                                left: 95%;
+                                } 
+    
+                           
+                        }
+                    }
+
+
+                    .text_animation_bottom{
+                        position: absolute;
+                        top: -59px;
+                        left: 118px;
+                        
+                        p{
+                            color: white;
+                            white-space: nowrap;
+                        }
+
+                    }
+
+                }
+
+                .animation_delay_button{
+                    animation-name: page_animation;
+                    animation-fill-mode: forwards;
+                    animation-duration: 3s;
+        
+                }
+            }
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     .section_instruments_bottom{

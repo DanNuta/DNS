@@ -133,9 +133,50 @@ class Slider extends Component {
                 </div>
 
 
+
+
+
+
                 <div className="right_img">
-                    <img className={this.state.curentSlide.id === 3 ? "animated" : ""} src={this.state.curentSlide.img} alt={this.state.curentSlide.alt}  />
+                    <div className={this.state.curentSlide.id === 3 ? "animated" : "photo"}>
+                        <img  src={this.state.curentSlide.img} alt={this.state.curentSlide.alt}  />
+
+                        {this.state.curentSlide.id === 3 && 
+                                    <div className='animated_photo'>
+                                        <div className="animation_top">
+                                            <div className="circle_animation">
+                                               <div className="line_animation"></div>
+                                            </div>
+                                            
+                                            <div className="text_animation">
+                                                <p>Paratrasnet PDA Sensor</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div className="animation_bottom animation_delay_button">
+                                            <div className="circle_animation">
+                                                <div className="line_animation"></div>
+                                                </div>
+                                                
+                                                <div className="text_animation_bottom">
+                                                    <p>Catarg fixare Paratrasnet PDA</p>
+                                                </div>
+                                        </div>
+
+                                    </div>
+                        }
+
+                    </div>
                 </div>
+
+
+
+
+
+
+
+
 
 
                 <div className="section_instruments_bottom center">
