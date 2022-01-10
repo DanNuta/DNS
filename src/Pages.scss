@@ -374,6 +374,139 @@ text-align: left;
 
 
 
+.calitate_garantie{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    grid-column: 1/13;
+    margin-top: 115px;
+
+
+    .calitate{
+        height: 331px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-column: 1/5;
+        border: 1px solid #E5E5E5;
+        transition: .2s;
+
+        h2{
+            margin: 38px 0 15px 0;
+            font-family: "Montserrat";
+            font-size: 24px;
+
+        }
+
+        &:hover.calitate{
+            border: 1px solid #FFD600;
+            background-color: #FFD600;
+            color: white;
+
+
+            svg{
+                path{
+                    fill: white;
+                }
+            }
+            }
+    }
+
+
+    .like{
+        height: 331px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-column: 5/9;
+        border: 1px solid #E5E5E5;
+        transition: .2s;
+
+        h2{
+            margin: 38px 0 15px 0;
+            font-family: "Montserrat";
+            font-size: 24px;
+
+        }
+        p{
+            font-family: "Open Sans";
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            width: 300px;
+        }
+
+        &:hover.like{
+            border: 1px solid #FFD600;
+            background-color: #FFD600;
+            color: white;
+
+
+            svg{
+                path{
+                    fill: white;
+                }
+            }
+            }
+            p{
+                color: white;
+            }
+
+        
+    }
+
+    .garantie{
+        height: 331px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-column: 9/13;
+        border: 1px solid #E5E5E5;
+        transition: .2s;
+
+        h2{
+            margin: 38px 0 15px 0;
+            font-family: "Montserrat";
+            font-size: 24px;
+        }
+
+        &:hover.garantie{
+            border: 1px solid #FFD600;
+            background-color: #FFD600;
+            color: white;
+
+
+            svg{
+                path{
+                    fill: white;
+                }
+            }
+            }
+        }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
