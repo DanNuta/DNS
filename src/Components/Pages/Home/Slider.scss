@@ -72,6 +72,25 @@
 
                 button{
                     @include btn;
+                    transition: .2s;
+
+                    svg{
+                        path{
+                            transition: .2s linear;
+                        }
+                    }
+
+                    &:hover 
+                        svg{
+                           
+                            path{
+                                fill: rgb(39, 39, 39);
+                                fill-opacity: 1;
+                                width: 100px;
+                                
+                            }
+                        }
+                    
 
                 }
             }

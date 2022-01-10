@@ -10,6 +10,7 @@ import leftArrow from "../../Pages/icon/header_arrow/left_arrow.svg";
 import rightArrow from "../../Pages/icon/header_arrow/right_arrow.svg";
 import rightArrowHover from "../../Pages/icon/header_arrow/right_arrow_hover.svg";
 import leftArrowHover from "../../Pages/icon/header_arrow/left_arrow_hover.svg";
+import {ImagesArrowSvg} from "./ArrowSvg";
 
 
 
@@ -122,7 +123,7 @@ class Slider extends Component {
                         <button onClick={this.submitData} className="btn">Contactează-ne</button>
 
                         <div className="indicator">
-                            <button onClick={this.leftArrow}><img src={this.state.leftArrow.img}  /></button>
+                            <button onClick={this.leftArrow}><ImagesArrowSvg/></button>
                             <button onClick={this.rightArrow}><img src={this.state.rightArrow.img} /></button>
                         </div>
 
