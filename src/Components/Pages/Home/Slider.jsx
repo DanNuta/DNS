@@ -11,6 +11,7 @@ import rightArrow from "../../Pages/icon/header_arrow/right_arrow.svg";
 import rightArrowHover from "../../Pages/icon/header_arrow/right_arrow_hover.svg";
 import leftArrowHover from "../../Pages/icon/header_arrow/left_arrow_hover.svg";
 import {ImagesArrowSvg, ImagesArrowSvg2} from "./ArrowSvg";
+import AnimatePhoto from "../../Pages/home_section1/home_animation.png";
 
 
 
@@ -21,8 +22,9 @@ class Slider extends Component {
 
     static defaultProps = {
         images: [
-            {id:1, img: Fist_Img, alt: "fist", class: "active_slide"},
-            {id:2, img: Seconds_Img, alt: "second", class: "active_slide"},
+            {id:1, img: Fist_Img, alt: "fist"},
+            {id:2, img: Seconds_Img, alt: "second"},
+            {id:3, img: AnimatePhoto, alt: "second"},
         ],
 
         arrowCurent: [
@@ -132,7 +134,7 @@ class Slider extends Component {
 
 
                 <div className="right_img">
-                    <img src={this.state.curentSlide.img} alt={this.state.curentSlide.alt}  />
+                    <img className={this.state.curentSlide.id === 3 ? "animated" : ""} src={this.state.curentSlide.img} alt={this.state.curentSlide.alt}  />
                 </div>
 
 
@@ -183,15 +185,7 @@ class Slider extends Component {
 
 
 
-                    <div className="number_slider">
-
-                        <ul>
-                            <li>01</li>
-                            <li>02</li>
-                            <li>03</li>
-                            <li>04</li>
-                        </ul>
-                    </div>
+                   
 
 
                     
