@@ -1437,17 +1437,74 @@ class App extends Component {
 
 
             {
-                id: "Tarusi_otel_cuprat_15-25_microni__nefiletati",
-                title: "Tarusi otel cuprat 15-25 microni ED filetati",
+                id: "Placi_impamantare_otel_cuprat_100_microni_WD",
+                title: "Placi impamantare otel cuprat 100 microni WD",
                 counter: 1,
                 img: product18,
                 price: 892,
-                description: "Tarusi de impamantare de cost redus, În comparație cu cuprul pur, conductivitatea acestor electrozi bimetalici este mai mică. Pentru a spori capacitatea curentă de transport a cuprului, diametrul și grosimea stratului de cuprului sunt crescute. Strat de cupru 15-25 microni.",
-                filter: "Tarusi Otel Cuprat 25 microni",
+                description: "Placa de impamntare din cupru si otel cuprat cu conductivitate ridicată fara conectori atașati la placă pentru conexiune mecanică.",
+                filter: "Tarusi Otel Cuprat 100 microni",
                 curentPrice: 892,
 
                 dateTehnice:{
-                    dateTehniceDesc: "Tarusii de împământare trebuie separati între ei și de orice cabluri adiacente la o distanță nu mai mică decât lungimea lor. Tijele de împământare suplimentare trebuie conectate folosind bandă de cupru sau cablu de cupru. Electrozii adiționali trebuie așezați astfel încât să mentina o separare fata de sistemele de impamntare LV și HV.",
+                    dateTehniceDesc: "Plăcile de împământare pot fi instalate în soluri puțin adânci sau în soluri stâncoase atunci când o tijă de împământare normala nu poate fi introdusă în pământ.",
+                    dataTehniceBotom: "Cantitate minima intr-un colet  50 buc. Nu se pot comanda individual.",
+                    titleDateTehnice: [
+                        {desk1: "Referinta",
+                         desk2: "Dimensiune nominala", 
+                         desk3: "Diametru real", 
+                         desk4: "Greutate Kg"
+                         
+                         },
+  
+                      {
+                        desk1: "WD5003",
+                        desk2: "500 x 500 x 3mm	", 
+                        desk3: "1500 mmp	", 
+                        desk4: "5.8"
+                          
+                      },
+                      {
+                        desk1: "WD1003		",
+                        desk2: "1000 x1000 x 3mm", 
+                        desk3: "3000 mmp", 
+                        desk4: "23.5"
+                      }
+                      ,
+                      {
+                        desk1: "WD5002",
+                        desk2: "500 x 500 x 2mm", 
+                        desk3: "1000 mmp", 
+                        desk4: "4.5"
+                      }
+                      ,
+                      {
+                        desk1: "WD1002	",
+                        desk2: "1000 x 1000 x 2	", 
+                        desk3: "2000 mmp", 
+                        desk4: "18"
+                      }
+                     
+
+  
+                    ]
+                }
+            },
+
+
+
+            {
+                id: "Tarus_impamantare_otel_cuprat_100_microni_ECD_filetati",
+                title: "Tarus impamantare otel cuprat 100 microni ECD filetati",
+                counter: 1,
+                img: product17,
+                price: 892,
+                description: "Tarusii de împământare trebuie separati între ei și de orice cabluri adiacente la o distanță nu mai mică decât lungimea lor. Tijele de împământare suplimentare trebuie conectate folosind bandă de cupru sau cablu de cupru. Electrozii adiționali trebuie așezați astfel încât să mentina o separare fata de sistemele de impamntare LV și HV.",
+                filter: "Tarusi Otel Cuprat 100 microni",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "Electrozi impamantare otel cuprat cu strat de cupru 100 microni.",
                     dataTehniceBotom: "",
                     titleDateTehnice: [
                         {desk1: "Referinta",
@@ -1458,31 +1515,538 @@ class App extends Component {
                          },
   
                       {
-                        desk1: "ED1014RR",
-                        desk2: "1000 X 5/8 inch", 
-                        desk3: "5/8 inch", 
-                        desk4: "1,6"
+                        desk1: "ECD1014RR",
+                        desk2: "1000 X M16	", 
+                        desk3: "1000 X M16", 
+                        desk4: "1,85"
                           
                       },
                       {
-                        desk1: "ED1514RR	",
-                        desk2: "1500 X 5/8 inch	", 
-                        desk3: "5/8 inch", 
-                        desk4: "1,75"
+                        desk1: "WD1003		",
+                        desk2: "1000 x1000 x 3mm", 
+                        desk3: "3000 mmp", 
+                        desk4: "23.5"
                       }
                       ,
                       {
-                        desk1: "ED2014RR",
-                        desk2: "2000 X 5/8 inch", 
-                        desk3: "5/8 inch", 
-                        desk4: "2.45"
+                        desk1: "ECD1514RR	",
+                        desk2: "1500 X M16	", 
+                        desk3: "M16	", 
+                        desk4: "2,47"
+                      }
+                      ,
+                      {
+                        desk1: "ECD1518RR",
+                        desk2: "1500 X M20	", 
+                        desk3: "M20", 
+                        desk4: "2,97"
+                      }
+                      ,
+                      {
+                        desk1: "ECD1518RR",
+                        desk2: "2000 X M20	", 
+                        desk3: "M20", 
+                        desk4: "3,97"
                       }
                      
 
   
                     ]
                 }
+            },
+
+
+            {
+                id: "Electrozi_impamantare_otel_cuprat_100_microni_ECD_nefiletati",
+                title: "Electrozi impamantare otel cuprat 100 microni ECD nefiletati",
+                counter: 1,
+                img: product16,
+                price: 892,
+                description: "Electrozi impamantare otel cuprat cu strat de cupru 100 microni. Aplicatii de impamantare pentru instalatii electrice, telecom sau alte aplicatii unde se cere o rezistenta medie la coroziune. Pentru utilizare la împământare.",
+                filter: "Tarusi Otel Cuprat 100 microni",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "Electrozi impamantare otel cuprat cu strat de cupru 100 microni.",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Referinta",
+                         desk2: "Dimensiune nominala", 
+                         desk3: "Diametru real", 
+                         desk4: "Greutate Kg"
+                         
+                         },
+  
+                      {
+                        desk1: "ECD1014",
+                        desk2: "1000 X 14.2mm	", 
+                        desk3: "14.2mm", 
+                        desk4: "1,85"
+                          
+                      },
+                      {
+                        desk1: "ECD1514	",
+                        desk2: "1500 X 14.2mm", 
+                        desk3: "3000 mmp", 
+                        desk4: "2.27"
+                      }
+                      ,
+                      {
+                        desk1: "ECD1518	",
+                        desk2: "1500 X 18mm	", 
+                        desk3: "14.2mm", 
+                        desk4: "2,97"
+                      }
+                      ,
+                      {
+                        desk1: "ECD2018	",
+                        desk2: "2000 X 18mm	", 
+                        desk3: "14.2mm	", 
+                        desk4: "3,95 "
+                      }
+                      
+
+
+
+
+                      
+                     
+
+  
+                    ]
+                }
+            } ,
+
+
+            {
+                id: "Electrozi_impamantare_otel_cuprat_300_microni_CERB_filetati",
+                title: "Electrozi impamantare otel cuprat 300 microni CERB nefiletati si filetati diametru 18,3mm M20",
+                counter: 1,
+                img: product16,
+                price: 892,
+                description: "Uneori, instalatorii aleg o tijă de împământare pe baza costului inițial. Un sistem de impamantare cu electrozi din otel cuprat are o durata de viata cuprinsa intre 30-40 ani, in functie de conditiile solului si este cel mai performant sistem disponibil. Cu toate acestea, este important să se ia în considerare și longevitatea și performanța întregului sistem - un cost inițial mai mare poate economisi bani pe termen lung dacă tija de impamantare este mai fiabilă și are o durată de viață mai lungă",
+                filter: "Tarusi Otel Cuprat 254 microni",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Diametru nominal mm	",
+                         desk2: "Diametru real mm	", 
+                         desk3: "Lungime", 
+                         desk4: "Filet",
+                         desk5: "Strat cupru",
+                         desk6: "Greutate"
+                         
+                         },
+  
+                      {
+                        desk1: 18.3,
+                        desk2: 18.3, 
+                        desk3: 15, 
+                        desk4: "M20",
+                        desk5: "300 µm",
+                        desk6: 3.2
+                          
+                      },
+                      {
+                        desk1: 18.3,
+                        desk2: 18.3, 
+                        desk3: 2, 
+                        desk4: "M20",
+                        desk5: "300 µm",
+                        desk6: 4.2
+                          
+                      },
+                      
+                      
+
+
+
+
+                      
+
+  
+                    ]
+                }
+            },
+
+
+
+
+
+
+
+
+            {
+                id: "Electrozi_impamantare_otel_cuprat_254_microni_CERB_nefiletati",
+                title: "Electrozi impamantare otel cuprat 254 microni CERB nefiletati si filetati diametru 14,2mm 5/8",
+                counter: 1,
+                img: product17,
+                price: 892,
+                description: "Un electrod de impamantare trebuie să fie din otel cuprat? Dacă instalația de imapamantare deserveste un amplasament cu o durata de viata a instalatiei mai mare de 15 ani, da. O instalatie de impamantare galvanizată este adecvată și va oferi cea mai rentabilă soluție pentru o instalatie de impamantare cu o durata de viata mai mica sau egala cu 15 ani. Pentru instalațiile cu o durată de viață mai lungă de 15 ani electrozii de legare la pamant din cupru, otel inoxidabil si otel cuprat sunt cea ma",
+                filter: "Tarusi Otel Cuprat 254 microni",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Diametru nominal mm	",
+                         desk2: "Diametru real mm	", 
+                         desk3: "Lungime", 
+                         desk4: "Filet",
+                         desk5: "Strat cupru",
+                         desk6: "Greutate",
+                         desk7: "Cod"
+                         
+                         },
+  
+                      {
+                        desk1: "5/8",
+                        desk2: 1, 
+                        desk3: "M14", 
+                        desk4: "254 µm",
+                        desk5: 1.25,
+                        desk6: "CERB 1058"
+                          
+                      },
+                      ,
+  
+                      {
+                        desk1: "5/8",
+                        desk2: 1.2, 
+                        desk3: `5/8"/M14`, 
+                        desk4: "254 µm",
+                        desk5: 1.5,
+                        desk6: "CERB 1258"
+                          
+                      },
+                      {
+                        desk1: "5/8",
+                        desk2: 1.5, 
+                        desk3: `5/8"/M14`, 
+                        desk4: "254 µm",
+                        desk5: 1.9,
+                        desk6: "CERB 1558"
+                          
+                      },
+
+                      {
+                        desk1: "5/8",
+                        desk2: 2, 
+                        desk3: `5/8"/M14`, 
+                        desk4: "254 µm",
+                        desk5: 2.58,
+                        desk6: "CERB 2058"
+                          
+                      },
+                      
+                      
+
+
+
+
+                      
+
+  
+                    ]
+                }
+            },
+
+
+            {
+                id: "Electrozi_impamantare_otel_cuprat_254_microni_CERB_nefiletati",
+                title: "Electrozi impamantare otel cuprat 254 microni CERB nefiletati si filetati diametru 17,2mm 3/4",
+                counter: 1,
+                img: product16,
+                price: 892,
+                description: "Tarusii de impamantare din otel cuprat , au o rezistență ridicată datorita continutului mare de carbon, o grosime a stratului de cupru electrolitic pur de 99,9% de 254 microni.",
+                filter: "Tarusi Otel Cuprat 254 microni",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Diametru nominal mm	",
+                         desk2: "Diametru real mm	", 
+                         desk3: "Lungime", 
+                         desk4: "Filet",
+                         desk5: "Strat cupru",
+                         desk6: "Greutate"
+                         
+                         },
+  
+  
+                      {
+                        desk1: `3/4"`,
+                        desk2: 17.2, 
+                        desk3: 1.2, 
+                        desk4: "254 µm",
+                        desk5: 2.2
+                          
+                      },
+                      {
+                        desk1: `3/4"`,
+                        desk2: 17.2, 
+                        desk3: 1.5, 
+                        desk4: "254 µm",
+                        desk5: 2.7
+                          
+                      },
+
+                      {
+                        desk1: `3/4"`,
+                        desk2: 17.2, 
+                        desk3: 2.4, 
+                        desk4: "254 µm",
+                        desk5: 4.4
+                          
+                      },
+                      
+                      
+
+
+
+
+                      
+
+  
+                    ]
+                }
+            },
+
+
+
+
+
+
+
+
+
+            {
+                id: "Cutie_impamantare_din_fonta",
+                title: "Cutie impamantare din fonta",
+                counter: 1,
+                img: product8,
+                price: 892,
+                description: "Cutie de vizitare din material fonta, cu marcaj și simbol de împământare pe capac. Cutia facilitează accesul la conexiune și permite măsurarea conexiunii Se poate poziționa în locuri pe cai de acces ale vehiculelor.",
+                filter: "Accesorii pentru tarusi impamantare",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Dimensiune	",
+                         desk2: "Diametru", 
+                         desk3: "Greutate kg"
+                         
+                         },
+  
+  
+                      {
+                        desk1: `230x100mm"`,
+                        desk2: "180mm	", 
+                        desk3: "5.5kg"
+                       
+                          
+                      },
+                      
+                      
+  
+                    ]
+                }
+            },
+
+
+
+
+            {
+                id: "Cutie_impamantare_din_plastic",
+                title: "Cutie impamantare din plastic",
+                counter: 1,
+                img: product9,
+                price: 892,
+                description: "Cutie de vizitare din material plastic, cu marcaj și simbol de împământare pe capac. Cutia facilitează accesul la conexiune și permite măsurarea conexiunii A se poziționa în locuri fără trecerea vehiculului.",
+                filter: "Accesorii pentru tarusi impamantare",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Dimensiune	",
+                         desk2: "Diametru", 
+                         desk3: "Greutate kg"
+                         
+                         },
+  
+  
+                      {
+                        desk1: `200x200x100mm`,
+                        desk2: "180mm	", 
+                        desk3: "0.360kg"
+                       
+                          
+                      },
+                      
+                      
+  
+                    ]
+                }
+            },
+
+
+
+
+            
+            {
+                id: "Surub_de_strangere_otel_carbon",
+                title: "Surub de strangere otel carbon pentru fixarea electrozilor de impamantare din otel cuprat MY",
+                counter: 1,
+                img: product10,
+                price: 892,
+                description: "Surub de fixarea a electrozilor de impamanatre din otel cuprat.",
+                filter: "Accesorii pentru tarusi impamantare",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Cod produs		",
+                         desk2: "Filet", 
+                         desk3: "Greutate kg"
+                         
+                         },
+  
+  
+                      {
+                        desk1: `MY14`,
+                        desk2: 5/8, 
+                        desk3: 0.110
+                      },
+
+                      {
+                        desk1: `MY17`,
+                        desk2: 3/4, 
+                        desk3: 0.100
+                      },
+                      {
+                        desk1: `MY18`,
+                        desk2: "M20", 
+                        desk3: 0.140
+                      },
+
+                      {
+                        desk1: `MY19`,
+                        desk2: 13/16, 
+                        desk3: 0.187
+                      },
+
+                      
+                      {
+                        desk1: `MY20`,
+                        desk2: "M22", 
+                        desk3: 0.235
+                      },
+                      
+                      
+                      
+  
+                    ]
+                }
+            },
+
+
+
+
+
+            {
+                id: "Cupla_alama_pentru_fixarea_electrozilor",
+                title: "Cupla alama pentru fixarea electrozilor  ​",
+                counter: 1,
+                img: product11,
+                price: 892,
+                description: "Cupla din alama pentru fixarea si prelungirea electrozilor de impamanatre din otel cuprat. Modele filetate si conice",
+                filter: "Accesorii pentru tarusi impamantare",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Cod produs	",
+                         desk2: "Diametru electrod	", 
+                         desk3: "Filet",
+                         desk4: "Greutate kg"
+                         
+                         },
+  
+  
+                         {desk1: "MX14	",
+                         desk2: "13.7-14.2	", 
+                         desk3: "5/8",
+                         desk4: 0.110
+                         },
+
+                         {desk1: "MX15",
+                         desk2: "14.2-14.6	", 
+                         desk3: "M16",
+                         desk4: 0.100
+                         },
+
+                         {desk1: "MX17	",
+                         desk2: "17.2", 
+                         desk3: "3/4",
+                         desk4: 0.130
+                         },
+
+
+                         {desk1: "MX18	",
+                         desk2: "18.3", 
+                         desk3: "M20",
+                         desk4: 0.180
+                         },
+
+
+                      
+                         {desk1: "MX19",
+                         desk2: "19.1", 
+                         desk3: "13/16",
+                         desk4: 0.169
+                         },
+
+                         {desk1: "MX19",
+                         desk2: "19.1", 
+                         desk3: "compresie",
+                         desk4: 0.169
+                         },
+
+                         {desk1: "MX20",
+                         desk2: "20.3", 
+                         desk3: "M22",
+                         desk4: 0.147
+                         },
+
+                      
+                      
+                      
+  
+                    ]
+                }
             }
+
+
+
+
+
+
+
+
 
 
 
