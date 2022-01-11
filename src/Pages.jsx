@@ -274,7 +274,7 @@ const Pages = (props) => {
 
         <div className="date_tehnice">
             <h1>Date tehnice</h1>
-            <p>{curentItem.dateTehnice.dateTehniceDesc}</p>
+            <p>{curentItem.dateTehnice.dateTehniceDesc || ""}</p>
 
 
             <table>
@@ -286,11 +286,11 @@ const Pages = (props) => {
                   {curentItem.dateTehnice.titleDateTehnice.map(el => (
                         <tr>
                            
-                           <td>{el.desk1}</td>
-                           <td>{el.desk2}</td>
-                           <td>{el.desk3}</td>
-                           <td>{el.desk4}</td>
-                           <td>{el.desk5}</td>
+                           <td>{el.desk1 || ""}</td>
+                           <td>{el.desk2 || ""}</td>
+                           <td>{el.desk3 || ""}</td>
+                           <td>{el.desk4 || ""}</td>
+                           <td>{el.desk5 || ""}</td>
                            
                         </tr>
                     
@@ -302,18 +302,9 @@ const Pages = (props) => {
                   </tbody>
 
             </table>
+
+            <p>{curentItem.dateTehnice.dataTehniceBotom || ""}</p>
         </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

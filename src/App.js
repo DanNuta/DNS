@@ -41,6 +41,7 @@ class App extends Component {
 
               dateTehnice:{
                   dateTehniceDesc: "Paratrasnetul cu amorsare de tip PDA  Schwærtz Core poate proteja constuctii mari, dispune de un timp de amorsare ΔT=45 µs si o raza de protectie de la 63 la 89 metri. Poate fi testat cu Testerul dedicat",
+                  dataTehniceBotom: "Paratrasnetul Aubach S1 ΔT=22 µs raza Rp 40-62m  este un paratrasnet PDA cu o stabilitate peste medie, dispozitiv de protectie dublu. Garantie 10 ani, poate lucra in  conditii dificile, atmosfera sulfuroasa sau in conditii de salinitate. Compatibil cu toata gama de accesorii pentru paratrasnete PDA  Sensor Aubach",
                   titleDateTehnice: [
                       {desk1: "H(m)",
                        desk2: "Nivel 1(D=20) Eficienta 98%",
@@ -144,7 +145,90 @@ class App extends Component {
                 description: "Paratrasnet PDA Schwaertz Compact S ΔT=25 µs raza Rp 42-65m",
                 filter: "pda",
                 curentPrice: 1000,
-                link: "products1"
+                link: "products1",
+
+                dateTehnice:{
+                    dateTehniceDesc: "Paratrasnetul cu amorsare de tip PDA  Schwærtz Core poate proteja constuctii mari, dispune de un timp de amorsare ΔT=45 µs si o raza de protectie de la 63 la 89 metri. Poate fi testat cu Testerul dedicat",
+                    dataTehniceBotom: "Paratrasnetul Aubach S1 ΔT=22 µs raza Rp 40-62m  este un paratrasnet PDA cu o stabilitate peste medie, dispozitiv de protectie dublu. Garantie 10 ani, poate lucra in  conditii dificile, atmosfera sulfuroasa sau in conditii de salinitate. Compatibil cu toata gama de accesorii pentru paratrasnete PDA  Sensor Aubach",
+                    titleDateTehnice: [
+                        {desk1: "H(m)",
+                         desk2: "Nivel 1(D=20) Eficienta 98%",
+                         desk3: "Nivel 2(D=30) Eficienta 95%",
+                         desk4: "Nivel 1(D=45) Eficienta 90%",
+                         desk5: "Nivel 4(D=60) Eficienta 80%"
+                      },
+  
+                      {
+                          desk1: 1,
+                          desk2: 1,
+                          desk3: 1,
+                          desk4: 1,
+                          desk5: 1,
+                      },
+                      {
+                          desk1: 2,
+                          desk2: 2,
+                          desk3: 2,
+                          desk4: 2,
+                          desk5: 2,
+                      },
+                       {
+                          desk1: 3,
+                          desk2: 3,
+                          desk3: 3,
+                          desk4: 3,
+                          desk5: 3,
+                      },
+  
+                      {
+                          desk1: 1,
+                          desk2: 1,
+                          desk3: 1,
+                          desk4: 1,
+                          desk5: 1,
+                      },
+                      {
+                          desk1: 2,
+                          desk2: 2,
+                          desk3: 2,
+                          desk4: 2,
+                          desk5: 2,
+                      },
+                       {
+                          desk1: 3,
+                          desk2: 3,
+                          desk3: 3,
+                          desk4: 3,
+                          desk5: 3,
+                      },
+                      {
+                          desk1: 2,
+                          desk2: 2,
+                          desk3: 2,
+                          desk4: 2,
+                          desk5: 2,
+                      },
+                       {
+                          desk1: 3,
+                          desk2: 3,
+                          desk3: 3,
+                          desk4: 3,
+                          desk5: 3,
+                      },
+  
+                      {
+                          desk1: 1,
+                          desk2: 1,
+                          desk3: 1,
+                          desk4: 1,
+                          desk5: 1,
+                      },
+                     
+  
+  
+  
+                    ]
+                }
             },
 
             {

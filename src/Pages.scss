@@ -279,7 +279,7 @@ text-align: left;
 
     table{
         width: 100%;
-        margin-top: 55px;
+        margin: 55px 0;
         border-collapse: collapse;
         
             
@@ -289,6 +289,12 @@ text-align: left;
                 transition: .2s linear;
                 &:hover{
                     background-color: rgba(39, 39, 39, 0.1);
+                }
+
+                &:first-of-type{
+                    border: 0;
+                    font-size: 18px;
+                    font-weight: bold;
                 }
 
                 td{
