@@ -195,7 +195,7 @@ class Shop extends Component {
 
 
                         <div className="prosude_similare">
-            <h4>PRODUSE SIMILARE</h4>
+              <h4>RECOMANDARI</h4>
 
 
             <div className='item_sililar'>
