@@ -25,7 +25,7 @@ class ElementWishList extends Component {
                         </div>
 
                         <div className="description">
-                            <p>{this.props.item.description}</p>
+                            <p>{this.props.item.title }</p>
                             <h2>{this.props.item.price} lei</h2>
                         </div>
 
