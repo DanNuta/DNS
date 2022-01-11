@@ -335,7 +335,7 @@ const Pages = (props) => {
                                          <div className="images_products">
                                             <img src={item.img} alt="" />
                                          </div>
-                                         <p className='description_i'>{item.description}</p>
+                                         <p className='description_i'>{item.title}</p>
                                      </div>
                                      </NavLink>
 

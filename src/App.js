@@ -114,8 +114,8 @@ class App extends Component {
                 curentPrice: 1000,
 
                 dateTehnice:{
-                    dateTehniceDesc: "Paratrasnetul cu amorsare de tip PDA  Schwærtz Core poate proteja constuctii mari, dispune de un timp de amorsare ΔT=45 µs si o raza de protectie de la 63 la 89 metri. Poate fi testat cu Testerul dedicat",
-                    dataTehniceBotom: "Paratrasnetul Aubach S1 ΔT=22 µs raza Rp 40-62m  este un paratrasnet PDA cu o stabilitate peste medie, dispozitiv de protectie dublu. Garantie 10 ani, poate lucra in  conditii dificile, atmosfera sulfuroasa sau in conditii de salinitate. Compatibil cu toata gama de accesorii pentru paratrasnete PDA  Sensor Aubach",
+                    dateTehniceDesc: "Pentru instalațiile care necesită protecție la 1 ++ (99,9%) și pentru instalațiile care prezintă o amenințare pentru mediu (factor de pericol specific hf = 20 conform EN 62305-2) sau care poate cauza mediu de contaminare (hf = 50 conform EN 62305-2), valorile razei de protecție ar trebui să fie reduse cu 40%. Garantie 10 ani.  Testat la un curent de 200kA (10 / 350μs).",
+                    dataTehniceBotom: "∆T - valoarea timpului de avans (determinată pe baza eficienței paratrăsnetului teste efectuate într-un laborator de înaltă tensiune) H - elevația (catragul) paratrăsnetului peste elementele protejate (necesar H ≥2m) R - raza zonei protejate",
                     titleDateTehnice: [
                         {desk1: "H(m)",
                          desk2: "Nivel 1(D=20) Eficienta 98%",
@@ -125,69 +125,87 @@ class App extends Component {
                       },
   
                       {
-                          desk1: 1,
-                          desk2: 1,
-                          desk3: 1,
-                          desk4: 1,
-                          desk5: 1,
+                          desk1: 2,
+                          desk2: 32,
+                          desk3: 34,
+                          desk4: 39,
+                          desk5: 43,
                       },
                       {
-                          desk1: 2,
-                          desk2: 2,
-                          desk3: 2,
-                          desk4: 2,
-                          desk5: 2,
+                          desk1: 3,
+                          desk2: 47,
+                          desk3: 52,
+                          desk4: 58,
+                          desk5: 64,
                       },
                        {
-                          desk1: 3,
-                          desk2: 3,
-                          desk3: 3,
-                          desk4: 3,
-                          desk5: 3,
+                          desk1: 4,
+                          desk2: 63,
+                          desk3: 69,
+                          desk4: 78,
+                          desk5: 86,
                       },
   
                       {
-                          desk1: 1,
-                          desk2: 1,
-                          desk3: 1,
-                          desk4: 1,
-                          desk5: 1,
+                          desk1: 5,
+                          desk2: 79,
+                          desk3: 87,
+                          desk4: 97,
+                          desk5: 107,
                       },
                       {
-                          desk1: 2,
-                          desk2: 2,
-                          desk3: 2,
-                          desk4: 2,
-                          desk5: 2,
+                          desk1: 6,
+                          desk2: 79,
+                          desk3: 87,
+                          desk4: 97,
+                          desk5: 107,
                       },
                        {
-                          desk1: 3,
-                          desk2: 3,
-                          desk3: 3,
-                          desk4: 3,
-                          desk5: 3,
+                          desk1: 10,
+                          desk2: 79,
+                          desk3: 88,
+                          desk4: 99,
+                          desk5: 109,
                       },
                       {
-                          desk1: 2,
-                          desk2: 2,
-                          desk3: 2,
-                          desk4: 2,
-                          desk5: 2,
+                          desk1: 15,
+                          desk2: 80,
+                          desk3: 89,
+                          desk4: 101,
+                          desk5: 111,
                       },
                        {
-                          desk1: 3,
-                          desk2: 3,
-                          desk3: 3,
-                          desk4: 3,
-                          desk5: 3,
+                          desk1: 20,
+                          desk2: 80,
+                          desk3: 89,
+                          desk4: 102,
+                          desk5: 113,
                       },
   
                       {
-                          desk1: 1,
-                          desk2: 1,
-                          desk3: 1,
-                          desk4: 1,
-                          desk5: 1,
+                          desk1: 30,
+                          desk2: "",
+                          desk3: 90,
+                          desk4: 104,
+                          desk5: 116,
+                      },
+                      ,
+  
+                      {
+                          desk1: 45,
+                          desk2: "",
+                          desk3: "",
+                          desk4: 105,
+                          desk5: 119,
+                      },
+                      ,
+  
+                      {
+                          desk1: 60,
+                          desk2: "",
+                          desk3: "",
+                          desk4: "",
+                          desk5: 120,
                       },
                      
   
@@ -198,40 +216,363 @@ class App extends Component {
             },
 
             {
-                id: "SLC_03",
-                title: "Contor de lovituri mecanic SCHWÆRTZ SLC 03",
+                id: "Paratrasnet_PDA_SENSOR_S3_ΔT=47_µs_raza_Rp_65-92m",
+                title: "Paratrasnet PDA SENSOR S3 ΔT=47 µs raza Rp 65-92m",
                 counter: 1,
-                img: product3,
+                img: product22,
                 price: 892,
-                description: "Paratrasnet PDA Schwaertz Compact S ΔT=25 µs raza Rp 42-65m",
-                filter: "pda",
-                curentPrice: 398,
-                link: "products1"
+                description: "De ce paratrasnetul PDA este o necesitate De ce am nevoie de el? Un fulger este un fenomen rar, dar periculos. Ajungand la 100 de milioane de volți de energie electrică, aceasta este o forță naturală distructivă asupra căreia avem relativ puțin control. Deoarece clădirile noastre dețin acum mai multe bunuri importante, este extrem de important să ne asigurăm că suntem protejați împotriva trăsnetelor. În zilele noastre, protecția împotriva trăsnetului este indinspensabila pentru orice siste",
+                filter: "Paratrasnet PDA SENSOR",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "Pentru instalațiile care necesită protecție la 1 ++ (99,9%) și pentru instalațiile care prezintă o amenințare pentru mediu (factor de pericol specific hf = 20 conform EN 62305-2) sau care poate cauza mediu de contaminare (hf = 50 conform EN 62305-2), valorile razei de protecție ar trebui să fie reduse cu 40%. Garantie 10 ani.  Testat la un curent de 200kA (10 / 350μs).",
+                    dataTehniceBotom: "∆T - valoarea timpului de avans (determinată pe baza eficienței paratrăsnetului teste efectuate într-un laborator de înaltă tensiune) H - elevația (catragul) paratrăsnetului peste elementele protejate (necesar H ≥2m) R - raza zonei protejate",
+                    titleDateTehnice: [
+                        {desk1: "H(m)",
+                         desk2: "Nivel 1(D=20) Eficienta 98%",
+                         desk3: "Nivel 2(D=30) Eficienta 95%",
+                         desk4: "Nivel 1(D=45) Eficienta 90%",
+                         desk5: "Nivel 4(D=60) Eficienta 80%"
+                      },
+  
+                      {
+                          desk1: 2,
+                          desk2: 26,
+                          desk3: 29,
+                          desk4: 33,
+                          desk5: 37,
+                      },
+                      {
+                          desk1: 3,
+                          desk2: 39,
+                          desk3: 44,
+                          desk4: 50,
+                          desk5: 55,
+                      },
+                       {
+                          desk1: 4,
+                          desk2: 52,
+                          desk3: 58,
+                          desk4: 66,
+                          desk5: 74,
+                      },
+  
+                      {
+                          desk1: 5,
+                          desk2: 65,
+                          desk3: 73,
+                          desk4: 83,
+                          desk5: 92,
+                      },
+                      {
+                          desk1: 6,
+                          desk2: 66,
+                          desk3: 73,
+                          desk4: 83,
+                          desk5: 92,
+                      },
+                       {
+                          desk1: 10,
+                          desk2: 66,
+                          desk3: 74,
+                          desk4: 85,
+                          desk5: 95,
+                      },
+                      {
+                          desk1: 15,
+                          desk2: 67,
+                          desk3: 76,
+                          desk4: 87,
+                          desk5: 97,
+                      },
+                       {
+                          desk1: 20,
+                          desk2: 67,
+                          desk3: 76,
+                          desk4: 89,
+                          desk5: 99,
+                      },
+  
+                      {
+                          desk1: 30,
+                          desk2: "",
+                          desk3: 77,
+                          desk4: 91,
+                          desk5: 103,
+                      },
+                      ,
+  
+                      {
+                          desk1: 45,
+                          desk2: "",
+                          desk3: "",
+                          desk4: 92,
+                          desk5: 106,
+                      },
+                      ,
+  
+                      {
+                          desk1: 60,
+                          desk2: "",
+                          desk3: "",
+                          desk4: "",
+                          desk5: 107,
+                      },
+                     
+  
+  
+  
+                    ]
+                }
+            },
+
+
+
+
+
+
+
+
+            {
+                id: "Paratrasnet_PDA_SENSOR_S2_ΔT=32_µs_raza_Rp_50-74m",
+                title: "Paratrasnet PDA SENSOR S2 ΔT=32 µs raza Rp 50-74m",
+                counter: 1,
+                img: product22,
+                price: 892,
+                description: "Cum funcționează paratrasnetul PDA SENSOR? Este un paratrăsnet de ultima generație certificat ca paratrasnet PDA pentru un curent suportat de impact 200kA (10 / 350μs). Terminalele paratrasnet PDA Senzor conțin un generator de impulsuri care emite impulsuri electrice la intervale foarte mici de timp.",
+                filter: "Paratrasnet PDA SENSOR",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "Pentru instalațiile care necesită protecție la 1 ++ (99,9%) și pentru instalațiile care prezintă o amenințare pentru mediu (factor de pericol specific hf = 20 conform EN 62305-2) sau care poate cauza mediu de contaminare (hf = 50 conform EN 62305-2), valorile razei de protecție ar trebui să fie reduse cu 40%. Garantie 10 ani.  Testat la un curent de 200kA (10 / 350μs).",
+                    dataTehniceBotom: "∆T - valoarea timpului de avans (determinată pe baza eficienței paratrăsnetului teste efectuate într-un laborator de înaltă tensiune) H - elevația (catragul) paratrăsnetului peste elementele protejate (necesar H ≥2m) R - raza zonei protejate",
+                    titleDateTehnice: [
+                        {desk1: "H(m)",
+                         desk2: "Nivel 1(D=20) Eficienta 98%",
+                         desk3: "Nivel 2(D=30) Eficienta 95%",
+                         desk4: "Nivel 1(D=45) Eficienta 90%",
+                         desk5: "Nivel 4(D=60) Eficienta 80%"
+                      },
+  
+                      {
+                          desk1: 2,
+                          desk2: 20,
+                          desk3: 23,
+                          desk4: 26,
+                          desk5: 30,
+                      },
+                      {
+                          desk1: 3,
+                          desk2: 30,
+                          desk3: 34,
+                          desk4: 40,
+                          desk5: 44,
+                      },
+                       {
+                          desk1: 4,
+                          desk2: 40,
+                          desk3: 46,
+                          desk4: 53,
+                          desk5: 59,
+                      },
+  
+                      {
+                          desk1: 5,
+                          desk2: 50,
+                          desk3: 57,
+                          desk4: 66,
+                          desk5: 74,
+                      },
+                      {
+                          desk1: 6,
+                          desk2: 50,
+                          desk3: 57,
+                          desk4: 66,
+                          desk5: 74,
+                      },
+                       {
+                          desk1: 10,
+                          desk2: 51,
+                          desk3: 59,
+                          desk4: 69,
+                          desk5: 77,
+                      },
+                      {
+                          desk1: 15,
+                          desk2: 52,
+                          desk3: 60,
+                          desk4: 71,
+                          desk5: 80,
+                      },
+                       {
+                          desk1: 20,
+                          desk2: 52,
+                          desk3: 61,
+                          desk4: 73,
+                          desk5: 83,
+                      },
+  
+                      {
+                          desk1: 20,
+                          desk2: 52,
+                          desk3: 61,
+                          desk4: 73,
+                          desk5: 83,
+                      },
+                      ,
+  
+                      {
+                          desk1: 30,
+                          desk2: "",
+                          desk3: 62,
+                          desk4: 76,
+                          desk5: 87,
+                      },
+                      
+
+                      {
+                          desk1: 45,
+                          desk2: "",
+                          desk3: "",
+                          desk4: 77,
+                          desk5: 91,
+                      },
+
+                      {
+                          desk1: 60,
+                          desk2: "",
+                          desk3: "",
+                          desk4: "",
+                          desk5: 92,
+                      },
+                     
+  
+  
+  
+                    ]
+                }
             },
 
             {
-                id: "SLC_04",
-                title: "Contor de lovituri mecanic SCHWÆRTZ SLC 01",
+                id: "Paratrasnet_PDA_SENSOR_S1_ΔT=22_µs_raza_Rp_40-62m",
+                title: "Paratrasnet PDA SENSOR S1 ΔT=22 µs raza Rp 40-62m",
                 counter: 1,
-                img: product1,
+                img: product22,
                 price: 892,
-                description: "Paratrasnet PDA Schwaertz Compact S ΔT=25 µs raza Rp 42-65m",
-                filter: "pda",
+                description: "Paratrasnetul Aubach este un paratrasnet extrem de eficient din gama premium. Testat la un curent de 200 kA la 10/350 us, construit cu doua circuite de amorsare dintre care unul redutant. Prezinta o efcienta a descarcarii de 100%. Testat la institutul ITE, acreditat ENAC, factor de protectie triplu.",
+                filter: "Paratrasnet PDA SENSOR",
                 curentPrice: 892,
-                link: "products1"
+
+                dateTehnice:{
+                    dateTehniceDesc: "Paratrasnetul Aubach S1 ΔT=22 µs raza Rp 40-62m  este un paratrasnet PDA cu o stabilitate peste medie, dispozitiv de protectie dublu. Garantie 10 ani, poate lucra in  conditii dificile, atmosfera sulfuroasa sau in conditii de salinitate. Compatibil cu toata gama de accesorii pentru paratrasnete PDA  Sensor Aubach",
+                    dataTehniceBotom: "∆T - valoarea timpului de avans (determinată pe baza eficienței paratrăsnetului teste efectuate într-un laborator de înaltă tensiune) H - elevația (catragul) paratrăsnetului peste elementele protejate (necesar H ≥2m) R - raza zonei protejate",
+                    titleDateTehnice: [
+                        {desk1: "H(m)",
+                         desk2: "Nivel 1(D=20) Eficienta 98%",
+                         desk3: "Nivel 2(D=30) Eficienta 95%",
+                         desk4: "Nivel 1(D=45) Eficienta 90%",
+                         desk5: "Nivel 4(D=60) Eficienta 80%"
+                      },
+  
+                      {
+                          desk1: 2,
+                          desk2: 16,
+                          desk3: 18,
+                          desk4: 22,
+                          desk5: 24,
+                      },
+                      {
+                          desk1: 3,
+                          desk2: 23,
+                          desk3: 28,
+                          desk4: 32,
+                          desk5: 37,
+                      },
+                       {
+                          desk1: 4,
+                          desk2: 31,
+                          desk3: 37,
+                          desk4: 43,
+                          desk5: 49,
+                      },
+  
+                      {
+                          desk1: 5,
+                          desk2: 39,
+                          desk3: 46,
+                          desk4: 54,
+                          desk5: 61,
+                      },
+                      {
+                          desk1: 6,
+                          desk2: 40,
+                          desk3: 46,
+                          desk4: 54,
+                          desk5: 62,
+                      },
+                       {
+                          desk1: 10,
+                          desk2: 41,
+                          desk3: 48,
+                          desk4: 57,
+                          desk5: 65,
+                      },
+                      {
+                          desk1: 15,
+                          desk2: 42,
+                          desk3: 50,
+                          desk4: 60,
+                          desk5: 69,
+                      },
+                       {
+                          desk1: 20,
+                          desk2: 42,
+                          desk3: 51,
+                          desk4: 62,
+                          desk5: 72,
+                      },
+  
+                      {
+                          desk1: 30,
+                          desk2: "",
+                          desk3: 52,
+                          desk4: 65,
+                          desk5: 76,
+                      },
+                      ,
+  
+                      {
+                          desk1: 45,
+                          desk2: "",
+                          desk3: "",
+                          desk4: 67,
+                          desk5: 81,
+                      },
+                      
+
+                      {
+                          desk1: 60,
+                          desk2: "",
+                          desk3: "",
+                          desk4: "",
+                          desk5: 82,
+                      },
+
+                     
+                     
+  
+  
+  
+                    ]
+                }
             },
 
-            {
-                id: "SLC_05",
-                title: "Contor de lovituri mecanic SCHWÆRTZ SLC 01",
-                counter: 1,
-                img: product1, 
-                price: 892, 
-                description: "Paratrasnet PDA Schwaertz Compact S ΔT=25 µs raza Rp 42-65m", 
-                filter: "pda",
-                curentPrice: 892,
-                link: "products1"
-            },
+
+
+
+
+
         ],
 
 
