@@ -109,8 +109,12 @@ class Products extends Component {
 
                                            </div>
                                            <p className='paragraph'>{el}</p>
+                                     
                                        </li>
                                    ))}
+
+
+                                   
                                    
                                     
 
@@ -123,7 +127,7 @@ class Products extends Component {
 
 
                             </div>
-                            <h3>IMPAMANTARE OTEL CUPRAT</h3>
+                            
                         </div>
                         
                     </div>

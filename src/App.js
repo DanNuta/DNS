@@ -1433,6 +1433,55 @@ class App extends Component {
   
                     ]
                 }
+            },
+
+
+            {
+                id: "Tarusi_otel_cuprat_15-25_microni__nefiletati",
+                title: "Tarusi otel cuprat 15-25 microni ED filetati",
+                counter: 1,
+                img: product18,
+                price: 892,
+                description: "Tarusi de impamantare de cost redus, În comparație cu cuprul pur, conductivitatea acestor electrozi bimetalici este mai mică. Pentru a spori capacitatea curentă de transport a cuprului, diametrul și grosimea stratului de cuprului sunt crescute. Strat de cupru 15-25 microni.",
+                filter: "Tarusi Otel Cuprat 25 microni",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "Tarusii de împământare trebuie separati între ei și de orice cabluri adiacente la o distanță nu mai mică decât lungimea lor. Tijele de împământare suplimentare trebuie conectate folosind bandă de cupru sau cablu de cupru. Electrozii adiționali trebuie așezați astfel încât să mentina o separare fata de sistemele de impamntare LV și HV.",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Referinta",
+                         desk2: "Dimensiune nominala", 
+                         desk3: "Diametru real", 
+                         desk4: "Greutate Kg"
+                         
+                         },
+  
+                      {
+                        desk1: "ED1014RR",
+                        desk2: "1000 X 5/8 inch", 
+                        desk3: "5/8 inch", 
+                        desk4: "1,6"
+                          
+                      },
+                      {
+                        desk1: "ED1514RR	",
+                        desk2: "1500 X 5/8 inch	", 
+                        desk3: "5/8 inch", 
+                        desk4: "1,75"
+                      }
+                      ,
+                      {
+                        desk1: "ED2014RR",
+                        desk2: "2000 X 5/8 inch", 
+                        desk3: "5/8 inch", 
+                        desk4: "2.45"
+                      }
+                     
+
+  
+                    ]
+                }
             }
 
 
