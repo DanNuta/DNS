@@ -122,7 +122,7 @@ class NavBar extends Component {
                             <ul className="nav_bar_links">
                                 <li><NavLink activeClassName="active" className="links-a" to="/">Despre</NavLink></li>
                                 <li><NavLink activeClassName="active" className="links-a" to="/products">Produse</NavLink></li>
-                                <li><NavLink activeClassName="active" className="links-a" to="/">Servicii</NavLink></li>
+                                <li> <a className="links-a" href="/#ce_oferim">Servicii</a></li>
                                 <li><NavLink activeClassName="active" className="links-a" to="/contact">Contacte</NavLink></li>
                             </ul>
 

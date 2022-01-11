@@ -8,6 +8,8 @@ import email_img from "../../src/images/footer_icon/email.svg";
 import logo from "../../src/images/Logo/logo.svg";
 import facebook from "../../src/Components/Pages/icon/header_icon/facebook.svg";
 import youtube from "../../src/Components/Pages/icon/header_icon/youtube.svg";
+import HashLink from "react-router-hash-link";
+import {Link , animation as scroll} from "react-scroll";
 
 
 
@@ -48,9 +50,10 @@ class Footer extends Component {
                             <ul className="links_active">
                                 <li><NavLink activeClassName="links_click" className="links" to="/">Despre</NavLink></li>
                                 <li><NavLink activeClassName="links_click" className="links" to="/products">Produse</NavLink></li>
-                                <li><NavLink activeClassName="links_click" className="links" to="/">Servicii</NavLink></li>
+                                <li> <a className="links" href="#ce_oferim">Servicii</a></li>
                                 <li><NavLink activeClassName="links_click" className="links" to="/contact">Contacte</NavLink></li>
                             </ul>
+                           
 
 
                             <ul className="links_icon">
@@ -61,7 +64,7 @@ class Footer extends Component {
 
 
                         <div className="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d21755.119895422107!2d28.783206899999996!3d47.032577749999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sro!2s!4v1639481897609!5m2!1sro!2s" ></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d21755.119895422107!2d28.783206899999996!3d47.032577749999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sro!2s!4v1639481897609!5m2!1sro!2s" ></iframe>
                         </div>
 
 

@@ -32,6 +32,7 @@ import stangaArrowHover from "../../Pages/icon/header_arrow/left_arrow_hover.svg
 import product1 from "../../Pages/produse/img1.png";
 import product2 from "../../Pages/produse/img2.png";
 import product3 from "../../Pages/produse/img3.png";
+import {HashLink, HashLink as Link} from "react-router-hash-link";
 
 
 
@@ -226,6 +227,9 @@ class Home extends Component {
                 />
 
 
+                
+
+
 
 
                 <section  className=" section-center1 ">
@@ -287,8 +291,8 @@ class Home extends Component {
 
 
 
-
-                <section className="ce_oferim center">
+     
+                <section className="ce_oferim center" id="ce_oferim">
                     <h1 className='h1'>CE OFERIM</h1>
 
                     <div className="propectie_supratensiuni">
@@ -482,6 +486,8 @@ class Home extends Component {
 
 
                 </section>
+
+                
 
 
 
