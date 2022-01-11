@@ -367,6 +367,10 @@ text-align: left;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
+                    img{
+                        width: 100%;
+                    }
                 }
                 .description_i{
                     font-size: 18px;

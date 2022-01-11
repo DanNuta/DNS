@@ -6,9 +6,33 @@ import Home from './Components/Pages/Home/home';
 import Footer from './Components/Footer';
 import coockie from "../src/Components/Pages/icon/cookies.svg";
 import Products from './Components/Pages/Products/Products';
+
 import product1 from "../src/Components/Pages/produse/img1.png";
 import product2 from "../src/Components/Pages/produse/img2.png";
 import product3 from "../src/Components/Pages/produse/img3.png";
+import product4 from "../src/Components/Pages/produse/img4.png";
+import product5 from "../src/Components/Pages/produse/img5.png";
+import product6 from "../src/Components/Pages/produse/img6.png";
+import product7 from "../src/Components/Pages/produse/img7.png";
+import product8 from "../src/Components/Pages/produse/img8.png";
+import product9 from "../src/Components/Pages/produse/img9.png";
+import product10 from "../src/Components/Pages/produse/img10.png";
+import product11 from "../src/Components/Pages/produse/img11.jpg";
+import product12 from "../src/Components/Pages/produse/img12.jpg";
+import product13 from "../src/Components/Pages/produse/img13.png";
+import product14 from "../src/Components/Pages/produse/img14.jpg";
+import product15 from "../src/Components/Pages/produse/img15.jpg";
+import product16 from "../src/Components/Pages/produse/img16.jpg";
+import product17 from "../src/Components/Pages/produse/img17.jpg";
+import product18 from "../src/Components/Pages/produse/img18.jpg";
+import product19 from "../src/Components/Pages/produse/img19.jpg";
+import product20 from "../src/Components/Pages/produse/img20.jpg";
+import product21 from "../src/Components/Pages/produse/img21.jpg";
+import product22 from "../src/Components/Pages/produse/img22.png";
+import product23 from "../src/Components/Pages/produse/img23.jpg";
+
+
+
 import Shop from './Components/Pages/Shop/Shop';
 import Contacte from './Components/Pages/Home/Contacte';
 import NewProducts from './NewProducts';
@@ -29,123 +53,65 @@ class App extends Component {
 
         produse: [
             { 
-              id: "SLC_01",
-              title: "Contor de lovituri mecanic SCHWÆRTZ SLC 01",
+              id: "Tester_paratrasnet_PDA",
+              title: "Tester paratrasnet PDA",
               counter: 1,
-              img: product1,
+              img: product23,
               price: 892,
-              description: "Paratrasnet PDA Schwaertz Compact S ΔT=25 µs raza Rp 42-65m",
-              filter: "pda_sensor",
+              description: "Tester paratrasnet PDA cu microprocesor pentru testarea paratrasnetelor PDA Schwaertz",
+              filter: "Tester paratrasnet PDA",
               curentPrice: 892,
-              link: "products1",
 
               dateTehnice:{
-                  dateTehniceDesc: "Paratrasnetul cu amorsare de tip PDA  Schwærtz Core poate proteja constuctii mari, dispune de un timp de amorsare ΔT=45 µs si o raza de protectie de la 63 la 89 metri. Poate fi testat cu Testerul dedicat",
-                  dataTehniceBotom: "Paratrasnetul Aubach S1 ΔT=22 µs raza Rp 40-62m  este un paratrasnet PDA cu o stabilitate peste medie, dispozitiv de protectie dublu. Garantie 10 ani, poate lucra in  conditii dificile, atmosfera sulfuroasa sau in conditii de salinitate. Compatibil cu toata gama de accesorii pentru paratrasnete PDA  Sensor Aubach",
+                  dateTehniceDesc: "Tester paratrasnet PDA cu microprocesor",
+                  dataTehniceBotom: "Tester paratrasnet PDA cu microprocesor pentru testarea paratrasnetelor PDA Schwaertz",
                   titleDateTehnice: [
-                      {desk1: "H(m)",
-                       desk2: "Nivel 1(D=20) Eficienta 98%",
-                       desk3: "Nivel 2(D=30) Eficienta 95%",
-                       desk4: "Nivel 1(D=45) Eficienta 90%",
-                       desk5: "Nivel 4(D=60) Eficienta 80%"
+                      {desk1: "Afisaj",
+                       desk2: "Afisaj  cu display digital",
+                       
                     },
 
                     {
-                        desk1: 1,
-                        desk2: 1,
-                        desk3: 1,
-                        desk4: 1,
-                        desk5: 1,
+                        desk1: "Tensiune",
+                        desk2: "5000 Volti",
+                        
                     },
                     {
-                        desk1: 2,
-                        desk2: 2,
-                        desk3: 2,
-                        desk4: 2,
-                        desk5: 2,
+                        desk1: "Test 1",
+                        desk2: "Test de continuitate circuit transformator",
+                        
                     },
                      {
-                        desk1: 3,
-                        desk2: 3,
-                        desk3: 3,
-                        desk4: 3,
-                        desk5: 3,
+                        desk1: "Test 2",
+                        desk2: "Test functionarea incarcare si descarcare paratrasnet PDA",
+                        
                     },
 
                     {
-                        desk1: 1,
-                        desk2: 1,
-                        desk3: 1,
-                        desk4: 1,
-                        desk5: 1,
+                        desk1: "Indice de protectie carcasa",
+                        desk2: "IP40",
+                        
                     },
                     {
-                        desk1: 2,
-                        desk2: 2,
-                        desk3: 2,
-                        desk4: 2,
-                        desk5: 2,
-                    },
-                     {
-                        desk1: 3,
-                        desk2: 3,
-                        desk3: 3,
-                        desk4: 3,
-                        desk5: 3,
-                    },
-                    {
-                        desk1: 2,
-                        desk2: 2,
-                        desk3: 2,
-                        desk4: 2,
-                        desk5: 2,
-                    },
-                     {
-                        desk1: 3,
-                        desk2: 3,
-                        desk3: 3,
-                        desk4: 3,
-                        desk5: 3,
-                    },
-
-                    {
-                        desk1: 1,
-                        desk2: 1,
-                        desk3: 1,
-                        desk4: 1,
-                        desk5: 1,
-                    },
-                    {
-                        desk1: 2,
-                        desk2: 2,
-                        desk3: 2,
-                        desk4: 2,
-                        desk5: 2,
-                    },
-                     {
-                        desk1: 3,
-                        desk2: 3,
-                        desk3: 3,
-                        desk4: 3,
-                        desk5: 3,
+                        desk1: "Greutate",
+                        desk2: "400 g",
+                        
                     }
-
-
-
+                     
                   ]
               }
             },
 
+
             {
-                id: "SLC_02",
-                title: "Contor de lovituri mecanic SCHWÆRTZ SLC 02",
+                id: "Paratrasnet_PDA_SENSOR_S4_ΔT=60_µs_raza_Rp_79-107m",
+                title: "Paratrasnet PDA SENSOR S4 ΔT=60 µs raza Rp 79-107m",
                 counter: 1,
-                img: product2,
-                price: 1000,
-                description: "Paratrasnet PDA Schwaertz Compact S ΔT=25 µs raza Rp 42-65m",
-                filter: "pda",
+                img: product22,
+                price: 892,
+                description: "Paratrasnet PDA activ ΔT=60 µs. Construit din otel inox AISI 316, rezistent la medii acide corozive. Transformator intern de inalta tensiune stabilizat prin doua sisteme spark gap. Fara transformator intern sau sursa de alimentare. Dublu dispozitiv de amorsare. Eficienta descarcarii 100%",
+                filter: "Paratrasnet PDA SENSOR",
                 curentPrice: 1000,
-                link: "products1",
 
                 dateTehnice:{
                     dateTehniceDesc: "Paratrasnetul cu amorsare de tip PDA  Schwærtz Core poate proteja constuctii mari, dispune de un timp de amorsare ΔT=45 µs si o raza de protectie de la 63 la 89 metri. Poate fi testat cu Testerul dedicat",
