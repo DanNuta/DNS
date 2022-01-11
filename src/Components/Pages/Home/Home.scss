@@ -752,14 +752,62 @@ section{
 
 
     .indicator{
+        position: relative;
         grid-column: 12/13;
         margin-top: 115px;
         margin-bottom: 55px;
         display: flex;
+        align-items: center;
+        z-index: 10;
 
         button{
+            display: flex;
+            align-items: center;
+            width: 3rem;
+            cursor: pointer;
+            overflow: hidden;
+            transition: 0.2s linear;
             @include btn;
+            margin-right: 5px;
+
+            &:first-of-type {
+                justify-content: flex-start;
+            }
+            
+            &:last-of-type {
+                justify-content: flex-end;
+            }
+
+        
+
+
+            &:hover{
+                width: 4.3rem;
+            }
+
+
+            .slider__button-inner{
+                
+
+                svg{
+                    path{
+                        transition: .2s linear;
+                    }
+                }
+
+                &:hover{
+                    svg{
+                        path{
+                            fill-opacity: 1;
+                        }
+                    }
+                }
+            }
+         
+
         }
+
+        
     }
 
 

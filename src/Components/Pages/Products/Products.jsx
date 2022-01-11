@@ -148,23 +148,7 @@ class Products extends Component {
 
 
 
-                    <div className="description centru">
-                        <h1>DESCRIERE</h1>
-
-                        <div className="img_text">
-                            <div className="img">
-                                <img src={descriereProdus} alt="" />
-                            </div>
-
-                            <div className="text">
-
-                                
-                            </div>
-                        </div>
-
-
-
-                    </div>
+                    
 
 
 

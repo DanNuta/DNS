@@ -33,6 +33,7 @@ import product1 from "../../Pages/produse/img1.png";
 import product2 from "../../Pages/produse/img2.png";
 import product3 from "../../Pages/produse/img3.png";
 import {HashLink, HashLink as Link} from "react-router-hash-link";
+import {ImagesArrowSvg, ImagesArrowSvg2} from "./ArrowSvg";
 
 
 
@@ -590,8 +591,8 @@ class Home extends Component {
 
 
                     <div className="indicator">
-                            <button onClick={this.leftArrow}><img src={this.state.leftArrow.img}  /></button>
-                            <button onClick={this.rightArrow}><img src={this.state.rightArrow.img} /></button>
+                            <button className='slider_btn_prev' onClick={this.leftArrow}><span className='slider__button-inner'><ImagesArrowSvg/></span></button>
+                            <button className='slider_btn_next' onClick={this.rightArrow}><span className='slider__button-inner'><ImagesArrowSvg2/></span></button>
                     </div>
 
 
