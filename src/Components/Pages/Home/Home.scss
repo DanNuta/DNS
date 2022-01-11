@@ -506,20 +506,24 @@ section{
         }
 
         .protectie_hover{
-            position: absolute;
-            
+            background-color: rgb(39, 39, 39, .64);
+            backdrop-filter: blur(27px);
             display: flex;
-            right: 50%;
-            transform: translateX(50%);
             justify-content: center;
-            background-color: $color-seconds;
+            align-items: center;
             z-index: 999;
-            width: 60%;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            max-width: 100%;
+            position: fixed;
 
             .protectie_inside{
                 padding: 71px 59px;
                 text-align: center;
-                color: white;
+                width: 50%;
+                background-color: $color-seconds;
 
                  h1{
                      color: white;
