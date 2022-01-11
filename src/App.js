@@ -14,6 +14,7 @@ import Contacte from './Components/Pages/Home/Contacte';
 import NewProducts from './NewProducts';
 import ProductsItem from './Components/Pages/Products/ProdusctItem';
 import Pages from './Pages';
+import Politica from './PoliticaDeConfidentialitate';
 
 
 
@@ -106,6 +107,12 @@ class App extends Component {
         firstPages: [],
         localStorageElement: []
 
+    }
+
+    componentDidMount(){
+        setTimeout(() => {
+            this.setState({coockie: true})
+        }, 2000);
     }
 
 
@@ -210,6 +217,11 @@ class App extends Component {
     }
 
 
+    desactiveCoockie = () =>{
+        this.setState({coockie: false})
+    }
+
+
     
 
 
@@ -296,11 +308,13 @@ class App extends Component {
 
 
                             
-                            <Route  path="/produse/:slug" element={<Pages element={this.props.produse}
+                            <Route   path="/produse/:slug" element={<Pages element={this.props.produse}
                                                                           onCos={this.cos}
                                                                           onShop={this.shop}/>}>
 
                             </Route>
+
+                            <Route path="Privacy" element={<Politica/>}></Route>
                         
 
 
@@ -323,7 +337,7 @@ class App extends Component {
                             <div className="inside">
                                 <img src={coockie}></img>
                                 <h1>Noi utilizam cookies</h1>
-                                <p>Utilizand acest site sunteti de acord cu folosirea cookie-urilor. <span><NavLink className="confidentialitate" to="/confidentialitate"> Conusltati politica noastra privind modulele cookie si privacy policy.</NavLink></span></p>
+                                <p>Utilizand acest site sunteti de acord cu folosirea cookie-urilor. <span onClick={this.desactiveCoockie}><NavLink className="confidentialitate" to="/Privacy"> Conusltati politica noastra privind modulele cookie si privacy policy.</NavLink></span></p>
                                 <button onClick={this.coockies}>Accepta</button>
                             </div>
                         </div>

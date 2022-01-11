@@ -39,30 +39,31 @@ p{
 
 
 
-.react_project{
-    background: rgba(39, 39, 39, 0.64);
-    
-
 
      
      
 
     .cookie{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 700px;
-        height: 500px;
-        background-color: $color-seconds;
-        z-index: 9990;
+        background-color: rgb(39, 39, 39, .64);
+        backdrop-filter: blur(27px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        max-width: 100%;
+        position: fixed;
     
     .inside{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        background-color: #272727;
         padding: 40px 100px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 32%;
     
         h1{
             font-family: Montserrat;
@@ -73,6 +74,7 @@ p{
             letter-spacing: 0em;
             text-align: center;
             color: white;
+            margin: 0;
         }
     
         p{
@@ -103,7 +105,7 @@ p{
 
 }
 
-}
+
 
 
 
