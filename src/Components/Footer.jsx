@@ -10,7 +10,20 @@ import facebook from "../../src/Components/Pages/icon/header_icon/facebook.svg";
 import youtube from "../../src/Components/Pages/icon/header_icon/youtube.svg";
 
 
-class Footer extends Component {
+
+
+class Footer extends Component { 
+
+
+    scrollToTop = () =>{
+        console.log("HELLO")
+
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
+    }
      
 
     render() { 
@@ -58,7 +71,7 @@ class Footer extends Component {
 
 
                     <div className="arrow_right">
-                            <img src={arrow_img} alt="" />
+                            <img onClick={this.scrollToTop} src={arrow_img} alt="" />
                     </div>
 
 
