@@ -78,7 +78,7 @@ class Footer extends Component {
 
                         <div className="footer_text">
                             <p>© DNA Electric 2021. All rights reserved</p>
-                            <p className="created">Created by <span>WebMetics</span></p>
+                            <p className="created">Created by <span><a href="https://web.metics.md/" target="_blank">WebMetics</a></span></p>
                         </div>
 
                 </div>

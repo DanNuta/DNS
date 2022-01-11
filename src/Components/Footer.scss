@@ -134,7 +134,9 @@ footer{
 
                 
                 span{
-                    color: $btn-color;
+                    a{
+                        color: $btn-color;
+                    }
                     
                 }
             }
