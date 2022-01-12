@@ -3,11 +3,16 @@ $color_seconds: #FFD600;
 
 
 
+
 $desktopExtraLarge: 1200px;
 
 @mixin desktopExtraLarge{
-    @media (min-wi)
+    @media (min-width: #{desktopExtraLarge}){
+        @content;
+    }
 }
+
+
 
 @mixin btn($bg, $text_color){
     background-color: $bg;
