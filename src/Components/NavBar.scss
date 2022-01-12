@@ -1,17 +1,7 @@
 $background_color_nav: #272727;
 $color_seconds: #FFD600;
 
-
-
-
-$desktopExtraLarge: 1200px;
-
-@mixin desktopExtraLarge{
-    @media (min-width: #{desktopExtraLarge}){
-        @content;
-    }
-}
-
+@import "../responsive";
 
 
 @mixin btn($bg, $text_color){
@@ -32,10 +22,9 @@ $desktopExtraLarge: 1200px;
     background-color: $background_color_nav;
     color: white;
     position: relative;
-    
 
+   
     
-     
     nav{
         display: flex;
         justify-content: space-between;
@@ -44,6 +33,12 @@ $desktopExtraLarge: 1200px;
         width: 100%;
         height: 110px;
         margin: 0 auto;
+
+        @include desktopExtraExtraLarge{
+            max-width: 90%;
+
+           
+        }
 
         ul{
             display: flex;
@@ -59,6 +54,17 @@ $desktopExtraLarge: 1200px;
         .nav_bar_links{
             display: flex;
             gap: 3rem;
+
+            
+            @include desktopExtraExtraLarge{
+                gap: 1.5rem;
+                
+                @include large{
+                    gap: 1rem;
+                }
+            }
+
+            
 
             li{
                 
@@ -81,6 +87,14 @@ $desktopExtraLarge: 1200px;
         .nav_bar_icons{
             display: flex;
             gap: 3rem;
+
+            @include desktopExtraExtraLarge{
+                gap: 1.5rem;
+
+                @include large{
+                    gap: 1rem;
+                }
+            }
            
 
             li{

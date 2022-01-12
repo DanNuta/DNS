@@ -2,6 +2,8 @@
  $color-seconds: #272727;
  $width: 1420px;
 
+ @import "../../../responsive";
+
  @mixin btn{
      border: 0;
      background-color: transparent;
@@ -26,6 +28,8 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+
+   
 }
 
 
@@ -39,6 +43,11 @@
 .section_slider{
     position: relative;
     margin-top: 87px;
+
+    @include desktopExtraExtraLarge{
+        max-width: 90%;
+        margin: 115px auto 0 auto;
+    }
     
 
     .center_slider{
@@ -46,6 +55,10 @@
         padding-top: 70px;
         .right{
             grid-column: 1/6;
+
+            @include desktopExtraExtraLarge{
+                grid-column: 1/7;
+            }
 
             h1{
                 margin-bottom: 36px
@@ -59,8 +72,12 @@
                 line-height: 38px;
                 letter-spacing: 0em;
                 text-align: left;
+                margin-bottom: 36px;
 
-                margin-bottom: 36px
+                @include desktopExtraExtraLarge{
+                   font-size: 25px;
+                   width: 450px;
+                }
             }
 
             .btn{
@@ -147,8 +164,19 @@
         height: 646px;
         z-index: -1;
 
+
+        @include desktopExtraExtraLarge{
+            right: -10%;
+        }
+
+
         .photo, .animated{
             position: relative;
+            height: 100%;
+
+            @include desktopExtraExtraLarge{
+                height: 100%;
+            }
            
             img{
                 width: 100%;
@@ -174,6 +202,11 @@
                     animation-name: page_animation;
                     animation-fill-mode: forwards;
                     animation-duration: 1s;
+
+                    @include desktopExtraExtraLarge{
+                        top: 10vw;
+                       left: 15vw;
+                    }
     
 
                     .circle_animation{
@@ -241,6 +274,11 @@
                     z-index: 20;
                     top: 22vw;
                     left: 19vw;
+
+                    @include desktopExtraExtraLarge{
+                        top: 30vw;
+                        left: 15vw;
+                    }
                     
                     
                     

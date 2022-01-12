@@ -134,6 +134,13 @@ class NavBar extends Component {
                                 <li><a href="https://www.youtube.com/" target="_blank" ><img src={youtube} alt="facebook"/></a></li>
                                 
                             </ul>
+
+
+                            <div className="mobile_elements">
+                               <li><NavLink to="/shop"><img src={shop} alt="shop" /></NavLink></li>
+                               <li></li>
+
+                            </div>
                         </nav>
 
 
