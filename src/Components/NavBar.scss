@@ -23,9 +23,42 @@ $color_seconds: #FFD600;
     color: white;
     position: relative;
 
+
+   .mobile_elements{
+       display: none;
+       @include large{
+          display: block;
+          width: 90%;
+          margin: auto;
+
+           .mobile_logo{
+               padding-top: 15px;
+               text-align: center;
+                 li{
+                     &:first-of-type{
+                         
+                     }
+                 }
+           }
+           .bars_shop{
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               height: 100%;
+               padding: 10px 0;
+
+               li{
+                   &:first-of-type{
+                       cursor: pointer;
+                   }
+               }
+           }
+       }
+   }
+
    
     
-    nav{
+    .nav_bar{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -34,10 +67,108 @@ $color_seconds: #FFD600;
         height: 110px;
         margin: 0 auto;
 
+
+        .cancel{
+            display: none;
+        }
+
+        .program{
+            display: none;
+        }
+        
+
+
+        @include large{
+            display: none;
+
+            &.active_mobile{
+                display: block;
+                position: fixed;
+                background-color: rgba(39, 39, 39, 0.64);
+                backdrop-filter: blur(27px);
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                max-width: 100%;
+                right: 0;
+                height: 100vh;
+                z-index: 10;
+
+
+                .cancel{
+                    display: block;
+                    position: absolute;
+                    right: 27px;
+                    top: 47px;
+                    cursor: pointer;
+                }
+
+
+                .nav_bar_links{
+                    display: block;
+                    position: absolute;
+                    left: 20px;
+                    top: 105px;
+
+                    li{
+                        margin-bottom: 25px;
+
+                        .links-a{
+                            font-size: 20px;
+
+                        }
+                    }
+                }
+
+
+                .nav_bar_icons{
+
+                    position: absolute;
+                    top: 452px;
+                    left: 20px;
+                     
+                    li{
+                        &:first-of-type{
+                            display: none;
+                        }
+                    }
+                }
+
+
+                .program{
+                    display: block;
+                    position: absolute;
+                    left: 20px;
+                    top: 536px;
+
+                    li{
+                        &:first-of-type{
+                            margin-bottom: 25px;
+                            font-size: 18px;
+                            font-family: sans-serif;
+                            font-weight: 200;
+                        }
+                        &:last-of-type{
+                            color: #FFD600;
+                            font-size: 18px;
+                            font-family: sans-serif;
+                            font-weight: 700;
+                        }
+                    }
+                }
+           }
+
+            
+         }
+
+        
+
+        
+
         @include desktopExtraExtraLarge{
             max-width: 90%;
 
-           
         }
 
         ul{
@@ -48,6 +179,12 @@ $color_seconds: #FFD600;
         .logo{
             display: flex;
             gap: 1rem;
+
+            @include large{
+                display: none;
+            }
+
+            
  
         }
 
@@ -59,9 +196,7 @@ $color_seconds: #FFD600;
             @include desktopExtraExtraLarge{
                 gap: 1.5rem;
                 
-                @include large{
-                    gap: 1rem;
-                }
+               
             }
 
             
@@ -89,11 +224,8 @@ $color_seconds: #FFD600;
             gap: 3rem;
 
             @include desktopExtraExtraLarge{
-                gap: 1.5rem;
+                gap: 1rem;
 
-                @include large{
-                    gap: 1rem;
-                }
             }
            
 
@@ -189,5 +321,25 @@ $color_seconds: #FFD600;
     display: none;
     margin: 0;
 }
+
+
+
+
+
+.burger_menu{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
 
 
