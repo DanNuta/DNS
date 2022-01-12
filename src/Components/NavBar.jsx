@@ -130,10 +130,6 @@ class NavBar extends Component {
                                 <li>0767216161</li>
                                 <li><NavLink to="/shop"><img src={shop} alt="shop" /></NavLink></li>
                                 <li className="wishList" onClick={this.wishList}><img src={heart} alt="wishList" /></li>
-
-
-
-
                                 <li><a href="https://www.facebook.com/" target="_blank" ><img src={facebook}  alt="facebook" /></a></li>
                                 <li><a href="https://www.youtube.com/" target="_blank" ><img src={youtube} alt="facebook"/></a></li>
                                 
