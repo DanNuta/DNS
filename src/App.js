@@ -2129,7 +2129,585 @@ class App extends Component {
   
                     ]
                 }
-            }
+            },
+
+
+
+            {
+                id: "Clema_alama_cu_surub_U_bolt",
+                title: "Clema alama cu surub U bolt pentru fixarea condutoarelor GDO​",
+                counter: 1,
+                img: product12,
+                price: 892,
+                description: "Clema din alama pentru condutoare din cupru masive sau tip conductor/funie pentru impamantare. Se foloseste pentru instalatiile de impamantare la legaturile dintre electrodul de impamantare din otel cuprat si conductor. Este compatibila cu tarusi/electrozi de impamantare cu diametrul de 18.3-20.3mm si cabluri cu sectiunea de 35-185mmp",
+                filter: "Accesorii pentru tarusi impamantare",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Cod produs	",
+                         desk2: "Material", 
+                         desk3: "Surub",
+                         desk4: "Diametru electrod	",
+                         desk5: "Conductoare",
+                         desk6: "Greutate kg "
+                         
+                         },
+  
+  
+                         {desk1: "GB15H",
+                         desk2: "Alama", 
+                         desk3: "otel zincat	",
+                         desk4: "14.6",
+                         desk5: "25-50 mmp	",
+                         desk6: "0.10"
+                         
+                         },
+
+                         {desk1: "GDO18	",
+                         desk2: "Alama", 
+                         desk3: "otel zincat",
+                         desk4: "18.3",
+                         desk5: "35-95 mmp",
+                         desk6: "0.203"
+                         
+                         },
+
+                         {desk1: "GDO18I",
+                         desk2: "Alama", 
+                         desk3: "otel inoxidabil",
+                         desk4: "18.3",
+                         desk5: "35-95 mmp	",
+                         desk6: "0.240"
+                         
+                         },
+
+
+                         {desk1: "GDO21	",
+                         desk2: "Alama", 
+                         desk3: "otel zincat",
+                         desk4: "20.3",
+                         desk5: "70-185 mmp	",
+                         desk6: "0.384"
+                         
+                         },
+
+
+                      
+                         {desk1: "GDO21I",
+                         desk2: "Alama", 
+                         desk3: "otel inoxidabil",
+                         desk4: "20.3",
+                         desk5: "70-185 mmp		",
+                         desk6: "0.384"
+                         
+                         },
+
+                        
+                         
+
+                      
+                      
+                      
+  
+                    ]
+                }
+            },
+
+
+
+
+            {
+                id: "Clema_otel_cu_surub_U_bolt",
+                title: "Clema otel cuprat cu surub U bolt pentru fixarea condutoarelor GX​",
+                counter: 1,
+                img: product13,
+                price: 892,
+                description: "Clema din otel cuprat pentru condutoare din cupru masive sau tip conductor/funie pentru impamantare. Se foloseste pentru instalatiile de impamantare la legaturile dintre electrodul de impamantare din otel cuprat si conductor. Este compatibila cu tarusi/electrozi de impamantare cu diametrul de 14.2 mm si cabluri cu",
+                filter: "Accesorii pentru tarusi impamantare",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Cod produs	",
+                         desk2: "Material", 
+                         desk3: "Surub",
+                         desk4: "Diametru electrod	",
+                         desk5: "Conductoare",
+                         desk6: "Greutate kg "
+                         
+                         },
+  
+  
+                         {desk1: "GX15H",
+                         desk2: "Otel cuprat", 
+                         desk3: "otel zincat/cuprat	",
+                         desk4: "16",
+                         desk5: "150 mmp	",
+                         desk6: "0.128"
+                         
+                         },
+
+                         
+                        
+                         
+
+                      
+                      
+                      
+  
+                    ]
+                }
+            },
+
+
+
+            {
+                id: "Clema_alama_cu_surub_pentru_fixarea_condutoarelor_GES",
+                title: "Clema alama cu surub pentru fixarea condutoarelor GES",
+                counter: 1,
+                img: product14,
+                price: 892,
+                description: "Clema din alama pentru condutoare din cupru masive sau tip conductor/funie pentru impamantare. Se foloseste pentru instalatiile de impamantare la legaturile dintre electrodul de impamantare din otel cuprat si conductor. Este compatibila cu tarusi/electrozi de impamantare cu diametrul de 14.2 -20.3mm si cabluri cu sectiunea 70 si 95mmp",
+                filter: "Accesorii pentru tarusi impamantare",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Cod produs	",
+                         desk2: "Material", 
+                         desk3: "Surub",
+                         desk4: "Diametru electrod	",
+                         desk5: "Conductoare",
+                         desk6: "Greutate kg "
+                         
+                         },
+  
+  
+                         {desk1: "GES15H",
+                         desk2: "Alama", 
+                         desk3: "otel zincat	",
+                         desk4: "14.6",
+                         desk5: "70 mmp	",
+                         desk6: "0.040"
+                         
+                         },
+
+                         {desk1: "GES58H",
+                         desk2: "Alama", 
+                         desk3: "otel inoxidabil",
+                         desk4: "16",
+                         desk5: "70 mmp",
+                         desk6: "0.042"
+                         
+                         },
+
+                         {desk1: "GES58I",
+                         desk2: "Alama", 
+                         desk3: "otel inoxidabil",
+                         desk4: "16",
+                         desk5: "70 mmp	",
+                         desk6: "0.042"
+                         
+                         },
+
+
+                         {desk1: "GES18H",
+                         desk2: "Alama", 
+                         desk3: "otel zincat",
+                         desk4: "18.3",
+                         desk5: "70 mmp	",
+                         desk6: "0.085"
+                         
+                         },
+
+
+                      
+                         {desk1: "GDO21I",
+                         desk2: "Alama", 
+                         desk3: "otel inoxidabil",
+                         desk4: "18.3",
+                         desk5: "70 mmp		",
+                         desk6: "0.090"
+                         
+                         },
+
+                         {desk1: "GES21H",
+                         desk2: "Alama", 
+                         desk3: "otel zincat",
+                         desk4: "20.3",
+                         desk5: "95 mmp		",
+                         desk6: "0.08"
+                         
+                         },
+
+                         
+                         {desk1: "GES21I",
+                         desk2: "Alama", 
+                         desk3: "otel inoxidabil",
+                         desk4: "20.3",
+                         desk5: "95 mmp		",
+                         desk6: "0.09"
+                         
+                         },
+
+                         
+
+                        
+                         
+
+                      
+                    ]
+                }
+            },
+
+
+
+
+            {
+                id: "Clema_alama_cu_surub_pentru_fixarea_platbandei_GES",
+                title: "Clema alama cu surub pentru fixarea platbandei GES",
+                counter: 1,
+                img: product15,
+                price: 892,
+                description: "Clema din alama pentru platband cupru sau inox cu latimea de maxima 30mm. Se foloseste pentru instalatiile de impamantare la legaturile dintre electrodul de impamantare din otel cuprat si conductoare. Este compatibila cu tarusi/electrozi de impamantare cu diametrul de 14.2 -20mm",
+                filter: "Accesorii pentru tarusi impamantare",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Cod produs	",
+                         desk2: "Material", 
+                         desk3: "Surub",
+                         desk4: "Diametru electrod	",
+                         desk5: "Conductoare",
+                         desk6: "Greutate kg "
+                         
+                         },
+  
+  
+                         {desk1: "GES30",
+                         desk2: "Alama", 
+                         desk3: "otel zincat",
+                         desk4: "14-20",
+                         desk5: "30x3 mm",
+                         desk6: "0.119"
+                         
+                         },
+
+
+                         
+  
+                         {desk1: "GES30I",
+                         desk2: "Alama", 
+                         desk3: "otel inoxidabil",
+                         desk4: "14-20",
+                         desk5: "30x3 mm",
+                         desk6: "0.122"
+                         
+                         },
+
+                         
+                        
+                         
+
+                      
+                      
+                      
+  
+                    ]
+                }
+            },
+
+
+
+            {
+                id: "Clema_paralela_din_alama_pentru_conductoare_cupru_GXM",
+                title: "Clema paralela din alama pentru conductoare cupru GXM",
+                counter: 1,
+                img: product6,
+                price: 892,
+                description: "Clema din alama pentru legaturi intre conductoare rotunde din cupru sau otel cuprat. Se folosesc la instalatiile de impamantare la legaturile intre conductoare, echipotentializare, instalatii paratrasnet, instalatii electrice. Sectiune conductoare 35-70 mmp.",
+                filter: "Accesorii din alama pentru impamantare",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Cod produs	",
+                         desk2: "Material", 
+                         desk3: "Surub",
+                         desk4: "Conductor 1",
+                         desk5: "Conductor 2",
+                         desk6: "Greutate"
+                         
+                         },
+  
+  
+                         {desk1: "GXM15H",
+                         desk2: "Alama", 
+                         desk3: "otel zincat	",
+                         desk4: "35-70 mmp",
+                         desk5: "35-70 mmp",
+                         desk6: "0.159"
+                         
+                         },
+
+                         {desk1: "GXM15I",
+                         desk2: "Alama", 
+                         desk3: "otel inoxidabil",
+                         desk4: "35-70 mmp",
+                         desk5: "35-70 mmp",
+                         desk6: "0.159"
+                         
+                         },
+
+                         {desk1: "GXM15I M12",
+                         desk2: "Alama", 
+                         desk3: "Otel inoxidabil M12",
+                         desk4: "35 -70 mmp",
+                         desk5: "70-70 mmp	",
+                         desk6: "0.200"
+                         
+                         },
+
+
+                         
+
+                        
+                         
+
+                      
+                    ]
+                }
+            },
+
+
+
+
+            {
+                id: "Clema_din_alama_pentru_intersectie_conductoare_cupru_GXT",
+                title: "Clema din alama pentru intersectie conductoare cupru GXT",
+                counter: 1,
+                img: product7,
+                price: 892,
+                description: "Clema din alama pentru conexiuni intre conductoare rotunde din cupru sau otel cuprat. Se foloseste la instalatiile de impamantare la legaturile intre conductoare, echipotentializare, instalatii paratrasnet, instalatii electrice. Sectiune conductoare 35-185 mmp.",
+                filter: "Accesorii din alama pentru impamantare",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Cod produs	",
+                         desk2: "Material", 
+                         desk3: "Surub",
+                         desk4: "Conductor 1",
+                         desk5: "Conductor 2",
+                         desk6: "Greutate"
+                         
+                         },
+  
+  
+                         {desk1: "GXT18H",
+                         desk2: "Alama", 
+                         desk3: "otel zincat	",
+                         desk4: "35-95 mmp",
+                         desk5: "35-95 mmp",
+                         desk6: "0.220"
+                         
+                         },
+
+                         {desk1: "GXT18I",
+                         desk2: "Alama", 
+                         desk3: "otel inoxidabil",
+                         desk4: "35-95 mmp",
+                         desk5: "35-95 mmp",
+                         desk6: "0.220"
+                         
+                         },
+
+                         {desk1: "GXT21H",
+                         desk2: "Alama", 
+                         desk3: "Otel zincat",
+                         desk4: "70-185 mmp",
+                         desk5: "70 -185 mmp",
+                         desk6: "0.400"
+                         
+                         },
+
+                         
+                         {desk1: "GXT21I",
+                         desk2: "Alama", 
+                         desk3: "Otel inoxidabil",
+                         desk4: "70 -185 mmp",
+                         desk5: "70 -185 mmp",
+                         desk6: "0.400"
+                         
+                         },
+
+
+                         
+
+                        
+                         
+
+                      
+                    ]
+                }
+            },
+
+
+
+
+
+            {
+                id: "Element_de_conexiune_derivatie_dubla_tip_C",
+                title: "Element de conexiune derivatie dubla tip C",
+                counter: 1,
+                img: product4,
+                price: 892,
+                description: "Element de derivatie din alama. Se foloseste la instalatiile de impamantare la legaturile intre conductoare, echipotentializare, instalatii paratrasnet, instalatii electrice. Sectiune conductoare 16-70 mmp.",
+                filter: "Elemente de conexiune specifice",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Cod produs	",
+                         desk2: "Material", 
+                         desk3: "Conductor",
+                         desk4: "Greutate"
+                         
+                         },
+  
+  
+                         {desk1: "CH1",
+                         desk2: "Alama", 
+                         desk3: "35 mmp	",
+                         desk4: "0.037"
+                         
+                         },
+
+                         {desk1: "CH2",
+                         desk2: "Alama", 
+                         desk3: "70 mmp",
+                         desk4: "0.089",
+                         
+                         
+                         },
+
+                         {desk1: "CH3",
+                         desk2: "Alama", 
+                         desk3: "150 mmp",
+                         desk4: "0.092 ",
+                         
+                         
+                         },
+
+                    ]
+                }
+            },
+
+
+
+            {
+                id: "Element_de_conexiune_derivatie_dubla_tip_B",
+                title: "Element de conexiune derivatie dubla tip B",
+                counter: 1,
+                img: product5,
+                price: 892,
+                description: "Element de derivatie din alama. Se foloseste la instalatiile de impamantare la legaturile intre conductoare, echipotentializare, instalatii paratrasnet, instalatii electrice. Sectiune conductoare 35-70 mmp.",
+                filter: "Elemente de conexiune specifice",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Cod produs	",
+                         desk2: "Material", 
+                         desk3: "Conductor",
+                         desk4: "Greutate"
+                         
+                         },
+  
+  
+                         {desk1: "BH1",
+                         desk2: "Alama", 
+                         desk3: "16-35 mmp",
+                         desk4: "0.037"
+                         
+                         },
+
+                         {desk1: "BH2",
+                         desk2: "Alama", 
+                         desk3: "50-70 mmp	",
+                         desk4: "0.089",
+                         
+                         
+                         }
+
+                    ]
+                }
+            },
+
+
+
+            {
+                id: "Element_de_conexiune_derivatie_dubla_tip_A",
+                title: "Element de conexiune derivatie dubla tip A",
+                counter: 1,
+                img: product5,
+                price: 892,
+                description: "Elemente de derivatie sunt folosite in legaturi pentru cabluri masive sau conductoare de cupru. Conexiunile de derivatie se folosesc in instalatii electrice, bransamente, conexiuni echipotentiale, instalatii de impamantare si legare la masa, instalatii paratrasnet. Element de derivatie din alama. Se foloseste la instalatiile de impamantare la legaturile intre conductoare, echipotentializare, instalatii paratrasnet, instalatii electrice. Sectiune conductoare 2x35-2x70 mmp.",
+                filter: "Elemente de conexiune specifice",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Cod produs	",
+                         desk2: "Material", 
+                         desk3: "Conductor",
+                         desk4: "Greutate"
+                         
+                         },
+  
+  
+                         {desk1: "AH1",
+                         desk2: "Alama", 
+                         desk3: "2X35 mmp",
+                         desk4: "0.037"
+                         
+                         },
+
+                         {desk1: "AH2",
+                         desk2: "Alama", 
+                         desk3: "2X70 mmp",
+                         desk4: "0.089",
+                         
+                         
+                         }
+
+                    ]
+                }
+            },
+
+
+
+
 
 
 
