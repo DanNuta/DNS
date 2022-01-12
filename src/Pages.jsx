@@ -291,6 +291,11 @@ const Pages = (props) => {
                            <td>{el.desk3 || ""}</td>
                            <td>{el.desk4 || ""}</td>
                            <td>{el.desk5 || ""}</td>
+                           <td>{el.desk6 || ""}</td>
+                           <td>{el.desk7 || ""}</td>
+                           <td>{el.desk8 || ""}</td>
+                           <td>{el.desk9 || ""}</td>
+                           <td>{el.desk10 || ""}</td>
                            
                         </tr>
                     

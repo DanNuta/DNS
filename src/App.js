@@ -2038,7 +2038,100 @@ class App extends Component {
   
                     ]
                 }
+            },
+
+
+            {
+                id: "Clema_alama_cu_surub_U",
+                title: "Clema alama cu surub U bolt pentru fixarea condutoarelor GB/PAT  ​",
+                counter: 1,
+                img: product12,
+                price: 892,
+                description: "Clema din alama pentru condutoare din cupru masive sau tip conductor/funie pentru impamantare. Se foloseste pentru instalatiile de impamantare la legaturile dintre electrodul de impamantare din otel cuprat si conductor. Este compatibila cu tarusi/electrozi de impamantare cu diametrul de 14.6-20.3mm si cabluri cu sectiunea de 25-185mmp",
+                filter: "Accesorii pentru tarusi impamantare",
+                curentPrice: 892,
+
+                dateTehnice:{
+                    dateTehniceDesc: "",
+                    dataTehniceBotom: "",
+                    titleDateTehnice: [
+                        {desk1: "Cod produs	",
+                         desk2: "Material", 
+                         desk3: "Surub",
+                         desk4: "Diametru electrod	",
+                         desk5: "Conductoare",
+                         desk6: "Greutate kg "
+                         
+                         },
+  
+  
+                         {desk1: "GB15H",
+                         desk2: "Alama", 
+                         desk3: "otel zincat	",
+                         desk4: "14.6",
+                         desk5: "25-50 mmp	",
+                         desk6: "0.10"
+                         
+                         },
+
+                         {desk1: "PAT",
+                         desk2: "Alama", 
+                         desk3: "otel zincat	",
+                         desk4: "14.6",
+                         desk5: "25-70 mmp	",
+                         desk6: "0.9"
+                         
+                         },
+
+                         {desk1: "GB18H",
+                         desk2: "Alama", 
+                         desk3: "otel zincat	",
+                         desk4: "18.3",
+                         desk5: "25-95 mmp	",
+                         desk6: "0.240"
+                         
+                         },
+
+
+                         {desk1: "GB18I",
+                         desk2: "Alama", 
+                         desk3: "otel inoxidabil	",
+                         desk4: "18.3",
+                         desk5: "25-95 mmp	",
+                         desk6: "0.245"
+                         
+                         },
+
+
+                      
+                         {desk1: "GB21H	",
+                         desk2: "Alama", 
+                         desk3: "otel zincat",
+                         desk4: "20.3",
+                         desk5: "70-185 mmp		",
+                         desk6: "0.296"
+                         
+                         },
+
+                         {desk1: "GB21I	",
+                         desk2: "Alama", 
+                         desk3: "otel inoxidabil	",
+                         desk4: "20.3",
+                         desk5: "70-185 mmp		",
+                         desk6: "0.296"
+                         
+                         },
+                         
+
+                      
+                      
+                      
+  
+                    ]
+                }
             }
+
+
 
 
 
