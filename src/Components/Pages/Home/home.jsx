@@ -310,6 +310,12 @@ class Home extends Component {
                             <div onClick={this.protectie} className="protectie_h1">
                                 <h2>Protecție împotriva trăsnetului</h2>
 
+                                
+                                {this.state.protectie && <div className="supratensiuni_hover"><p className="p">Testarea este, de asemenea, importantă în timp, deoarece rezistența se schimbă în timp. După cum afirmă Fluke în raportul lor, „solurile corozive cu un conținut ridicat de umiditate, conținut ridicat de sare și temperaturi ridicate pot degrada tijele de impamantare și conexiunile lor”.
+
+                                Acest lucru va duce la o creștere a rezistenței în timp. Pe măsură impamantare dvs. devine mai puțin fiabila, creste riscul de zgomot electric, deteriorarea echipamentelor și accidente din electrocutari. Este important să aveți o procedură anuală de testare pentru a vă asigura că instalatia  dvs. funcționează conform așteptărilor și că angajații dvs. rămân în siguranță.</p></div>
+                                 }
+
                             </div>
 
                         </div>

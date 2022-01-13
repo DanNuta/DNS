@@ -340,6 +340,11 @@ section{
 
         @include desktopExtraExtraLarge{
             grid-column: 1/13;
+
+            @include medium{
+                font-size: 20px;
+                margin: 0;
+            }
         }
     }
 
@@ -363,6 +368,12 @@ section{
             height: 144px;
             background-color: $btn-color;
             margin-bottom: 47px;
+
+            @include medium{
+                width: 100px;
+                height: 62px;
+                
+            }
            
             
             
@@ -371,6 +382,11 @@ section{
                 font-size: 90px;
                 font-weight: 800;
                 padding: 17px 0 0px 34px;
+
+                @include medium{
+                    font-size: 30px;
+                    padding: 14px 0 0 34px;
+                }
             }
         }
 
@@ -418,9 +434,21 @@ section{
 .ce_oferim{
     margin-top: 115px;
 
+    @include desktopExtraExtraLarge{
+       width: 90% !important;
+       margin: 115px  auto 0 auto;
+
+       
+    }
+
     h1{
         grid-column: 1/13;
         grid-row: 1;
+
+        @include medium{
+            font-size: 20px;
+            margin: 45px 0 0 0;
+        }
     }
 
 
@@ -428,6 +456,12 @@ section{
         grid-column: 1 / span 4;
         grid-row: 2;
         margin-top: 56px;
+
+        @include large{
+            grid-column: 1/7;
+        }
+
+        
 
         .protectie{
 
@@ -455,6 +489,10 @@ section{
                     line-height: 42px;
                     letter-spacing: 0em;
                     text-align: center;
+
+                    @include medium{
+                        font-size: 20px;
+                    }
 
 
                 }
@@ -504,6 +542,10 @@ section{
                         line-height: 42px;
                         letter-spacing: 0em;
                         text-align: center;
+
+                        @include medium{
+                            font-size: 20px;
+                        }
     
     
                     }
@@ -521,6 +563,12 @@ section{
             margin-top: 10px;
             box-shadow: 5px 4px 13px -1px rgba(0, 0, 0, 0.25);
 
+            @include medium{
+                display: block;
+            }
+
+            
+
             p{
                 padding: 15px;
             }
@@ -534,6 +582,10 @@ section{
             grid-column: 6 / 10;
             grid-row: 2;
             margin-top: 56px;
+
+            @include large{
+                grid-column: 7/13;
+            }
 
 
             .protectie{
@@ -563,6 +615,10 @@ section{
                         line-height: 42px;
                         letter-spacing: 0em;
                         text-align: center;
+
+                        @include medium{
+                            font-size: 20px;
+                        }
     
     
                     }
@@ -577,6 +633,10 @@ section{
                     background-color: white;
                     margin-top: 10px;
                     box-shadow: 5px 4px 13px -1px rgba(0, 0, 0, 0.25);
+
+                    @include medium{
+                        display: block;
+                    }
         
                     p{
                         padding: 15px;
@@ -619,6 +679,10 @@ section{
                             line-height: 42px;
                             letter-spacing: 0em;
                             text-align: center;
+
+                            @include medium{
+                                font-size: 20px;
+                            }
         
         
                         }
@@ -631,6 +695,10 @@ section{
                             background-color: white;
                             margin-top: 10px;
                             box-shadow: 5px 4px 13px -1px rgba(0, 0, 0, 0.25);
+
+                            @include medium{
+                                display: block;
+                            }
                 
                             p{
                                 padding: 15px;
@@ -650,6 +718,10 @@ section{
             grid-row: 2;
             position: relative;
             margin-top: 45px;
+
+            @include medium{
+                display: none;
+            }
 
 
 
@@ -693,6 +765,10 @@ section{
             bottom: 0;
             max-width: 100%;
             position: fixed;
+
+            @include medium{
+                display: none;
+            }
 
             .protectie_inside{
                 padding: 71px 59px;
@@ -750,8 +826,18 @@ section{
 .paratrasnet_pda{
     margin-top: 115px;
 
+    @include desktopExtraExtraLarge{
+        width: 90% !important;
+        margin: auto;
+    }
+
     h1{
         grid-column: 1/13;
+
+        @include medium{
+            font-size: 20px;
+            margin: 45px 0 0 0;
+        }
     }
 
 
@@ -759,12 +845,42 @@ section{
         margin-top: 55px;
         grid-column: 1/5;
 
+        @include desktopExtraLarge{
+            grid-column: 1/7;
+
+            @include large{
+                grid-column: 1/13;
+            }
+        }
+
         .paratrasnet_photo{
             position: relative;
+
+            @include large{
+                width: 60%;
+                height: 500px;
+                margin: auto;
+
+                @include medium{
+                    width: 100%;
+                    height: 500px;
+                    
+                }
+            }
+
+
 
             img{
                 width: 100%;
                 box-shadow: -4px 4px 12px 3px rgba(0, 0, 0, 0.12);
+
+                @include desktopExtraLarge{
+                    width: 90% ;
+                    height: 100%;
+                    object-fit: cover;
+
+                    
+                }
                 
             }
 
@@ -778,6 +894,11 @@ section{
                 top: 113px;
                 z-index: -1;
 
+                @include desktopExtraLarge{
+                    right: 0px;
+                }
+                
+
             }
         }
     }
@@ -785,6 +906,16 @@ section{
     .paratrasnet_pda_paragraph{
         grid-column: 6/13;
         margin-top: 100px;
+
+        
+
+        @include desktopExtraLarge{
+            grid-column: 7/12;
+
+            @include large{
+                grid-column: 1/13;
+            }
+        }
 
         h2{
             margin: 43px 0 26px 0;
@@ -796,6 +927,8 @@ section{
             letter-spacing: 0em;
             text-align: left;
 
+            
+
         }
     }
 }
@@ -806,11 +939,20 @@ section{
 
 .calitate{
 
+    @include desktopExtraExtraLarge{
+        width: 90% !important;
+        margin: auto;
+    }
+
     .calitate_img_left{
         margin-top: 207px;
         grid-column: 1/7;
         grid-row: 1;
         z-index: -1;
+
+        @include large{
+            display: none;
+        }
 
         img{
             width: 100%;
@@ -824,12 +966,27 @@ section{
         grid-row: 1;
         background-color: white;
         margin-top: 115px;
+
+        @include large{
+            grid-column: 1/13;
+
+            @include medium{
+                box-shadow: 0px 4px 13px 2px rgba(255, 255, 255, 0.15);
+                
+            }
+        }
         
 
         .element_inside{
             padding: 89px 100px;
             display: flex;
             flex-wrap: wrap;
+              
+
+            @include medium{
+                padding: 0;
+            }
+            }
 
 
             .element_inside_right{
@@ -838,9 +995,25 @@ section{
                 margin: auto;
                 justify-content: space-between;
 
+                @include medium{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center; 
+                    width: 100%;  
+                 }
+
+                
+                  
+
                 .element_items{
                     width: 40%;
                     text-align: center;
+
+                    @include medium{
+                        text-align: center;
+                        width: 100%;
+                        margin-bottom: 20px;  
+                     }
 
 
                     h2{
@@ -853,6 +1026,16 @@ section{
                         text-align: center;
                         margin: 27px 0 19px 0;
 
+                    }
+
+                    p{
+                       @include large{
+                        
+                        
+                           text-align: center;
+
+                           
+                       }
                     }
                     
                 }
@@ -869,9 +1052,23 @@ section{
                 margin: 56px auto 0 auto;
                 justify-content: space-between;
 
+                @include medium{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center; 
+                    flex-direction: column-reverse;
+                    width: 100%;  
+                 }
+
                 .element_items{
                     width: 40%;
                     text-align: center;
+
+                    @include medium{
+                        text-align: center;
+                        width: 100%;
+                        margin-bottom: 20px;  
+                     }
 
                     h2{
                         font-family: Montserrat;
@@ -883,6 +1080,16 @@ section{
                         text-align: center;
                         margin: 27px 0 19px 0;
 
+                    }
+
+                    p{
+                        @include large{
+                        
+                        
+                            text-align: center;
+ 
+                            
+                        }
                     }
                 }
 
@@ -913,13 +1120,18 @@ section{
            
         }
     }
-}
+
 
 
 
 
 .etapele_de_lucru{
     margin-top: 115px;
+
+    @include desktopExtraExtraLarge{
+        width: 90% !important;
+        margin: auto;
+    }
 
     h1{
         grid-column: 1/7;
