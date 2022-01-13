@@ -29,7 +29,7 @@ import product19 from "../src/Components/Pages/produse/img19.jpg";
 import product20 from "../src/Components/Pages/produse/img20.jpg";
 import product21 from "../src/Components/Pages/produse/img21.jpg";
 import product22 from "../src/Components/Pages/produse/img22.png";
-import product23 from "../src/Components/Pages/produse/img23.jpg";
+import product23 from "../src/Components/Pages/produse/img23.png";
 
 
 
