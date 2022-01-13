@@ -2,6 +2,8 @@
 $btn-color: #FFD600;
 $color-seconds: #272727;
 
+@import "../../../responsive";
+
 @mixin btn{
     border: 0;
     background-color: transparent;
@@ -74,15 +76,100 @@ section{
 .section-center1{
     margin-top: 115px;
 
+    @include desktopExtraExtraLarge{
+        width: 90%;
+        margin: 115px auto 0 auto;
+    }
+
     .dns-paratrasnet{
+
+
+        .text-images{
+            display: none;
+            @include large{
+                background-color: $btn-color;
+                grid-column: 4/13;
+                height: 63px;
+                position: relative;
+                top: -135px;
+                grid-row: 3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                
+
+                @include medium{
+                    top: -150px;
+                }
+                
+                
+                
+            }
+
+
+        }
+
+        .mobile_h1_center{
+            display: none;
+
+            @include large{
+                display: block;
+                grid-column: 1/13;
+                grid-row: 1;
+                margin-bottom: 30px;
+                display: none;
+
+                @include medium{
+                    font-size: 20px;
+                    display: block;
+
+                    
+                }
+                
+                
+            }
+        }
+
+
         
 
         .left-part{
             grid-column: 1/5;
 
+            .text-images{
+                @include large{
+                    background-color: $btn-color;
+                    text-align: center;
+                    top: 0;
+                    left: 0;
+                    width: 192px;
+                    height: 63px;
+                    position: absolute;
+                    right: 100%;
+                }
+
+
+            }
+
             img{
                 width: 100%;
                 margin-bottom: 38px;
+
+                @include large{
+                    
+                    width: 130%;
+                    min-height: 80%;
+                    margin-bottom: 20px;
+                    object-fit: cover;
+                  
+                }
+            }
+            p{
+                @include large{
+                    width: 300%;
+                  
+                }
             }
         }
 
@@ -91,21 +178,55 @@ section{
             grid-column: 6/13;
             margin-top: 114px;
 
+            @include desktopExtraExtraLarge{
+                margin-top: 30px;
+            }
+
             .right-text{
                 width: 90%;
                 margin-left: -84px;
 
                 h1{
                     margin-bottom: 50px;
+
+                    @include desktopExtraExtraLarge{
+                       width: 100%;
+                       font-size: 40px;
+                       margin-bottom: 20px;
+                       margin-left: 100px;
+
+                       @include medium{
+                           display: none;
+                           
+                       }
+                    }
                 }
 
                 p{
                     margin-bottom: 40px;
+
+                    @include large{
+                        margin-left: 100px;
+                        width: 100%;
+                      
+                    }
+
+                    
                 }
 
                 button{
                     margin-bottom: 88px;
                     @include btn;
+
+                    @include large{
+                        margin-left: 100px;
+
+                        @include medium{
+                            display: none;
+                            
+                        }
+                        
+                    }
 
                     .btn-link{
                         display: flex;
@@ -134,6 +255,10 @@ section{
 
                 img{
                     max-width: 100%;
+
+                    @include large{
+                        display: none;
+                    }
                 }
 
                 .text-images-top{
@@ -148,11 +273,23 @@ section{
                     justify-content: center;
                     text-align: center;
 
+                    @include large{
+                        display: none;
+                      
+                    }
+
                     span{
                         font-weight: 300;
                         font-size: 18px;
                         padding: 0 52px;
                         line-height: 25px;
+
+                        @include large{
+                            width: 300%;font-size: 12px;
+                            line-height: 16px;
+                            padding: 0;
+                          
+                        }
 
                         h3{
 
@@ -190,15 +327,35 @@ section{
 .despre_noi{
     margin-top: 115px;
 
+    @include desktopExtraExtraLarge{
+        width: 90% !important;
+        margin: auto;
+
+       
+    }
+
     h1{
         text-transform: uppercase;
         grid-column: 1 / span 4;
+
+        @include desktopExtraExtraLarge{
+            grid-column: 1/13;
+        }
     }
 
 
     .despre_noi_right{
         grid-column: 1 / span 4;
         margin-top: 55px;
+
+        @include large{
+            display: block;
+            grid-column: 1/13;
+            
+            
+        }
+
+       
         
 
         .h1_bg{
@@ -225,12 +382,30 @@ section{
         grid-column: 5 / span 12;
         margin-top: 55px;
 
+      
+
+        @include desktopExtraExtraLarge{
+            grid-column: 6/13;
+
+            @include large{
+                display: block;
+                grid-column: 1/13;
+                width: 100%;
+                
+            }
+        }
+
         p{
             margin-bottom: 44px;
         }
 
         img{
             width: 100%;
+
+            @include large{
+                height: 146px;
+                
+            }
         }
     }
 

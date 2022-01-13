@@ -37,6 +37,7 @@ import {ImagesArrowSvg, ImagesArrowSvg2} from "./ArrowSvg";
 
 
 
+
 class Home extends Component {
 
 
@@ -237,10 +238,17 @@ class Home extends Component {
 
                     <div className="dns-paratrasnet center">
 
+                    <div className="text-images">
+                                       <span><h3>Paratrasnet PDA –</h3>produs de ultimă generație</span>
+                    </div>
+
                         <div className="left-part">
                             <img src={section2Img} alt="" />
                             <p className='p'>Aflați cum vă putem ajuta compania cu soluțiile noastre de protecție împotriva trăsnetului, împământare și supratesniune, balizaj si avertizare împotriva trăsnetului.</p>
                         </div>
+
+                        <h1 className='mobile_h1_center'>Fii în siguranță împreună
+                                cu DNA electric</h1>
 
                         <div className="right-part">
                             
