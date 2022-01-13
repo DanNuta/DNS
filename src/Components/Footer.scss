@@ -1,6 +1,8 @@
 $btn-color: #FFD600;
 $color-seconds: #272727;
 
+@import "../responsive";
+
 p{
     line-height: 24px;
 }
@@ -12,14 +14,41 @@ footer{
     background-color: $color-seconds;
     margin-top: 116px;
 
+   
+
     .footer_div{
         padding: 62px 0 36px 0;
+
+        @include desktopExtraExtraLarge{
+            width: 90%;
+            margin: 116px auto 0 auto;
+        }
 
 
         .left_footer{
             grid-column: 1/4;
 
+            @include large{
+                grid-column: 1/5;
+
+                @include medium{
+                    grid-column: 1/13;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                }
+                        
+            }
+
             ul{
+
+                @include medium{
+                    grid-column: 1/13;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                }
                
 
                  li{
@@ -27,6 +56,13 @@ footer{
                      color: white;
                      display: flex;
                      align-items: center;
+
+                     @include medium{
+                        grid-column: 1/13;
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                    }
 
 
                      &:last-of-type{
@@ -44,12 +80,31 @@ footer{
         .right_footer{
             grid-column: 4/12;
 
+            @include large{
+                grid-column: 5/12;
 
-            nav{
+                @include medium{
+                    grid-column: 1/13;
+       
+                }
+                        
+            }
+
+
+            .nav_footer{
 
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 35px;
+
+                @include medium{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+
+                   
+                }
 
                 ul{
                     display: flex;
@@ -58,8 +113,35 @@ footer{
                 .links_active{
                     display: flex;
                     align-items: center;
+
+                    @include large{
+                        display: grid;
+                        grid-auto-columns: max-content;
+                        grid-auto-flow: column;
+                        grid-gap: 1rem;
+
+
+                        @include medium{
+                            display: flex;
+                            justify-content: space-between;
+                            margin: 32px 0;
+        
+        
+                           
+                        }
+
+                   
+                    }
+
+                    
                     li{
                         margin-right: 62px;
+
+                        @include large{
+                            margin: 0;
+                            
+                                                    
+                        }
 
                         .links{
                             color: white;
@@ -84,8 +166,24 @@ footer{
 
 
                 .links_icon{
+
+                    @include medium{
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                        gap: 2rem;
+                        align-items: flex-end;
+           
+                    }
+
+
                     li{
                         margin-left: 26px;
+
+                        @include medium{
+                            margin-left:0;
+               
+                        }
                     }
                 }
             }
@@ -96,6 +194,10 @@ footer{
                 iframe{
                     width: 100%;
                     height: 180px;
+                }
+
+                @include medium{
+                    
                 }
                 
             }
@@ -109,6 +211,10 @@ footer{
             grid-column: 12/13;
             display: flex;
             align-items: center;
+
+            @include medium{
+                display: none;
+            }
 
             img{
                 cursor: pointer;

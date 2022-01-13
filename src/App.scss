@@ -17,6 +17,11 @@ $width: 1420px;
     font-size: 18px;
 }
 
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+  }
+
 
 h1{
     font-family: 'Montserrat', sans-serif;

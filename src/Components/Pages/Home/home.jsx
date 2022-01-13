@@ -221,12 +221,10 @@ class Home extends Component {
             <div>
 
 
-                <Slider 
-                    onExportDate={this.exportDate} 
-                    products={this.props.produse}
-                    onSearchItem={this.searchItem}
-                    produse={this.props.products}
-                />
+
+
+
+               
 
 
                 

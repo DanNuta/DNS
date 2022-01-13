@@ -46,7 +46,7 @@ class Footer extends Component {
 
                     <div className="right_footer">
 
-                        <nav>
+                        <nav className='nav_footer'>
                             <ul className="links_active">
                                 <li><NavLink activeClassName="links_click" className="links" to="/">Despre</NavLink></li>
                                 <li><NavLink activeClassName="links_click" className="links" to="/products">Produse</NavLink></li>
