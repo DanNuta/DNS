@@ -37,6 +37,11 @@ text-align: left;
         grid-gap: 1rem;
 
     }
+
+    @include medium{
+        display: none;
+      }
+     
 }
 
 
@@ -364,6 +369,11 @@ text-align: left;
         font-weight: 800;
         line-height: 63px;
         margin-bottom: 46px;
+
+        @include medium{
+            font-size: 26px;
+
+        }
 
     }
 
@@ -735,6 +745,8 @@ text-align: left;
             padding: 10px 20px 30px 20px;
             justify-content: space-between;
 
+           
+
             input, button{
                 width: 40%;
                 height: 50px;
@@ -749,6 +761,11 @@ text-align: left;
                 text-align: center;
                 color: #272727;
                 background-color: #FFD600;
+
+                @include medium{
+                   font-size: 12px;
+                   width: 35%;
+                  }
 
             }
             
