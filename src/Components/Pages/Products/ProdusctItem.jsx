@@ -36,7 +36,9 @@ class ProductsItem extends Component {
                                <div className="img">
                                  <img className="instrument" src={this.props.element.img} alt="" />
                                </div>
-                                <p>{this.props.element.title}</p>
+                                <h3 className='description_products'>
+                                    <p>{this.props.element.title}</p>
+                                </h3>
                         </div>
 
                     <div className="element_bottom_prodicts">

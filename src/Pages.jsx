@@ -169,6 +169,8 @@ const Pages = (props) => {
 
         <div className='center'>
 
+            
+
 
             <div className="element_top_item">
                 <div className="item_id">
@@ -191,7 +193,7 @@ const Pages = (props) => {
                 </div>
 
                 <div className="right_text">
-                    <h1>{curentItem.title}</h1>
+                    <h4>{curentItem.title}</h4>
 
                     <div className="element_about_products">
 
@@ -245,7 +247,7 @@ const Pages = (props) => {
                             <div className="input_contacteaza">
                                         <input onChange={inputNumber} min={1} type="number" />
                                         <button disabled={!btnClick} className="btn_cos" onClick={achitaOnlineForm}>Achita online</button>
-                                    </div>
+                            </div>
                                 
                             
 
@@ -419,8 +421,10 @@ const Pages = (props) => {
         </div>
         }
 
+       </div>
+
        
-    </div>
+    
         
         
     )

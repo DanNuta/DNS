@@ -1,3 +1,5 @@
+@import "../src/responsive";
+
 body{
 
     li{
@@ -14,6 +16,14 @@ letter-spacing: 0em;
 text-align: left;
 
 }
+
+
+.center{
+
+    @include desktopExtraExtraLarge{
+        width: 90%;
+        margin: auto;
+    }
 
 
 .element_top_item{
@@ -52,6 +62,10 @@ text-align: left;
             align-items: center;
             justify-content: center;
 
+            @include medium{
+                grid-column: 1/13; 
+            }
+
               img{
                 width: 75%;
                 height: 75%;
@@ -62,7 +76,11 @@ text-align: left;
         .right_text{
             grid-column: 7/13;
 
-            h1{
+            @include medium{
+                grid-column: 1/13; 
+            }
+
+            h4{
                 font-family: 'Montserrat';
                 font-size: 28px;
                 font-style: normal;
@@ -70,6 +88,11 @@ text-align: left;
                 line-height: 39px;
                 text-align: left;
                 margin-bottom: 13px;
+
+                @include medium{
+                  display: none;
+                }
+               
 
             }
 
@@ -189,6 +212,11 @@ text-align: left;
 
                 .input_contacteaza{
                     display: flex;
+
+                    @include medium{
+                        display: flex;
+                        justify-content: space-between;
+                     }
                     input{
                         outline: 0;
                         border: 0;
@@ -342,7 +370,7 @@ text-align: left;
     .item_sililar{
 
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
         grid-gap: 20px;
       
         
@@ -375,6 +403,8 @@ text-align: left;
 
                     img{
                         width: 100%;
+
+                        
                     }
                 }
                 .description_i{
@@ -605,6 +635,18 @@ text-align: left;
         z-index: 10;
         width: 30%;
 
+        @include large{
+            width: 50%;
+
+            @include medium{
+                width: 70%;
+
+                @include small{
+                    width: 90%;
+                }
+            }
+        }
+
 
         h2{
             font-family: Montserrat;
@@ -713,5 +755,7 @@ text-align: left;
         }
     
     }
+
+}
 
 }

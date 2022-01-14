@@ -30,23 +30,27 @@
            
            }
 
+           .description_products{
+               height: 70px;
+               min-height: 70px;
 
-           p{
-            font-family: 'Open Sans', sans-serif;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: 25px;
-            color: black;
-            
-
-            @include medium{
-                height: 120px;
+               p{
+                font-family: 'Open Sans', sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 25px;
+                color: black;
                 
-            }
-            
-            
+    
+               
+                
+                
+               }
            }
+
+
+           
        }
     
 
@@ -82,7 +86,7 @@
             img{
             
                 &:last-of-type{
-                    margin-left: 15px;
+                    margin-left: max(15px, 5px);
                 }
             }
         }
