@@ -188,6 +188,10 @@ const Pages = (props) => {
 
             
                 <div className='card_items'>
+
+                <h4 className='title_responsive'>{curentItem.title}</h4>
+
+
                 <div className="left_images">
                     <img className='img_products' src={curentItem.img} alt="" />
                 </div>
@@ -335,6 +339,7 @@ const Pages = (props) => {
                      .map((item) => {
                          return (
                              
+                             
                             
                                  <div className="item_p">
                                  <NavLink to={`/produse/${item.id}`}>
@@ -371,8 +376,7 @@ const Pages = (props) => {
             <div className="like calitate_gr">
                 <ImagesCalitateSVG/>
                 <h2>Protectie exceptionala</h2>
-                <p>Paratrasnetul nostru protejeaza de la cele mai mari tensiuni</p>
-            </div>
+                            </div>
 
             <div className="garantie calitate_gr">
             <ImagesCalitateSVG3/>

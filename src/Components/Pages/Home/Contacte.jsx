@@ -104,7 +104,7 @@ class Contacte extends Component {
         return ( 
 
             <div className='centru'>
-                <h1>CONTACTE</h1>
+                <h1 className='contact_mobile'>CONTACTE</h1>
                 <p>Simțiți-vă liber să ne contactați oricând. Vom reveni cu un mesaj cât mai curând posibil!</p>
 
                 <form onSubmit={this.sendEmail}>
