@@ -47,24 +47,33 @@ class ItemShopItself extends Component {
                         </div>
                     </div>
 
+
+                    <div className="price_total_counter">
+
                         <div className="price">
+                            
                             <p>{this.props.element.curentPrice}lei</p>
                         </div>
                         <div className="counter">
+                            <h3>Cantitate:</h3>
                             <input min="1"
-                                   type="number"
+                                   type="number" placeholder='1'
                                    
                                    onChange={this.changeCantity}
                                    />
                         </div>
 
                         <div className="price_total">
+                            <h3>Pret:</h3>
                             <p>{this.props.element.price} lei</p>
                         </div>
 
                         <div className="cancel_products">
                             <img onClick={this.close} src={close} alt="" />
                         </div>
+
+
+                    </div>
 
                 </div>
             </div>

@@ -1,4 +1,5 @@
 
+@import "../../../responsive";
 .elementAded{
 
     
@@ -8,24 +9,74 @@
         align-items: center;
         justify-content: space-between;
         margin: 30px 0 30px 0;
+        
+        @include medium{
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+
+
+            @include small{
+                display: flex;
+                gap: 0;
+            }
+           
+        }
 
         .element_products{
-            width: 48%;
+            width: 100%;
             display: flex;
+            
 
-            .img_left{
+            @include large{
+                width: 100%;
+
+                    @include small{
+                        display: flex;
+                        flex-wrap: wrap;
+                        max-width: 80%;
+                        
+                    }
+                    
                 
+            }
+
+            .img_left{      
                 background-color: #F8F8F8;
                 margin-right: 20px;
+
+
+                @include medium{
+                    height: 100%;
+                    width: 100%;
+
+                    @include small{
+                        display: flex;
+                        justify-content: center;
+                        margin: 0 0 10px 0;
+                    }
+                }
 
                 img{
                     width: 220px;
                     height: 220px;
                     object-fit: cover;
+
+                    
+
+                
                 }
             }
 
+
+           
+
             .text_right{
+
+                @include large{
+                    max-width: 80%;
+                }
                 
                 h2{
                     
@@ -36,6 +87,10 @@
                     line-height: 28px;
                     margin-bottom: 10px;
 
+                    @include medium{
+                        font-size: 16px;
+                    }
+
                 }
 
                 p{
@@ -45,6 +100,8 @@
                     font-weight: 400;
                     line-height: 19px;
                     margin-bottom: 10px;
+
+
                     
                      span{
                          color: red;
@@ -58,6 +115,10 @@
                     font-style: normal;
                     font-weight: 400;
                     line-height: 19px;
+
+                    @include medium{
+                        font-size: 12px;
+                    }
                     
 
                     h3{
@@ -70,13 +131,84 @@
                         text-align: left;
                         margin-bottom: 6px;
 
+                        @include medium{
+                            font-size: 14px;
+                        }
+
                     }
                 }
             }
         }
 
 
+
+        .price_total_counter{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+
+            @include small{
+                display: block;
+            }
+
+
+
+            .price{
+
+                @include small{
+                    display: none;
+                }
+            }
+
+
+
+            .price_total{
+                h3{
+                    display: none;
+
+                    @include small{
+                        display: block;
+                        font-family: sans-serif;
+                        font-weight: 600;
+                        font-size: 14px;
+                        margin: 15px 0;
+                    }
+
+
+                }
+            }
+
+
+
+            .cancel_products{
+                @include small{
+                    position: absolute;
+                    top: 280px;
+                    z-index: 999;
+                    right: 25px;
+                }
+            }
+        }
+
+
+
+
+
         .counter{
+
+            h3{
+                display: none;
+
+                @include small{
+                    display: block;
+                    font-family: sans-serif;
+                    font-weight: 600;
+                    font-size: 14px;
+                    margin: 15px 0;
+                }
+            }
 
             input{
                 padding: 11px 16px;

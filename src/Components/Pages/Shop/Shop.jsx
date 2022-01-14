@@ -194,11 +194,22 @@ class Shop extends Component {
 
 
 
-                        <div className="prosude_similare">
+
+
+
+
+
+
+
+
+
+
+
+         <div className="prosude_similare">
               <h4>RECOMANDARI</h4>
 
 
-            <div className='item_sililar'>
+          <div className='item_sililar'>
             {this.props.products.filter((item, index) => (index < 4))
                      .map((item) => {
                          return (
@@ -225,7 +236,7 @@ class Shop extends Component {
                          )
                      })
             }
-            </div>
+        </div>
 
         </div>
 
@@ -247,7 +258,7 @@ class Shop extends Component {
                 
 
                 
-                    </div> 
+  </div> 
         );
     }
 }
