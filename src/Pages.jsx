@@ -38,9 +38,7 @@ const Pages = (props) => {
         telefon: telefon
     }
 
-    const disableBtn = () =>{
-        setBtnClick(false)
-    }
+   
 
 
     const numeChange = (e) =>{
@@ -153,6 +151,9 @@ const Pages = (props) => {
         setTimeout(() => {
           setAchitaOnline(false)
         }, 200);
+
+
+        setBtnClick(false)
     
       
       
@@ -416,7 +417,7 @@ const Pages = (props) => {
         </div>    
 
            <div className="button">
-                <input onClick={disableBtn}   className="input_btn" type="submit" value="Achita online" />
+                <input  className="input_btn" type="submit" value="Achita online" />
                 <button onClick={cancel}>Cancel</button>
             </div>
 

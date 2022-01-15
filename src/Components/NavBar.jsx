@@ -42,6 +42,7 @@ class NavBar extends Component {
 
     solicitaOferta = () =>{
         this.props.selectElementFromWishList(this.props.wishList)
+        this.setState({wishListHeader: !this.state.wishListHeader})
     }
 
 

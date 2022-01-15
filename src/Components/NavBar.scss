@@ -272,6 +272,17 @@ $color_seconds: #FFD600;
             display: flex;
             justify-content: center;
             flex-direction: column;
+            
+
+            @include medium{
+                position: absolute;
+                right: 0;
+                width: 70%;
+
+                @include small{
+                    width: 60%;
+                }
+            }
     
     
               .elementWishList{
@@ -288,12 +299,22 @@ $color_seconds: #FFD600;
                     font-style: normal;
                     font-weight: 700;
                     color: white;
+
+                    @include small{
+                        font-size: 14px;
+                    }
                 }
     
                 button{
                     display: flex;
                     justify-self: center;
                     @include btn(#272727,white );
+
+                    @include small{
+                        font-size: 14px;
+                        background-color: transparent;
+
+                    }
     
                 
                 }
@@ -306,6 +327,11 @@ $color_seconds: #FFD600;
                 align-self: center;
                 @include btn($color_seconds, $background_color_nav);
                 margin-top: 45px;
+
+                @include small{
+                    font-size: 14px;
+                    padding: 6px 30px ;
+                }
     
               }
     

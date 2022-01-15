@@ -71,6 +71,12 @@ text-align: left;
                 margin-bottom: 13px;
                 grid-column: 1/13;
                 margin: 45px 0 20px 0;
+
+
+                @include small{
+                    font-size: 20px;
+                    line-height: 100%;
+                }
            }
        }
        
@@ -173,6 +179,14 @@ text-align: left;
 
                         span{
                             color: red;
+                            
+                            @include small{
+                                @include small{
+                                    
+                                    width: 80%;
+                    
+                                }
+                            }
                         }
                     }
                 }
@@ -194,10 +208,20 @@ text-align: left;
                             margin-right: 10px;
                             margin-bottom: 0;
 
+                            @include small{
+                                font-size: 24px;
+                                
+                            }
+
                         }
 
                         sup{
                             text-decoration: line-through;
+
+                            @include small{
+                                font-size: 15px;
+                                
+                            }
                         }
                     }
                 }
@@ -471,7 +495,7 @@ text-align: left;
     .item_sililar{
 
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
         grid-gap: 20px;
       
         
@@ -502,12 +526,22 @@ text-align: left;
                     align-items: center;
                     justify-content: center;
 
+                    @include large{
+                        height: 200px;
+
+                        @include small{
+                            height: 200px;
+                        }
+                    }
+
+                    
+
                     img{
                         width: 100%;
 
                         @include small{
-                            width: 70%;
-                            min-width: 70%;
+                            width: 50%;
+                            
                         }
 
                         
@@ -519,6 +553,19 @@ text-align: left;
                     line-height: 25px;
                     font-weight: lighter;
                     padding: 20px 20px 40px 20px;
+
+                    @include large{
+
+                        font-size: 14px;
+
+                        @include small{
+                            padding: 5px 8px 10px 5px;
+                            text-align: center;
+                            font-size: 12px;
+                        }
+                    }
+
+                    
                 }
                 
 
@@ -549,6 +596,10 @@ text-align: left;
                         font-style: normal;
                         font-weight: 700;
                         line-height: 22px;
+
+                        @include small{
+                            font-size: 14px;
+                        }
                  }
 
                  
@@ -897,7 +948,7 @@ text-align: left;
 
                 @include medium{
                    font-size: 12px;
-                   width: 35%;
+                   width: 40%;
                   }
 
             }

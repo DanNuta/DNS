@@ -2772,7 +2772,13 @@ class App extends Component {
 
     elementFromProducts = (dataItem) =>{
 
-        this.setState({elementAded: [...this.state.elementAded, dataItem]})
+        let elementAded = this.state.elementAded.map(el => el.id);
+
+        if(elementAded.includes(dataItem.id)){
+            return;
+        }else{
+            this.setState({elementAded: [...this.state.elementAded, dataItem]})
+        }
         
     }
 
@@ -2828,13 +2834,32 @@ class App extends Component {
 
 
     cos = (data) =>{
-        this.setState({elementAded: [...this.state.elementAded, data]})
+        let elementAded = this.state.elementAded.map(el => el.id);
+
+        if(elementAded.includes(data.id)){
+            return;
+        }else{
+            this.setState({elementAded: [...this.state.elementAded, data]})
+        }
+
+        
     }
+
+
+
 
 
     shop = (data) =>{
 
-        this.setState({dataShop: [...this.state.dataShop, data]})
+        let elementAded = this.state.dataShop.map(el => el.id);
+
+        if(elementAded.includes(data.id)){
+            return;
+        }else{
+            this.setState({dataShop: [...this.state.dataShop, data]})
+        }
+
+        
 
     }
 

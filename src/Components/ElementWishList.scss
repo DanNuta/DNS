@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2? family= Open+Sans:wght@300;400 & display=swap');
-
+@import "../responsive";
 .elementWish{
     display: flex;
     background-color: white;
@@ -11,6 +11,13 @@
         img{
             width: 100px;
             height: 120px;
+
+            @include small{
+                width: 50px;
+                height: 100px;
+                object-fit: cover;
+
+            }
         }
     }
 
@@ -26,6 +33,11 @@
             font-weight: 400;
             line-height: 19px;
             margin-bottom: 12px;
+
+            @include small{
+                margin-right: 20px;
+
+            }
         }
 
         h2{

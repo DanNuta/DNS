@@ -237,16 +237,19 @@ class Home extends Component {
                     <div className="dns-paratrasnet center">
 
                     <div className="text-images">
-                                       <span><h3>Paratrasnet PDA –</h3>produs de ultimă generație</span>
+                            <span><h3>Paratrasnet PDA –</h3>produs de ultimă generație</span>
                     </div>
 
                         <div className="left-part">
                             <img src={section2Img} alt="" />
-                            <p className='p'>Aflați cum vă putem ajuta compania cu soluțiile noastre de protecție împotriva trăsnetului, împământare și supratesniune, balizaj si avertizare împotriva trăsnetului.</p>
                         </div>
 
                         <h1 className='mobile_h1_center'>Fii în siguranță împreună
                                 cu DNA electric</h1>
+
+
+
+
 
                         <div className="right-part">
                             
@@ -273,6 +276,11 @@ class Home extends Component {
 
 
                 </section>
+
+
+
+
+                
 
 
 
@@ -516,7 +524,6 @@ class Home extends Component {
                     <div className="paratrasnet_pda_img">
                         <div className="paratrasnet_photo">
                             <img src={paratrasnet_pda} alt="" />
-
                             <div className="background_paratrasnet"></div>
                         </div>
                     </div>
@@ -556,7 +563,7 @@ class Home extends Component {
 
                                     <div className="element_items">
                                         <img src={dolar} alt="Star" />
-                                        <h2>CALITATE</h2>
+                                        <h2>Accesibilitate</h2>
                                         <p className="p">Oferim soluții și dispozitive de protecție împotriva trasnetului de tip paratrasnet PDA pentru o varietate de aplicatii si industrii</p>
 
                                     </div>
@@ -576,7 +583,7 @@ class Home extends Component {
 
                                     <div className="element_items">
                                         <img src={group} alt="Star" />
-                                        <h2>Calitate</h2>
+                                        <h2>Personal</h2>
                                         <p className="p">Oferim soluții și dispozitive de protecție împotriva trasnetului de tip paratrasnet PDA pentru o varietate de aplicatii si industrii</p>
 
                                     </div>

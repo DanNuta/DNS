@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 $btn-color: #FFD600;
 $color-seconds: #272727;
 
@@ -76,35 +77,30 @@ section{
 .section-center1{
     margin-top: 115px;
 
+
     @include desktopExtraExtraLarge{
-        width: 90%;
+        
         margin: 115px auto 0 auto;
     }
 
     .dns-paratrasnet{
 
-
+        position: relative;
+        
         .text-images{
             display: none;
-            @include large{
+
+            @include medium{
                 background-color: $btn-color;
                 grid-column: 4/13;
                 height: 63px;
-                position: relative;
-                top: -135px;
-                grid-row: 3;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 text-align: center;
-                
-
-                @include medium{
-                    top: -150px;
-                }
-                
-                
-                
+                z-index: 999;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+   
             }
 
 
@@ -112,23 +108,6 @@ section{
 
         .mobile_h1_center{
             display: none;
-
-            @include large{
-                display: block;
-                grid-column: 1/13;
-                grid-row: 1;
-                margin-bottom: 30px;
-                display: none;
-
-                @include medium{
-                    font-size: 20px;
-                    display: block;
-
-                    
-                }
-                
-                
-            }
         }
 
 
@@ -137,16 +116,35 @@ section{
         .left-part{
             grid-column: 1/5;
 
+            @include medium{
+                grid-column: 1/7;
+                height: 500px;
+                object-fit: cover;
+            }
+
             .text-images{
                 @include large{
                     background-color: $btn-color;
                     text-align: center;
-                    top: 0;
-                    left: 0;
-                    width: 192px;
                     height: 63px;
-                    position: absolute;
-                    right: 100%;
+                    z-index: 10;
+                    position: relative;
+                    grid-row: 2/-1;
+                    height: 100%;
+                   
+
+                     @include small{
+                        grid-row: 2/-1;
+                        text-align: center;
+                        height: 63px;
+                        z-index: 20;
+                        position: relative;
+                        top: 0;
+                   
+
+                     }
+
+                   
                 }
 
 
@@ -157,21 +155,18 @@ section{
                 margin-bottom: 38px;
 
                 @include large{
-                    
-                    width: 130%;
+                    height: 100%;
                     min-height: 80%;
                     margin-bottom: 20px;
                     object-fit: cover;
-                  
-                }
-            }
-            p{
-                @include large{
-                    width: 300%;
+                    
                   
                 }
             }
         }
+
+
+
 
 
         .right-part{
@@ -180,6 +175,10 @@ section{
 
             @include desktopExtraExtraLarge{
                 margin-top: 30px;
+
+                @include medium{
+                    grid-column: 7/13;
+                }
             }
 
             .right-text{
@@ -195,10 +194,6 @@ section{
                        margin-bottom: 20px;
                        margin-left: 100px;
 
-                       @include medium{
-                           display: none;
-                           
-                       }
                     }
                 }
 
@@ -208,6 +203,17 @@ section{
                     @include large{
                         margin-left: 100px;
                         width: 100%;
+
+                        @include small{
+                            font-family: 'Open Sans', sans-serif;
+                            font-size: 12px;
+                            line-height: 16px;
+                            font-family: sans-serif;
+                            font-weight: 400;
+                            display: block;
+                        }
+
+
                       
                     }
 
@@ -324,12 +330,22 @@ section{
 
 
 
+
+
+
+
+
+
+
+
 .despre_noi{
     margin-top: 115px;
 
     @include desktopExtraExtraLarge{
         width: 90% !important;
         margin: auto;
+
+        
 
        
     }
@@ -340,10 +356,15 @@ section{
 
         @include desktopExtraExtraLarge{
             grid-column: 1/13;
+            margin: 0;
 
             @include medium{
                 font-size: 20px;
                 margin: 0;
+
+                @include small{
+                    margin-bottom: 30px;
+                }
             }
         }
     }
@@ -358,8 +379,14 @@ section{
             grid-column: 1/13;
             display: flex;
             flex-direction: column-reverse;
-            
-            
+            margin: 0;
+
+            @include small{
+                grid-row: 2;
+                margin: 0;
+            }
+
+
         }
 
        
@@ -371,11 +398,19 @@ section{
             background-color: $btn-color;
             margin-bottom: 47px;
 
-            @include medium{
-                width: 100px;
-                height: 62px;
-                margin: 30px 0 0 0;
-                
+            @include large{
+                margin: 0;
+
+                @include medium{
+                    width: 100px;
+                    height: 62px;
+                    margin: 30px 0 0 0;
+    
+                    @include small{
+                        margin: 20px 0;
+                    }
+                    
+                }
             }
            
             
@@ -390,6 +425,25 @@ section{
                     font-size: 30px;
                     padding: 14px 0 0 34px;
                 }
+            }
+
+            
+
+
+
+            
+        }
+
+
+        p{
+
+            @include small{
+                font-family: 'Open Sans', sans-serif;
+                font-size: 12px;
+                line-height: 16px;
+                font-family: sans-serif;
+                font-weight: 400;
+                display: block;
             }
         }
 
@@ -412,6 +466,12 @@ section{
                 width: 100%;
                 display: flex;
                 flex-direction: column-reverse;
+                margin: 0;
+
+
+                @include small{
+                    margin: 0;
+                }
                 
             }
         }
@@ -419,11 +479,20 @@ section{
         p{
             margin-bottom: 44px;
 
-            @include large{
-                height: 146px;
-                margin-bottom: 0px;
+          
                 
-            }
+
+                @include small{
+                    margin: 0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 12px;
+                    line-height: 16px;
+                    font-family: sans-serif;
+                    font-weight: 400;
+                    display: block;
+                }
+                
+            
         }
 
         img{
@@ -443,23 +512,37 @@ section{
 
 
 
+
+
+
+
+
 .ce_oferim{
     margin-top: 115px;
+
+
 
     @include desktopExtraExtraLarge{
        width: 90% !important;
        margin: 115px  auto 0 auto;
 
        
+
+
+      
+
+       
     }
 
     h1{
         grid-column: 1/13;
-        grid-row: 1;
+        
 
         @include medium{
             font-size: 20px;
-            margin: 45px 0 0 0;
+            margin: 45px 0 25px 0;
+
+           
         }
     }
 
@@ -469,8 +552,16 @@ section{
         grid-row: 2;
         margin-top: 56px;
 
+
+
+
         @include large{
             grid-column: 1/7;
+
+            @include small{
+                margin: 0;
+            }
+
         }
 
         
@@ -485,7 +576,12 @@ section{
                 box-shadow: 5px 4px 13px -1px rgba(0, 0, 0, 0.25);
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 cursor: pointer;
+
+                @include small{
+                    height: 70px;
+                }
 
                 &:hover{
                     background-color: $btn-color;
@@ -504,6 +600,11 @@ section{
 
                     @include medium{
                         font-size: 20px;
+
+                        @include small{
+                            font-size: 10px;
+                            line-height: 100%;
+                        }
                     }
 
 
@@ -527,6 +628,13 @@ section{
 
             margin-top: 35px;
 
+
+            @include small{
+                margin: 0;
+            }
+
+            
+
             
 
                 .protectie_h1{
@@ -538,7 +646,12 @@ section{
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    justify-content: center;
                     cursor: pointer;
+
+                    @include small{
+                        height: 70px;
+                    }
     
                     &:hover{
                         background-color: $btn-color;
@@ -557,6 +670,12 @@ section{
 
                         @include medium{
                             font-size: 20px;
+
+                            @include small{
+                                font-size: 10px;
+                                line-height: 100%;
+                                text-align: center;
+                            }
                         }
     
     
@@ -574,6 +693,7 @@ section{
             background-color: white;
             margin-top: 10px;
             box-shadow: 5px 4px 13px -1px rgba(0, 0, 0, 0.25);
+            z-index: 10;
 
             @include medium{
                 display: block;
@@ -583,6 +703,10 @@ section{
 
             p{
                 padding: 15px;
+
+                @include small{
+                    font-size: 12px;
+                }
             }
           }
         }
@@ -595,8 +719,16 @@ section{
             grid-row: 2;
             margin-top: 56px;
 
+            
+
             @include large{
                 grid-column: 7/13;
+
+                @include small{
+                    margin: 0;
+                }
+
+               
             }
 
 
@@ -612,6 +744,10 @@ section{
                     align-items: center;
                     justify-content: center;
                     cursor: pointer;
+
+                    @include small{
+                        height: 70px;
+                    }
     
                     &:hover{
                         background-color: $btn-color;
@@ -630,6 +766,11 @@ section{
 
                         @include medium{
                             font-size: 20px;
+
+                            @include small{
+                                font-size: 10px;
+                                line-height: 100%;
+                            }
                         }
     
     
@@ -645,6 +786,7 @@ section{
                     background-color: white;
                     margin-top: 10px;
                     box-shadow: 5px 4px 13px -1px rgba(0, 0, 0, 0.25);
+                    z-index: 10;
 
                     @include medium{
                         display: block;
@@ -652,6 +794,10 @@ section{
         
                     p{
                         padding: 15px;
+
+                        @include small{
+                            font-size: 12px;
+                        }
                     }
                   }
     
@@ -664,6 +810,13 @@ section{
             .supratensiuni{
     
                 margin-top: 35px;
+
+
+                @include small{
+                    margin: 0;
+                }
+
+                
     
                 
     
@@ -676,6 +829,10 @@ section{
                         align-items: center;
                         justify-content: center;
                         cursor: pointer;
+
+                        @include small{
+                            height: 70px;
+                        }
         
                         &:hover{
                             background-color: $btn-color;
@@ -692,8 +849,15 @@ section{
                             letter-spacing: 0em;
                             text-align: center;
 
+
+
                             @include medium{
                                 font-size: 20px;
+
+                                @include small{
+                                    font-size: 10px;
+                                    line-height: 100%;
+                                }
                             }
         
         
@@ -710,10 +874,15 @@ section{
 
                             @include medium{
                                 display: block;
+                                z-index: 10;
                             }
                 
                             p{
                                 padding: 15px;
+
+                                @include small{
+                                    font-size: 12px;
+                                }
                             }
                           }
         
@@ -876,6 +1045,15 @@ section{
                 @include medium{
                     width: 100%;
                     height: 500px;
+
+                    @include small{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        margin: auto;
+                        display: flex;
+                        justify-content: center;
+                    }
                     
                 }
             }
@@ -889,9 +1067,8 @@ section{
                 @include desktopExtraLarge{
                     width: 90% ;
                     height: 100%;
+                    margin: auto;
                     object-fit: cover;
-
-                    
                 }
                 
             }
@@ -908,6 +1085,10 @@ section{
 
                 @include desktopExtraLarge{
                     right: 0px;
+
+                    @include small{
+                        display: none;
+                    }
                 }
                 
 
@@ -926,6 +1107,18 @@ section{
 
             @include large{
                 grid-column: 1/13;
+                margin-top: 30px;
+            }
+        }
+
+        p{
+            @include small{
+                font-family: 'Open Sans', sans-serif;
+                font-size: 12px;
+                line-height: 16px;
+                font-family: sans-serif;
+                font-weight: 400;
+                display: block;
             }
         }
 
@@ -939,9 +1132,18 @@ section{
             letter-spacing: 0em;
             text-align: left;
 
-            
+            @include small{
+                font-family: 'Open Sans', sans-serif;
+                font-size: 18px;
+                line-height: 16px;
+                font-family: sans-serif;
+                font-weight: 800;
+                margin: 20px 0;
+                
+            }
 
         }
+        
     }
 }
 
@@ -1038,13 +1240,25 @@ section{
                         text-align: center;
                         margin: 27px 0 19px 0;
 
+                        @include small{
+                            font-size: 18px;
+                        }
+
                     }
 
                     p{
                        @include large{
-                        
-                        
                            text-align: center;
+
+
+                           @include small{
+                            font-family: 'Open Sans', sans-serif;
+                            font-size: 12px;
+                            line-height: 16px;
+                            font-family: sans-serif;
+                            font-weight: 400;
+                            display: block;
+                        }
 
                            
                        }
@@ -1092,13 +1306,24 @@ section{
                         text-align: center;
                         margin: 27px 0 19px 0;
 
+                        @include small{
+                            font-size: 18px;
+                        }
+
                     }
 
                     p{
                         @include large{
-                        
-                        
                             text-align: center;
+
+                            @include small{
+                                font-family: 'Open Sans', sans-serif;
+                                font-size: 12px;
+                                line-height: 16px;
+                                font-family: sans-serif;
+                                font-weight: 400;
+                                display: block;
+                            }
  
                             
                         }

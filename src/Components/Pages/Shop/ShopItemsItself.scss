@@ -10,15 +10,15 @@
         justify-content: space-between;
         margin: 30px 0 30px 0;
         
-        @include medium{
+        @include large{
 
-            display: flex;
+            display: flex !important;
             flex-wrap: wrap;
             gap: 3rem;
 
 
             @include small{
-                display: flex;
+                display: flex !important;
                 gap: 0;
             }
            
@@ -35,7 +35,7 @@
                     @include small{
                         display: flex;
                         flex-wrap: wrap;
-                        max-width: 80%;
+                        max-width: 100%;
                         
                     }
                     
@@ -49,12 +49,13 @@
 
                 @include medium{
                     height: 100%;
-                    width: 100%;
+                    
 
                     @include small{
                         display: flex;
                         justify-content: center;
                         margin: 0 0 10px 0;
+                        width: 100%;
                     }
                 }
 
@@ -75,7 +76,7 @@
             .text_right{
 
                 @include large{
-                    max-width: 80%;
+                    width: 100%;
                 }
                 
                 h2{
@@ -183,11 +184,19 @@
 
 
             .cancel_products{
-                @include small{
+                @include large{
                     position: absolute;
-                    top: 280px;
+                    top: 350px;
                     z-index: 999;
                     right: 25px;
+
+
+                    @include small{
+                        position: absolute;
+                        top: 280px;
+                        z-index: 999;
+                        right: 25px;
+                    }
                 }
             }
         }

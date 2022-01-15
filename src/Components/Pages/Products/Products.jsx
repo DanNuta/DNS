@@ -139,7 +139,7 @@ class Products extends Component {
 
                         {this.state.filterData.map(el => (
 
-                           <NavLink to={`/produse/${el.id}`}>
+                          
 
                                 <ProductsItem 
                                     element={el}
@@ -147,7 +147,7 @@ class Products extends Component {
                                     onElementShop={this.elementShop} 
                                 />
 
-                           </NavLink>
+                           
                                 
                                
                             

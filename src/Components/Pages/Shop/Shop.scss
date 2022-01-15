@@ -22,6 +22,11 @@
 
 h1{
     margin-bottom: 55px;
+
+    @include medium{
+        font-size: 30px;
+    
+    }
 }
 
 
@@ -38,12 +43,13 @@ h1{
 
         span{
             &:first-of-type{
-                width: 36%;
+                width: 50%;
             }
         }
 
         display: flex;
         justify-content: space-between;
+        width: 83%;
     }
 }
 
@@ -308,12 +314,16 @@ h1{
                     align-items: center;
                     justify-content: center;
 
+                    @include small{
+                        height: 200px;
+                    }
+
                     img{
                         width: 100%;
 
                         @include small{
-                            width: 70%;
-                            min-width: 70%;
+                            width: 50%;
+                            
                         }
 
                         
@@ -325,6 +335,12 @@ h1{
                     line-height: 25px;
                     font-weight: lighter;
                     padding: 20px 20px 40px 20px;
+
+                    @include small{
+                        padding:5px 8px 10px 8px;
+                        font-size: 12px;
+                        text-align: center;
+                    }
                 }
                 
 
