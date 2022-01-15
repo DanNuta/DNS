@@ -90,16 +90,30 @@ section{
         .text-images{
             display: none;
 
-            @include medium{
+            @include small{
                 background-color: $btn-color;
                 grid-column: 4/13;
                 height: 63px;
-                text-align: center;
                 z-index: 999;
-                display: block;
+                display: flex;
                 position: absolute;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
                 bottom: 0;
                 width: 100%;
+
+                span{
+                    font-size: 12px;
+                    line-height: 16px;
+
+                    h3{
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 700;
+
+                    }
+                }
+                
    
             }
 
@@ -108,6 +122,15 @@ section{
 
         .mobile_h1_center{
             display: none;
+
+            @include small{
+                display: block;
+                grid-column: 1/13;
+                grid-row: 1;
+                margin-bottom: 30px;
+                font-size: 20px;
+
+            }
         }
 
 
@@ -120,6 +143,10 @@ section{
                 grid-column: 1/7;
                 height: 500px;
                 object-fit: cover;
+
+                @include small{
+                    height: 250px;
+                }
             }
 
             .text-images{
@@ -134,12 +161,13 @@ section{
                    
 
                      @include small{
-                        grid-row: 2/-1;
-                        text-align: center;
-                        height: 63px;
-                        z-index: 20;
-                        position: relative;
-                        top: 0;
+                        background-color: $btn-color;
+                    text-align: center;
+                    height: 63px;
+                    z-index: 10;
+                    position: relative;
+                    grid-row: 2/-1;
+                    height: 100%;
                    
 
                      }
@@ -176,14 +204,23 @@ section{
             @include desktopExtraExtraLarge{
                 margin-top: 30px;
 
+               @include large{
+
+                  grid-column: 5/13;
+
                 @include medium{
                     grid-column: 7/13;
                 }
+               }
             }
 
             .right-text{
                 width: 90%;
                 margin-left: -84px;
+
+                @include large{
+                    margin: 0;
+                }
 
                 h1{
                     margin-bottom: 50px;
@@ -191,9 +228,15 @@ section{
                     @include desktopExtraExtraLarge{
                        width: 100%;
                        font-size: 40px;
-                       margin-bottom: 20px;
-                       margin-left: 100px;
 
+
+                       @include large{
+                           font-size: 30px;
+
+                           @include small{
+                               display: none;
+                           }
+                       }
                     }
                 }
 
@@ -201,7 +244,6 @@ section{
                     margin-bottom: 40px;
 
                     @include large{
-                        margin-left: 100px;
                         width: 100%;
 
                         @include small{
@@ -210,7 +252,7 @@ section{
                             line-height: 16px;
                             font-family: sans-serif;
                             font-weight: 400;
-                            display: block;
+                            display: flex;
                         }
 
 
@@ -225,10 +267,14 @@ section{
                     @include btn;
 
                     @include large{
-                        margin-left: 100px;
+                        
 
                         @include medium{
-                            display: none;
+                            display: block;
+
+                            @include small{
+                                display: none;
+                            }
                             
                         }
                         
@@ -237,6 +283,10 @@ section{
                     .btn-link{
                         display: flex;
                         align-content: center;
+
+                       @include small{
+                           justify-content: flex-start;
+                       }
                     }
 
                     
@@ -248,6 +298,10 @@ section{
                         font-size: 18px;
                         margin-right: 15px;
                         color: $color-seconds;
+
+                        @include medium{
+                            font-size: 14px;
+                        }
                     }
 
                     img{
@@ -345,6 +399,24 @@ section{
         width: 90% !important;
         margin: auto;
 
+        @include large{
+
+            margin-top: 45px !important;
+            
+
+            @include medium{
+                margin-top: 45px !important;
+    
+                @include small{
+                    margin-top: 45px !important;
+                }
+            }
+        }
+
+        
+
+        
+
         
 
        
@@ -358,12 +430,18 @@ section{
             grid-column: 1/13;
             margin: 0;
 
-            @include medium{
-                font-size: 20px;
-                margin: 0;
+            @include large{
+                margin-bottom: 30px;
 
-                @include small{
-                    margin-bottom: 30px;
+                @include medium{
+                    font-size: 20px;
+                    margin: 0 0 30px 0;
+    
+                    @include small{
+                        margin-bottom: 30px;
+                        
+    
+                    }
                 }
             }
         }
@@ -399,12 +477,12 @@ section{
             margin-bottom: 47px;
 
             @include large{
-                margin: 0;
+                margin: 20px 0;
 
                 @include medium{
                     width: 100px;
                     height: 62px;
-                    margin: 30px 0 0 0;
+                    margin: 30px 0 20px 0;
     
                     @include small{
                         margin: 20px 0;
@@ -479,8 +557,9 @@ section{
         p{
             margin-bottom: 44px;
 
-          
-                
+            @include medium{
+
+                margin: 0;
 
                 @include small{
                     margin: 0;
@@ -491,6 +570,9 @@ section{
                     font-weight: 400;
                     display: block;
                 }
+            }
+
+               
                 
             
         }
@@ -508,6 +590,9 @@ section{
 
      
 }
+
+
+
 
 
 
@@ -538,12 +623,16 @@ section{
         grid-column: 1/13;
         
 
+       @include large{
+           margin: 0;
+
         @include medium{
             font-size: 20px;
-            margin: 45px 0 25px 0;
+            margin: 45px 0 0 0 ;
 
            
         }
+       }
     }
 
 
@@ -1337,6 +1426,12 @@ section{
 
                     .btn-link{
                         width: 100%;
+
+                        @include medium{
+                            width: 50%;
+                            margin: auto
+
+                        }
 
                         button{
                             @include btn_click($color-seconds);
