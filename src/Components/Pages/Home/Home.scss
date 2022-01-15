@@ -81,6 +81,10 @@ section{
     @include desktopExtraExtraLarge{
         
         margin: 115px auto 0 auto;
+
+        @include small{
+            margin: 0;
+        }
     }
 
     .dns-paratrasnet{

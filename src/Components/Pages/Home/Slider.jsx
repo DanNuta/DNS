@@ -123,7 +123,7 @@ class Slider extends Component {
             
             <section className="section_slider">
 
-                <div className="center_slider center">
+                <div className="center_slider ">
                     <div className="right">
                         <h1>Sudara exotermica CADWELD</h1>
                         <p>Accesorii, interconexiuni, consumabile
@@ -262,6 +262,8 @@ class Slider extends Component {
 
 
                     </div>
+
+                   
                 </div>
 
 
@@ -316,6 +318,8 @@ class Slider extends Component {
                             </ul>
                             
                         </div>
+
+                        
                     </div>
 
 
@@ -326,6 +330,9 @@ class Slider extends Component {
                     
                     
                 </div>
+
+
+                <NavLink className="btn-link" to="/contact"><button>Contacteaza-ne</button></NavLink>
 
             </section>
          );

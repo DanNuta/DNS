@@ -3,6 +3,8 @@
  $width: 1420px;
 
  @import "../../../responsive";
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 
  @mixin btn{
      border: 0;
@@ -21,6 +23,9 @@
     font-weight: bold;
     font-size: 18px;
 }
+
+
+
 
 .center{
     width: 100%;
@@ -47,21 +52,42 @@
     @include desktopExtraExtraLarge{
         max-width: 90%;
         margin: 115px auto 0 auto;
+
+        @include small{
+            margin-top: 52px;
+        }
     }
     
 
     .center_slider{
 
         padding-top: 70px;
+
+        @include small{
+            padding: 0;
+        }
+
+
         .right{
             grid-column: 1/6;
 
             @include desktopExtraExtraLarge{
                 grid-column: 1/7;
+
+                @include small{
+                    grid-column: 1/13;
+
+                }
             }
 
             h1{
-                margin-bottom: 36px
+                margin-bottom: 36px;
+
+                @include small{
+                    grid-column: 1/13;
+                    font-size: 22px;
+                    margin-bottom: 15px;
+                }
             }
 
             p{
@@ -77,6 +103,16 @@
                 @include desktopExtraExtraLarge{
                    font-size: 25px;
                    width: 450px;
+
+                   @include small{
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 12px;
+                    line-height: 16px;
+                    font-family: sans-serif;
+                    font-weight: 400;
+                    width: 100%;
+                    margin-bottom: 30px;                    
+                }
                 }
             }
 
@@ -144,6 +180,28 @@
             }
 
         }
+
+
+
+        .btn-link{
+
+            button{
+
+                @include small{
+                    @include btn_click;
+                    background-color: red;
+    
+                }
+
+            }
+
+           
+           
+        }
+
+
+
+
     }
 
 
@@ -167,6 +225,19 @@
 
         @include desktopExtraExtraLarge{
             right: -10%;
+
+            @include small{
+                grid-column: 1/13 ;
+                position: relative;
+                grid-row: 2;
+                width: 100%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                height: 100%;
+
+            }
         }
 
 
@@ -174,8 +245,12 @@
             position: relative;
             height: 100%;
 
+            
+
             @include desktopExtraExtraLarge{
                 height: 100%;
+
+
             }
            
             img{
@@ -194,6 +269,12 @@
                 right: 0;
                 bottom: 0;
                 left: 0;
+
+                @include small{
+                    display: none;
+                }
+
+
                 .animation_top{
                     position: absolute;
                     z-index: 20;
@@ -359,6 +440,12 @@
                 right: 0;
                 bottom: 0;
                 left: 0;
+
+                @include small{
+                    display: none;
+                }
+
+
                 .animation_top2{
                     position: absolute;
                     z-index: 20;
@@ -569,6 +656,11 @@
                 right: 0;
                 bottom: 0;
                 left: 0;
+
+                @include small{
+                    display: none;
+                }
+
                 .animation_top4{
                     position: absolute;
                     z-index: 20;
@@ -791,6 +883,10 @@
     .section_instruments_bottom{
         margin-top: 75px;
         display: flex;
+
+        @include small{
+            display: none;
+        }
 
         .first_item{
             display: flex;
