@@ -1340,6 +1340,7 @@ section{
                     }
 
                     p{
+                        text-align: center;
                        @include large{
                            text-align: center;
 
@@ -1398,6 +1399,7 @@ section{
                         letter-spacing: 0em;
                         text-align: center;
                         margin: 27px 0 19px 0;
+                        text-align: center;
 
                         @include small{
                             font-size: 18px;
@@ -1406,6 +1408,7 @@ section{
                     }
 
                     p{
+                        text-align: center;
                         @include large{
                             text-align: center;
 
@@ -1439,9 +1442,30 @@ section{
 
                         button{
                             @include btn_click($color-seconds);
-                            width: 100%;
                             color: white;
-    
+                
+                            @include large{
+                                font-size: 18px;
+                                color: white;
+                
+                                @include medium{
+                
+                                    font-size: 16px;
+                                    color: white;
+                                    width: 160px;
+                
+                                    @include small{
+                
+                
+                                        width: 160px;
+                                        height: 40px;
+                                        font-size: 14px;
+                                        color: white;
+                                    }
+                                }
+                
+                            }
+                            
                         }
 
                     }
@@ -1463,6 +1487,7 @@ section{
 
 .etapele_de_lucru{
     margin-top: 115px;
+    position: relative;
 
     @include desktopExtraExtraLarge{
         width: 90% !important;
@@ -1494,6 +1519,14 @@ section{
 
         @include medium{
            display: block;
+
+           @include small{
+            display: flex;
+            flex-direction: column-reverse;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
             
         }
 
@@ -1508,6 +1541,17 @@ section{
             margin-right: 5px;
 
                     @include medium{
+
+
+
+                        @include small{
+                            display: block;
+                            overflow: hidden;
+                            width: 2rem;
+                            transition: none;
+                            margin: 0;
+                            padding: 0;
+                        }
                        
                         
                     }
@@ -1515,11 +1559,21 @@ section{
             &:first-of-type {
                 justify-content: flex-start;
 
+                @include small{
+                    display: flex;
+                    justify-content: flex-start;
+                }
+
                
             }
             
             &:last-of-type {
                 justify-content: flex-end;
+
+                @include small{
+                    display: flex;
+                    justify-content: flex-end;
+                }
 
                
             }
@@ -1535,7 +1589,7 @@ section{
 
             @include medium{
                  &:hover{
-                     width: 3rem;
+                     width: 2rem;
                  }
             }
 
@@ -1643,11 +1697,51 @@ section{
 
     .btn-link{
        margin-top: 115px;
+       display: flex;
+       justify-content: center;
+
+       @include large{
+        margin: 25px 0 0 0;
+       
+
+           @include medium{
+             margin: 25px 0 0 0;
+    
+               @include small{
+                  
+                   margin: 25px 0 0 0;
+               }
+           }
+       }
+
+
          
         button{
             @include btn_click($color-seconds);
             color: white;
-            margin: auto;
+
+            @include large{
+                font-size: 18px;
+                color: white;
+
+                @include medium{
+
+                    font-size: 16px;
+                    color: white;
+                    width: 160px;
+
+                    @include small{
+
+
+                        width: 160px;
+                        height: 40px;
+                        font-size: 14px;
+                        color: white;
+                    }
+                }
+
+            }
+            
         }
     }
 }

@@ -26,6 +26,19 @@
 
 
 
+@mixin btn_click2($background){
+    width: 300px;
+    height: 51px;
+    background-color: $background;
+    color: $color-seconds;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
 
 .center{
     width: 100%;
@@ -60,10 +73,11 @@
     
 
     .center_slider{
+        position: relative;
 
         padding-top: 70px;
 
-        @include small{
+        @include large{
             padding: 0;
         }
 
@@ -74,7 +88,7 @@
             @include desktopExtraExtraLarge{
                 grid-column: 1/7;
 
-                @include small{
+                @include large{
                     grid-column: 1/13;
 
                 }
@@ -83,10 +97,20 @@
             h1{
                 margin-bottom: 36px;
 
-                @include small{
+                @include large{
                     grid-column: 1/13;
                     font-size: 22px;
                     margin-bottom: 15px;
+                    font-size: 56px;
+
+                    @include medium{
+                        font-size: 30px;
+
+                        @include small{
+                            font-size: 20px;
+                            margin-right: 27px;
+                        }
+                    }
                 }
             }
 
@@ -104,14 +128,23 @@
                    font-size: 25px;
                    width: 450px;
 
-                   @include small{
+                   @include large{
                     font-family: 'Open Sans', sans-serif;
-                    font-size: 12px;
-                    line-height: 16px;
-                    font-family: sans-serif;
-                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 26px;
                     width: 100%;
-                    margin-bottom: 30px;                    
+                    margin-bottom: 30px;
+
+
+                    @include small{
+                        font-size: 12px;
+                        line-height: 16px;
+                        font-weight: 400;
+                        font-family: 'Open Sans', sans-serif;
+
+                    }
+                    
+                    
                 }
                 }
             }
@@ -129,6 +162,14 @@
                 display: flex;
                 align-items: center;
 
+                @include large{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
                 button{
                     display: flex;
                     align-items: center;
@@ -139,12 +180,31 @@
                     @include btn;
                     margin-right: 5px;
 
+                    @include large{
+                        display: block;
+                        overflow: hidden;
+                        width: 2rem;
+                        transition: none;
+                        margin: 0;
+                        padding: 0;
+                    }
+
                     &:first-of-type {
                         justify-content: flex-start;
+
+                        @include large{
+                            display: flex;
+                            justify-content: flex-start;
+                        }
                     }
                     
                     &:last-of-type {
                         justify-content: flex-end;
+
+                        @include large{
+                            display: flex;
+                            justify-content: flex-end;
+                        }
                     }
 
                 
@@ -152,6 +212,13 @@
 
                     &:hover{
                         width: 4.3rem;
+                    }
+
+
+                    @include large{
+                        &:hover{
+                            width: 2rem;
+                        }
                     }
 
 
@@ -183,21 +250,7 @@
 
 
 
-        .btn-link{
-
-            button{
-
-                @include small{
-                    @include btn_click;
-                    background-color: red;
-    
-                }
-
-            }
-
-           
-           
-        }
+       
 
 
 
@@ -226,7 +279,7 @@
         @include desktopExtraExtraLarge{
             right: -10%;
 
-            @include small{
+            @include large{
                 grid-column: 1/13 ;
                 position: relative;
                 grid-row: 2;
@@ -884,9 +937,23 @@
         margin-top: 75px;
         display: flex;
 
-        @include small{
+        @include large{
+
             display: none;
+
+            @include medium{
+    
+                display: none;
+                
+                @include small{
+                    display: none;
+                }
+            }
+
         }
+
+
+
 
         .first_item{
             display: flex;
@@ -974,5 +1041,51 @@
                 }
             }
         }
+    }
+
+
+
+    .btn-link{
+        display: none;
+
+        @include large{
+            display: flex;
+            justify-content: center;
+            margin: 25px 0 45px 0;
+        }
+
+        
+
+        button{
+            @include btn_click2($color-seconds);
+            background-color: $btn-color;
+            color: $color-seconds;
+
+            @include large{
+                font-size: 18px;
+                
+
+                @include medium{
+
+                    font-size: 16px;
+                   
+                    width: 160px;
+
+                    @include small{
+
+
+                        width: 160px;
+                        height: 40px;
+                        font-size: 14px;
+                        
+                    }
+                }
+
+            }
+            
+        }
+
+       
+       
     }
 }
