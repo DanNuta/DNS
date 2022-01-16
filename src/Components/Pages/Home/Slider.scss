@@ -74,12 +74,24 @@
 
     .center_slider{
         position: relative;
-
         padding-top: 70px;
+        width: 40%;
 
-        @include large{
-            padding: 0;
+        @include desktopExtraExtraLarge{
+            width: 35%;
+
+
+            @include desktopExtraLarge{
+                width: 35%;
+    
+                @include large{
+                    padding: 0;
+                    width: 100%;
+                }
+            }
         }
+
+
 
 
         .right{
@@ -97,21 +109,27 @@
             h1{
                 margin-bottom: 36px;
 
-                @include large{
-                    grid-column: 1/13;
-                    font-size: 22px;
-                    margin-bottom: 15px;
-                    font-size: 56px;
+                @include desktopExtraLarge{
 
-                    @include medium{
-                        font-size: 30px;
+                    font-size: 36px;
 
-                        @include small{
-                            font-size: 20px;
-                            margin-right: 27px;
+                    @include large{
+                        grid-column: 1/13;
+                        font-size: 22px;
+                        margin-bottom: 15px;
+                        font-size: 56px;
+    
+                        @include medium{
+                            font-size: 30px;
+    
+                            @include small{
+                                font-size: 20px;
+                                margin-right: 27px;
+                            }
                         }
                     }
                 }
+
             }
 
             p{
@@ -125,33 +143,52 @@
                 margin-bottom: 36px;
 
                 @include desktopExtraExtraLarge{
-                   font-size: 25px;
+                   font-size: 24px;
                    width: 450px;
 
-                   @include large{
-                    font-family: 'Open Sans', sans-serif;
-                    font-size: 20px;
-                    line-height: 26px;
-                    width: 100%;
-                    margin-bottom: 30px;
+                   @include desktopExtraLarge{
+                       font-size: 20px;
+                       line-height: 26px;
+                       width: 100%;
 
 
-                    @include small{
-                        font-size: 12px;
-                        line-height: 16px;
-                        font-weight: 400;
+                       @include large{
                         font-family: 'Open Sans', sans-serif;
-
+                        font-size: 20px;
+                        line-height: 26px;
+                        width: 100%;
+                        margin-bottom: 30px;
+    
+    
+                        @include small{
+                            font-size: 12px;
+                            line-height: 16px;
+                            font-weight: 400;
+                            font-family: 'Open Sans', sans-serif;
+    
+                        }
+                        
+                        
                     }
-                    
-                    
-                }
+
+                   }
+
                 }
             }
 
             .btn{
-                @include btn_click;
-                margin-bottom: 54px
+                display: block;
+
+                button{
+
+                    @include btn_click;
+                    margin-bottom: 54px;
+                    display: block;
+
+                    @include large{
+                        display: none;
+                    }
+                }
             }
 
 
@@ -274,23 +311,36 @@
         left: 45%;
         height: 646px;
         z-index: -1;
+        display: none;
 
 
         @include desktopExtraExtraLarge{
             right: -10%;
+            display: none;
 
-            @include large{
-                grid-column: 1/13 ;
-                position: relative;
-                grid-row: 2;
-                width: 100%;
-                top: 0;
-                left: 0;
-                bottom: 0;
+
+            @include desktopExtraLarge{
+                width: 55%;
                 right: 0;
-                height: 100%;
+                display: none;
 
+
+                @include large{
+                    grid-column: 1/13 ;
+                    position: relative;
+                    grid-row: 2;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    height: 100%;
+                    display: block;
+                    
+    
+                }
             }
+
         }
 
 
@@ -936,6 +986,7 @@
     .section_instruments_bottom{
         margin-top: 75px;
         display: flex;
+        gap: 2.5em;
 
         @include large{
 
@@ -959,12 +1010,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 340px;
-            height: 290px;
             background-color: white;
             box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.08);
-            margin-right: 40px;
             position: relative;
+
+
+            
 
               .img{
                   width: 70%;
@@ -1087,5 +1138,755 @@
 
        
        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.img_out_grid{
+    position: absolute;
+    top: 12.5em;
+    right: 0;
+    width: 55%;
+    height: 646px;
+    z-index: -1;
+    display: block;
+
+
+
+    @include desktopExtraExtraLarge{
+        top: 12.5em;
+        width: 55%;
+        
+
+        @include desktopExtraLarge{
+            position: absolute;
+            width: 55%;
+            top: 12.5em;
+            height: 40.625em;
+            
+            
+
+
+            @include large{
+                
+                display: none;
+                
+            }
+        }
+
+    }
+
+
+    .photo, .animated{
+        position: relative;
+        height: 100%;
+
+        @include desktopExtraExtraLarge{
+            height: 100%;
+
+        }
+
+
+        .img_right{
+
+            height: 33.625em;
+
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+    
+                @include desktopExtraLarge{
+                    height: 100%;
+                }
+            }
+        }
+
+
+       
+
+
+
+
+
+
+
+
+        .animated_photo{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            @include small{
+                display: none;
+            }
+
+
+            .animation_top{
+                position: absolute;
+                z-index: 20;
+                top: 6vw;
+                left: 19vw;
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 1s;
+
+                @include desktopExtraExtraLarge{
+                    top: 10vw;
+                   left: 15vw;
+                }
+
+
+                .circle_animation{
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation{
+                        position: absolute;
+                        width: 251px;
+                        height: 2px;
+                        background-color: white;
+                        top: 50%;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 95px;
+                            transform: rotate(45deg);
+                            top: 33px;
+                            left: 94%;
+                            } 
+
+                       
+                    }
+                }
+
+
+
+            }
+
+
+            @keyframes page_animation {
+                from { 
+                    opacity: 0;
+                } 
+                to { 
+                    opacity: 1;
+                } 
+                
+            }
+
+
+            .text_animation{
+                position: absolute;
+                top: 100px;
+                left: 250px;
+
+                p{
+                    color: white;
+                    white-space: nowrap;
+                }
+            }
+
+
+
+
+            .animation_bottom{
+                position: absolute;
+                z-index: 20;
+                top: 22vw;
+                left: 19vw;
+
+                @include desktopExtraExtraLarge{
+                    top: 30vw;
+                    left: 15vw;
+                }
+                
+                
+                
+
+                .circle_animation{
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation{
+                        position: absolute;
+                        width: 114px;
+                        height: 2px;
+                        background-color: white;
+                        top: 50%;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 95px;
+                            transform: rotate(-25deg);
+                            top: -20px;
+                            left: 95%;
+                            } 
+
+                       
+                    }
+                }
+
+
+                .text_animation_bottom{
+                    position: absolute;
+                    top: -59px;
+                    left: 118px;
+                    
+                    p{
+                        color: white;
+                        white-space: nowrap;
+                    }
+
+                }
+
+            }
+
+            .animation_delay_button{
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 3s;
+    
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .animated_photo2{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            @include small{
+                display: none;
+            }
+
+
+            .animation_top2{
+                position: absolute;
+                z-index: 20;
+                top: 4vw;
+                left: 25vw;
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 1s;
+
+
+                .circle_animation2{
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation2{
+                        position: absolute;
+                        width: 251px;
+                        height: 2px;
+                        background-color: white;
+                        top: 50%;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 95px;
+                            transform: rotate(45deg);
+                            top: 33px;
+                            left: 94%;
+                            } 
+
+                       
+                    }
+                }
+
+
+
+            }
+
+
+            @keyframes page_animation {
+                from { 
+                    opacity: 0;
+                } 
+                to { 
+                    opacity: 1;
+                } 
+                
+            }
+
+
+            .text_animation2{
+                position: absolute;
+                top: 100px;
+                left: 250px;
+
+                p{
+                    color: white;
+                    white-space: nowrap;
+                }
+            }
+
+
+
+
+            .animation_bottom2{
+                position: absolute;
+                z-index: 20;
+                top: 22vw;
+                left: 25vw;
+                
+                
+                
+
+                .circle_animation2{
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation2{
+                        position: absolute;
+                        width: 114px;
+                        height: 2px;
+                        background-color: white;
+                        top: 50%;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 95px;
+                            transform: rotate(-25deg);
+                            top: -20px;
+                            left: 95%;
+                            } 
+
+                       
+                    }
+                }
+
+
+                .text_animation_bottom2{
+                    position: absolute;
+                    top: -59px;
+                    left: 118px;
+                    
+                    p{
+                        color: white;
+                        white-space: nowrap;
+                    }
+
+                }
+
+            }
+
+            .animation_delay_button2{
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 3s;
+    
+            }
+
+
+            .fii_in_siguranta{
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 4s;
+                position: absolute;
+                z-index: 20;
+                top: 13vw;
+                left: 20vw;
+
+                .circle_animation2{
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation2{
+                        position: absolute;
+                        width: 114px;
+                        height: 2px;
+                        background-color: white;
+                        bottom: 50%;
+                        right: 100%;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 50px;
+                            transform: rotate(90deg);
+                            right: 79%;
+                            top: -24px;
+                            } 
+
+                       
+                    }
+                }
+
+
+                .text_animation_bottom2{
+                    position: absolute;
+                    top: -61px;
+                    left: -180px;
+                    
+                    p{
+                        color: white;
+                        white-space: nowrap;
+                    }
+
+                }
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .animated_photo4{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            @include small{
+                display: none;
+            }
+
+            .animation_top4{
+                position: absolute;
+                z-index: 20;
+                top: 7vw;
+                left: 27vw;
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 1s;
+
+
+                .circle_animation4{
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation4{
+                        position: absolute;
+                        width: 251px;
+                        height: 2px;
+                        background-color: white;
+                        top: 50%;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 47px;
+                            transform: rotate(90deg);
+                            top: 23px;
+                            left: 91%;
+                            } 
+
+                       
+                    }
+                }
+
+
+
+            }
+
+
+            @keyframes page_animation {
+                from { 
+                    opacity: 0;
+                } 
+                to { 
+                    opacity: 1;
+                } 
+                
+            }
+
+
+            .text_animation4{
+                position: absolute;
+                top: 71px;
+                left: 180px;
+
+                p{
+                    color: white;
+                    white-space: nowrap;
+                }
+            }
+
+
+
+
+            .animation_bottom4{
+                position: absolute;
+                z-index: 20;
+                top: 14vw;
+                left: 27vw;
+                
+                
+                
+
+                .circle_animation4{
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation4{
+                        position: absolute;
+                        width: 114px;
+                        height: 2px;
+                        background-color: white;
+                        top: 50%;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 95px;
+                            transform: rotate(45deg);
+                            top: 34px;
+                            left: 88%;
+                            } 
+
+                       
+                    }
+                }
+
+
+                .text_animation_bottom4{
+                    position: absolute;
+                    top: 97px;
+                    left: 118px;
+                    
+                    p{
+                        color: white;
+                        white-space: nowrap;
+                    }
+
+                }
+
+            }
+
+            .animation_delay_button4{
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 3s;
+    
+            }
+
+
+            .fii_in_siguranta4{
+                animation-name: page_animation;
+                animation-fill-mode: forwards;
+                animation-duration: 2s;
+                position: absolute;
+                z-index: 20;
+                top: 23vw;
+                left: 23vw;
+
+                .circle_animation4{
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 100px;
+                    background-color: white;
+                    border: 8px solid #FFD600;
+                    box-shadow: 0 0 7px rgba(255, 214, 0, 0.37);
+
+                    .line_animation4{
+                        position: absolute;
+                        width: 100px;
+                        height: 2px;
+                        background-color: white;
+                        bottom: 50%;
+                        right: 100%;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            height: 2px;
+                            background-color: rgb(255, 255, 255);
+                            width: 50px;
+                            transform: rotate(45deg);
+                            right: 92%;
+                            top: -18px;
+                            } 
+
+                       
+                    }
+                }
+
+
+                .text_animation_bottom4{
+                    position: absolute;
+                    top: -45px;
+                    left: -169px;
+                    
+                    p{
+                        color: white;
+                        white-space: nowrap;
+                    }
+
+                }
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

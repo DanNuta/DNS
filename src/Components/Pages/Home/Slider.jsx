@@ -120,32 +120,20 @@ class Slider extends Component {
 
 
         return ( 
-            
-            <section className="section_slider">
-
-                <div className="center_slider ">
-                    <div className="right">
-                        <h1>Sudara exotermica CADWELD</h1>
-                        <p>Accesorii, interconexiuni, consumabile
-                            Suduri impamantare durabile, garantie pe viata, durata de viata 100 ani.</p>
-                        <button onClick={this.submitData} className="btn">Contactează-ne</button>
-
-                        <div className="indicator">
-                            <button className='slider_btn_prev' onClick={this.leftArrow}><span className='slider__button-inner'><ImagesArrowSvg/></span></button>
-                            <button className='slider_btn_next' onClick={this.rightArrow}><span className='slider__button-inner'><ImagesArrowSvg2/></span></button>
-                        </div>
-
-                    </div>
-                </div>
 
 
 
+            <React.Fragment>
 
 
 
-                <div className="right_img">
+            <div className="img_out_grid">
                     <div className={this.state.curentSlide.id === 3 ? "animated" : "photo"}>
-                        <img  src={this.state.curentSlide.img} alt={this.state.curentSlide.alt}  />
+
+                            <div className="img_right">
+                                <img  src={this.state.curentSlide.img} alt={this.state.curentSlide.alt}/>
+                            </div>
+                        
 
                         {this.state.curentSlide.id === 3 && 
                                     <div className='animated_photo'>
@@ -275,7 +263,247 @@ class Slider extends Component {
 
 
 
-                <div className="section_instruments_bottom center">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+               <section className="section_slider ">
+
+
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div className="center_slider ">
+                    <div className="right">
+                        <h1>Sudara exotermica CADWELD</h1>
+                        <p>Accesorii, interconexiuni, consumabile
+                            Suduri impamantare durabile, garantie pe viata, durata de viata 100 ani.</p>
+                            <NavLink className="btn" to="/contact"><button>Contacteaza-ne</button></NavLink>
+
+                        <div className="indicator">
+                            <button className='slider_btn_prev' onClick={this.leftArrow}><span className='slider__button-inner'><ImagesArrowSvg/></span></button>
+                            <button className='slider_btn_next' onClick={this.rightArrow}><span className='slider__button-inner'><ImagesArrowSvg2/></span></button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <div className="right_img">
+                    <div className={this.state.curentSlide.id === 3 ? "animated" : "photo"}>
+
+                            <div className="img_right">
+                                <img  src={this.state.curentSlide.img} alt={this.state.curentSlide.alt}/>
+                            </div>
+                        
+
+                        {this.state.curentSlide.id === 3 && 
+                                    <div className='animated_photo'>
+                                        <div className="animation_top">
+                                            <div className="circle_animation">
+                                               <div className="line_animation"></div>
+                                            </div>
+                                            
+                                            <div className="text_animation">
+                                                <p>Paratrasnet PDA Sensor</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div className="animation_bottom animation_delay_button">
+                                            <div className="circle_animation">
+                                                <div className="line_animation"></div>
+                                                </div>
+                                                
+                                                <div className="text_animation_bottom">
+                                                    <p>Catarg fixare Paratrasnet PDA</p>
+                                                </div>
+                                        </div>
+
+                                    </div>
+                        }
+
+
+
+
+
+
+                        {this.state.curentSlide.id === 4 && 
+                                    <div className='animated_photo2'>
+                                        <div className="animation_top2">
+                                            <div className="circle_animation2">
+                                               <div className="line_animation2"></div>
+                                            </div>
+                                            
+                                            <div className="text_animation2">
+                                                <p>Paratrasnet PDA Sensor</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div className="fii_in_siguranta">
+                                            <div className="circle_animation2">
+                                                <div className="line_animation2"></div>
+                                            </div>
+
+                                                <div className="text_animation_bottom2">
+                                                    <p>Fii in suguranta cu DNA</p>
+                                                </div>
+
+                                        </div>
+
+
+                                        <div className="animation_bottom2 animation_delay_button2">
+                                                <div className="circle_animation2">
+                                                   <div className="line_animation2"></div>
+                                                </div>
+                                                
+                                                <div className="text_animation_bottom2">
+                                                    <p>Catarg fixare Paratrasnet PDA</p>
+                                                </div>
+                                        </div>
+
+                                    </div>
+                        }
+
+
+
+
+
+
+
+                      {this.state.curentSlide.id === 5 && 
+                                    <div className='animated_photo4'>
+                                        <div className="animation_top4">
+                                            <div className="circle_animation4">
+                                               <div className="line_animation4"></div>
+                                            </div>
+                                            
+                                            <div className="text_animation4">
+                                                <p>Garantie de lunga durata</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div className="fii_in_siguranta4">
+                                            <div className="circle_animation4">
+                                                <div className="line_animation4"></div>
+                                            </div>
+
+                                                <div className="text_animation_bottom4">
+                                                    <p>Calitate inalta</p>
+                                                </div>
+
+                                        </div>
+
+
+                                        <div className="animation_bottom4 animation_delay_button4">
+                                                <div className="circle_animation4">
+                                                   <div className="line_animation4"></div>
+                                                </div>
+                                                
+                                                <div className="text_animation_bottom4">
+                                                    <p>Protectie exceptionala</p>
+                                                </div>
+                                        </div>
+
+                                    </div>
+                        }
+
+
+                    </div>
+
+                   
+                </div>
+
+
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+                <div className="section_instruments_bottom ">
 
                     <div className="first_item">
                         <img className='img' src={this.state.products[0].img} alt="Sfredel" />
@@ -335,6 +563,9 @@ class Slider extends Component {
                 <NavLink className="btn-link" to="/contact"><button>Contacteaza-ne</button></NavLink>
 
             </section>
+
+
+            </React.Fragment>
          );
     }
 }
