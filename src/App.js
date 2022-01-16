@@ -2736,7 +2736,7 @@ class App extends Component {
     }
 
     state = {
-        coockie: false,
+        coockie: true,
         elementAded: [], 
         dataShop: [],
         dataItem: "",
