@@ -77,10 +77,20 @@ p{
             width: 50%;
 
             @include small{
-                width: 60%;
-                padding: 40px 30px;
+                width: 70%;
+                padding: 40px 28px;
             }
 
+        }
+
+
+
+        img{
+            
+
+            @include small{
+                width: 50%;
+            }
         }
     
         h1{
@@ -97,6 +107,7 @@ p{
 
             @include small{
                 font-size: 20px;
+                line-height: 27px;
             }
         }
     
@@ -128,7 +139,13 @@ p{
     
     
         button{
-            @include btn_click($btn-color)
+            @include btn_click($btn-color);
+
+            @include small{
+                padding: 12px 50px;
+                font-size: 14px;
+
+            }
         }
     }
 
