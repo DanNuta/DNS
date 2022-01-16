@@ -145,7 +145,13 @@ class Contacte extends Component {
 
                            <div className="despre_noi">
 
+                           <input className='submit_btn_despre' type="submit" value="Contactează-ne" />
+
+
+
                                <div className="despre_noi_content">
+
+
                                    <h2>Despre noi</h2>
 
                                    <div className="despre_noi_info">
@@ -175,13 +181,17 @@ class Contacte extends Component {
                            <div className="background_yollow"></div>
 
 
+
+                           <input className='submit_btn' type="submit" value="Contactează-ne" />
+
+
                            
 
 
                     </div>
 
 
-                    <input className='submit_btn' type="submit" value="Contactează-ne" />
+                    
 
 
 

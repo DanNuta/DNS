@@ -49,6 +49,11 @@
     form{
         grid-column: 1/13;
         margin-top: 55px;
+
+        @include small{
+            margin-top: 20px;
+            
+        }
        
 
         h2{
@@ -78,14 +83,20 @@
             .nume_email{
                 grid-column: 1/5;
 
-                @include large{
-                    grid-column: 1/7;
+                @include desktopExtraLarge{
 
-                    @include small{
-                        grid-column: 1/13;
-                        grid-row: 1;
+                    grid-column: 1/5;
+
+                    @include large{
+                        grid-column: 1/7;
+    
+                        @include small{
+                            grid-column: 1/13;
+                            grid-row: 1;
+                        }
                     }
                 }
+
 
                 .div{
                     
@@ -118,6 +129,19 @@
                         letter-spacing: 0.02em;
                         margin-bottom: 15px;
                         padding-left: 10px;
+
+                        
+
+
+                        @include small{
+                            height: 40px;
+
+                            &::placeholder{
+                                font-size: 12px;
+                            }
+
+                            
+                        }
                         
       
                     }
@@ -164,6 +188,20 @@
                     letter-spacing: 0.02em;
                     resize: none;
                     height: 244px;
+
+
+                    @include small{
+                        height: 150px;
+
+                        &::placeholder{
+                            font-size: 12px;
+                            line-height: 16px;
+                        }
+
+                        
+                    }
+
+                    
                 }
             }
 
@@ -187,18 +225,24 @@
                             grid-column: 1/13;
                             grid-row: 2;
                             top: 0px;
+                            margin-top: 30px  !important;
+                            width: 100%;
 
                             @include small{
                                 grid-column: 1/13;
                                 grid-row: 3;
-                                margin-top: 157px;
                                 align-content: center;
+                                margin: 30px  !important;
                             }
                         }
                     }
                     
                     .despre_noi_content{
                         padding: 59px 25px;
+
+                        @include small{
+                            padding: 2.25em 1.25em;
+                        }
 
                           h2{
                               margin-bottom: 30px;
@@ -211,6 +255,10 @@
                                 display: flex;
                                 align-items: center;
                                 margin-bottom: 44px;
+
+                                @include small{
+                                    margin-bottom: 0.9375em;
+                                }
 
                                 
                                 
@@ -226,6 +274,43 @@
                             }
                         }
                     }
+
+
+
+                    .submit_btn_despre{
+                        border: 0;
+                        outline: none;
+                        cursor: pointer;
+                        padding: 14px 100px;
+                        background-color: #FFD600;
+                        font-family: "Montserrat";
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 22px;
+                        text-align: center;
+                        z-index: 10;
+                        position: absolute;
+                        
+                        display: none;
+
+                        @include large{
+                            display: flex;
+                        }
+                        
+                        
+
+
+                    }
+
+
+
+
+
+
+
+
+
                 
             }
 
@@ -251,9 +336,59 @@
                         @include small{
                             grid-column: 7/13;
                             grid-row: 3;
-                            margin-top: 110px;
+                            
+                            height: 19em;
                         }
                     }
+                }
+            }
+
+
+
+
+
+
+
+
+
+            .submit_btn{
+                grid-row: 2;
+                border: 0;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 100px;
+                background-color: #FFD600;
+                font-family: "Montserrat";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 22px;
+                text-align: center;
+                z-index: 10;
+                position: relative;
+                bottom: 400%;
+                grid-column: 4/6;
+                display: flex;
+                justify-content: center;
+
+                
+                @include large{
+                    
+                    display: none;
+                    
+                   
+    
+                   @include small{
+    
+                    top: -533px;
+                    width: 70%;
+                    margin: auto;
+                    text-align: center;
+                    padding: 0;
+                    font-size: 14px;
+                    height: 40px;
+                    
+                }
                 }
             }
 
@@ -265,44 +400,7 @@
         }
 
 
-        .submit_btn{
-            grid-row: 1;
-            border: 0;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 75px;
-            background-color: #FFD600;
-            font-family: Montserrat;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 22px;
-            letter-spacing: 0em;
-            text-align: center;
-            position: relative;
-            top: -180px;
-            left: 23%;
-
-
-            @include large{
-                position: relative;
-                left: 50%;
-                transform: translateX(-50%);
-               top: -456px;
-
-               @include small{
-
-                top: -533px;
-                width: 70%;
-                margin: auto;
-                text-align: center;
-                padding: 0;
-                font-size: 14px;
-                height: 40px;
-                
-            }
-            }
-        }
+        
     }
 
 

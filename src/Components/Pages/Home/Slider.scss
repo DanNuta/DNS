@@ -187,6 +187,7 @@
 
                     @include large{
                         display: none;
+                        
                     }
                 }
             }
@@ -1100,9 +1101,11 @@
         display: none;
 
         @include large{
-            display: flex;
-            justify-content: center;
-            margin: 25px 0 45px 0;
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%)
         }
 
         
@@ -1114,17 +1117,13 @@
 
             @include large{
                 font-size: 18px;
-                
-
+                margin: 25px 0 45px 0;
                 @include medium{
 
                     font-size: 16px;
-                   
                     width: 160px;
 
                     @include small{
-
-
                         width: 160px;
                         height: 40px;
                         font-size: 14px;
@@ -1142,38 +1141,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 
 
 }
