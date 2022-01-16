@@ -223,10 +223,12 @@
 
                         @include large{
                             grid-column: 1/13;
-                            grid-row: 2;
-                            top: 0px;
-                            margin-top: 30px  !important;
-                            width: 100%;
+                                grid-row: 2;
+                                align-content: center;
+                                margin: 0  !important;
+                                width: 100%;
+                                position: relative;
+                                top: 137px;
 
                             @include small{
                                 grid-column: 1/13;
@@ -336,14 +338,14 @@
                 position: relative;
                 top: -123px;
 
-                @include large{
-                    grid-row: 2;
-                    height: 450px;
+                
 
                     @include large{
-                        grid-column: 10/13;
-                        grid-row: 2;
-                        top: 0px;
+                        grid-column: 7/13;
+                            grid-row: 3;
+                            position: relative;
+                            top: -255px;
+                            height: 27em;
 
                         @include small{
                             grid-column: 7/13;
@@ -353,7 +355,7 @@
                             height: 19em;
                         }
                     }
-                }
+                
             }
 
 
@@ -420,10 +422,19 @@
     .map{
         grid-column: 1/13;
 
-        @include small{
-            margin-top: 200px;
-            grid-row: 4;
+
+
+        @include large{
+
+            margin-top: -200px;
+
+
+            @include small{
+                margin-top: 125px;
+                grid-row: 4;
+            }
         }
+
 
         iframe{
             width: 100%;
