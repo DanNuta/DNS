@@ -64,8 +64,7 @@
     grid-column: 1/13;
 
     @include desktopExtraExtraLarge{
-        max-width: 90%;
-        margin: 115px auto 0 auto;
+        
 
         @include small{
             margin-top: 52px;
@@ -1265,7 +1264,7 @@
 
         .img_right{
 
-            height: 33.625em;
+            height: 100%;
 
 
             img{
