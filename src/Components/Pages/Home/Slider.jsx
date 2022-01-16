@@ -292,51 +292,6 @@ class Slider extends Component {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <div className="center_slider ">
                     <div className="right">
                         <h1>Sudara exotermica CADWELD</h1>

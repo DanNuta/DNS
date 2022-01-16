@@ -61,6 +61,7 @@
 .section_slider{
     position: relative;
     margin-top: 87px;
+    grid-column: 1/13;
 
     @include desktopExtraExtraLarge{
         max-width: 90%;
