@@ -221,13 +221,23 @@ class Home extends Component {
             <div>
 
 
+                <div className="center">
 
-            <Slider
+
+                
+        <Slider
             onExportDate={this.exportDate}
             products={this.props.produse}
             onSearchItem={this.searchItem}
             produse={this.props.products}
             />
+                </div>
+
+
+
+
+
+           
 
 
 
@@ -242,6 +252,7 @@ class Home extends Component {
 
 
                 <section  className=" section-center1 ">
+
 
                     <div className="dns-paratrasnet center">
 
