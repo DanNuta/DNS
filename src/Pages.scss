@@ -91,22 +91,36 @@ text-align: left;
             align-items: center;
             justify-content: center;
 
-            @include medium{
-                grid-column: 1/13; 
 
-                @include small{
-                    height: 300px;
+            @include large{
+
+                height: 400px;
+
+                @include medium{
+                    grid-column: 1/13; 
+    
+                    @include small{
+                        height: 300px;
+                    }
                 }
             }
+
 
               img{
                 width: 75%;
                 height: 75%;
                 object-fit: cover;
 
-                @include small{
-                    width: 50%;
+                @include large{
+
+                    width: 60%;
+
+
+                    @include small{
+                        width: 50%;
+                    }
                 }
+
             }
         }
 
@@ -597,9 +611,15 @@ text-align: left;
                         font-weight: 700;
                         line-height: 22px;
 
-                        @include small{
-                            font-size: 14px;
+                        @include large{
+
+                            font-size: 16px;
+
+                            @include small{
+                                font-size: 14px;
+                            }
                         }
+
                  }
 
                  

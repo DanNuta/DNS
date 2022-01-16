@@ -391,6 +391,11 @@
                     @include desktopExtraExtraLarge{
                         top: 10vw;
                        left: 15vw;
+
+                       @include large{
+                        top: 8vw;
+                        left: 32vw;
+                    }
                     }
     
 
@@ -409,6 +414,11 @@
                             background-color: white;
                             top: 50%;
 
+
+                            @include large{
+                                width: 140px;
+                            }
+
                             &:after {
                                 position: absolute;
                                 content: "";
@@ -418,6 +428,10 @@
                                 transform: rotate(45deg);
                                 top: 33px;
                                 left: 94%;
+
+                                @include large{
+                                    left: 90%;
+                                }
                                 } 
     
                            
@@ -445,6 +459,10 @@
                     top: 100px;
                     left: 250px;
 
+                    @include large{
+                        left: 140px;
+                    }
+
                     p{
                         color: white;
                         white-space: nowrap;
@@ -463,6 +481,11 @@
                     @include desktopExtraExtraLarge{
                         top: 30vw;
                         left: 15vw;
+
+                        @include large{
+                            top: 42vw;
+                           left: 32vw;
+                        }
                     }
                     
                     
@@ -558,6 +581,11 @@
                     animation-name: page_animation;
                     animation-fill-mode: forwards;
                     animation-duration: 1s;
+
+                    @include large{
+                        top: 6vw;
+                        left: 41vw;
+                    }
     
 
                     .circle_animation2{
@@ -575,6 +603,10 @@
                             background-color: white;
                             top: 50%;
 
+                            @include large{
+                                width: 146px;
+                            }
+
                             &:after {
                                 position: absolute;
                                 content: "";
@@ -584,6 +616,10 @@
                                 transform: rotate(45deg);
                                 top: 33px;
                                 left: 94%;
+
+                                @include large{
+                                    left: 90%;
+                                }
                                 } 
     
                            
@@ -611,6 +647,10 @@
                     top: 100px;
                     left: 250px;
 
+                    @include large{
+                        left: 121px;
+                    }
+
                     p{
                         color: white;
                         white-space: nowrap;
@@ -625,6 +665,13 @@
                     z-index: 20;
                     top: 22vw;
                     left: 25vw;
+
+                    @include large{
+
+                    top: 44vw;
+                    left: 40vw;
+                        
+                    }
                     
                     
                     
@@ -664,6 +711,14 @@
                         position: absolute;
                         top: -59px;
                         left: 118px;
+
+                        
+                    @include large{
+
+                       
+                        left: 90px;
+                            
+                        }
                         
                         p{
                             color: white;
@@ -690,6 +745,11 @@
                     z-index: 20;
                     top: 13vw;
                     left: 20vw;
+
+                    @include large{
+                        top: 23vw;
+                        left: 34vw;
+                    }
 
                     .circle_animation2{
                         position: absolute;
@@ -773,6 +833,11 @@
                     animation-name: page_animation;
                     animation-fill-mode: forwards;
                     animation-duration: 1s;
+
+                    @include large{
+                        top: 5vw;
+                        left: 44vw;
+                    }
     
 
                     .circle_animation4{
@@ -790,6 +855,10 @@
                             background-color: white;
                             top: 50%;
 
+                            @include large{
+                                width: 140px;
+                            }
+
                             &:after {
                                 position: absolute;
                                 content: "";
@@ -799,6 +868,10 @@
                                 transform: rotate(90deg);
                                 top: 23px;
                                 left: 91%;
+
+                                @include large{
+                                    left: 84%;
+                                }
                                 } 
     
                            
@@ -826,6 +899,12 @@
                     top: 71px;
                     left: 180px;
 
+                    @include large{
+                        left: 90px;
+                    }
+
+                    
+
                     p{
                         color: white;
                         white-space: nowrap;
@@ -840,6 +919,11 @@
                     z-index: 20;
                     top: 14vw;
                     left: 27vw;
+
+                    @include large{
+                        top: 28vw;
+                        left: 44vw;
+                    }
                     
                     
                     
@@ -905,6 +989,11 @@
                     z-index: 20;
                     top: 23vw;
                     left: 23vw;
+
+                    @include large{
+                        top: 37vw;
+                        left: 37vw;
+                    }
 
                     .circle_animation4{
                         position: absolute;
@@ -1273,7 +1362,7 @@
                 position: absolute;
                 z-index: 20;
                 top: 6vw;
-                left: 19vw;
+                left: 18vw;
                 animation-name: page_animation;
                 animation-fill-mode: forwards;
                 animation-duration: 1s;
@@ -1281,6 +1370,13 @@
                 @include desktopExtraExtraLarge{
                     top: 10vw;
                    left: 15vw;
+
+                   @include desktopExtraLarge{
+
+                    top: 11vw;
+                   left: 11vw;
+
+                   }
                 }
 
 
@@ -1347,12 +1443,23 @@
             .animation_bottom{
                 position: absolute;
                 z-index: 20;
-                top: 22vw;
-                left: 19vw;
+                top: 26vw;
+                left: 18vw;
+
+
 
                 @include desktopExtraExtraLarge{
                     top: 30vw;
                     left: 15vw;
+
+
+                    @include desktopExtraLarge{
+
+                        top: 40vw;
+                       left: 11vw;
+
+                    }
+    
                 }
                 
                 
@@ -1435,9 +1542,13 @@
             bottom: 0;
             left: 0;
 
-            @include small{
-                display: none;
+            @include desktopExtraExtraLarge{
+
+                @include small{
+                    display: none;
+                }
             }
+
 
 
             .animation_top2{
@@ -1448,6 +1559,13 @@
                 animation-name: page_animation;
                 animation-fill-mode: forwards;
                 animation-duration: 1s;
+
+                @include desktopExtraExtraLarge{
+
+                    top: 7vw;
+                    left: 23vw;
+                    
+                }
 
 
                 .circle_animation2{
@@ -1464,6 +1582,16 @@
                         height: 2px;
                         background-color: white;
                         top: 50%;
+                        left: 94%;
+
+                        @include desktopExtraExtraLarge{
+                           width: 215px;
+
+                           @include desktopExtraLarge{
+                               width: 134px;
+                           }
+                            
+                        }
 
                         &:after {
                             position: absolute;
@@ -1474,6 +1602,10 @@
                             transform: rotate(45deg);
                             top: 33px;
                             left: 94%;
+
+                            @include desktopExtraLarge{
+                                left: 90%;
+                            }
                             } 
 
                        
@@ -1501,6 +1633,17 @@
                 top: 100px;
                 left: 250px;
 
+                @include desktopExtraExtraLarge{
+
+                    left: 199px;
+
+
+                    @include desktopExtraLarge{
+                        left: 113px;
+                    }
+                     
+                 }
+
                 p{
                     color: white;
                     white-space: nowrap;
@@ -1515,6 +1658,11 @@
                 z-index: 20;
                 top: 22vw;
                 left: 25vw;
+
+                @include desktopExtraExtraLarge{
+                    top: 39vw;
+                    left: 23vw; 
+                }
                 
                 
                 
@@ -1580,6 +1728,11 @@
                 z-index: 20;
                 top: 13vw;
                 left: 20vw;
+
+                @include desktopExtraExtraLarge{
+                    top: 22vw;
+                    left: 19vw; 
+                }
 
                 .circle_animation2{
                     position: absolute;
@@ -1658,11 +1811,15 @@
             .animation_top4{
                 position: absolute;
                 z-index: 20;
-                top: 7vw;
+                top: 5vw;
                 left: 27vw;
                 animation-name: page_animation;
                 animation-fill-mode: forwards;
                 animation-duration: 1s;
+
+                @include desktopExtraExtraLarge{
+                    left: 26vw;
+                }
 
 
                 .circle_animation4{
@@ -1680,6 +1837,10 @@
                         background-color: white;
                         top: 50%;
 
+                        @include desktopExtraLarge{
+                            width: 171px;
+                        }
+
                         &:after {
                             position: absolute;
                             content: "";
@@ -1689,6 +1850,10 @@
                             transform: rotate(90deg);
                             top: 23px;
                             left: 91%;
+
+                            @include desktopExtraLarge{
+                                left: 87%;
+                            }
                             } 
 
                        
@@ -1716,6 +1881,10 @@
                 top: 71px;
                 left: 180px;
 
+                @include desktopExtraLarge{
+                    left: 105px;
+                }
+
                 p{
                     color: white;
                     white-space: nowrap;
@@ -1730,6 +1899,11 @@
                 z-index: 20;
                 top: 14vw;
                 left: 27vw;
+
+                @include desktopExtraExtraLarge{
+                    left: 26vw;
+                    top: 19vw;
+                }
                 
                 
                 
@@ -1795,6 +1969,10 @@
                 z-index: 20;
                 top: 23vw;
                 left: 23vw;
+
+                @include desktopExtraExtraLarge{
+                    top: 37vw;
+                }
 
                 .circle_animation4{
                     position: absolute;
