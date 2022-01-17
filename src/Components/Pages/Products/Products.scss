@@ -169,7 +169,7 @@
             margin-top: 55px;
             grid-column: 5/13;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 3fr));
             grid-row-gap: 40px;
             grid-column-gap: 20px;
 
