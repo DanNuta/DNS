@@ -272,6 +272,12 @@ $color_seconds: #FFD600;
             display: flex;
             justify-content: center;
             flex-direction: column;
+
+            h1{
+                color: white;
+                font-size: 20px;
+                text-align: center;
+            }
             
 
             @include medium{

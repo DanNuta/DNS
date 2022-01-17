@@ -10,7 +10,7 @@ import leftArrow from "../../Pages/icon/header_arrow/left_arrow.svg";
 import rightArrow from "../../Pages/icon/header_arrow/right_arrow.svg";
 import rightArrowHover from "../../Pages/icon/header_arrow/right_arrow_hover.svg";
 import leftArrowHover from "../../Pages/icon/header_arrow/left_arrow_hover.svg";
-import {ImagesArrowSvg, ImagesArrowSvg2} from "./ArrowSvg";
+import {ImagesArrowSvg, ImagesArrowSvg2,  ImagesArrowSvg3, ImagesArrowSvg4} from "./ArrowSvg";
 import AnimatePhoto from "../../Pages/home_section1/home_animation.png";
 import AnimatePhoto2 from "../../Pages/home_section1/home_animation2.png";
 import AnimatePhoto3 from "../../Pages/home_section1/home_animation3.png";
@@ -38,7 +38,12 @@ class Slider extends Component {
             {img: rightArrow, alt: "Right Arrow"},
             {img: leftArrowHover, alt: "Left Arrow Hover"},
             {img: rightArrowHover, alt: "Right Arrow Hover"}
-        ]
+        ],
+
+        svgWishList: [<ImagesArrowSvg3/>, <ImagesArrowSvg4/>]
+
+
+       
  
     }
 
@@ -48,11 +53,10 @@ class Slider extends Component {
     state = {
         curentSlide: this.props.images[0],
         click: 1, 
-
         leftArrow: this.props.arrowCurent[0],
         rightArrow: this.props.arrowCurent[1],
-
-        products: this.props.produse
+        products: this.props.produse,
+        iconWishList: this.props.svgWishList[0]
 
         
         
@@ -93,7 +97,13 @@ class Slider extends Component {
 
     selectFirstItem = () =>{
         this.props.onExportDate(this.state.products[0])
+        
+       this.setState({iconWishList: this.props.wishList.map(el => el.id === this.state.products[0].id ?  this.props.svgWishList[1] : this.props.svgWishList[0])})
+
     }
+
+
+
 
 
     selectFirstItem2 = () =>{
@@ -467,7 +477,7 @@ class Slider extends Component {
                              <img className="img" src={this.state.products[0].img} alt="Sfredel"  />
                             <ul>
                                 <li onClick={this.searchItem1}><NavLink to={`/produse/${this.state.products[0].id}`}><img src={search} alt="search"/></NavLink></li>
-                                <li onClick={this.selectFirstItem}><img src={heart} alt="search"/></li>
+                                <li onClick={this.selectFirstItem}>{this.state.iconWishList}</li>
                             </ul>
                             
                         </div>

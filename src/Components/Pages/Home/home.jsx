@@ -107,7 +107,8 @@ class Home extends Component {
                 description: "Paratrasnet PDA Schwaertz Compact S ΔT=25 µs raza Rp 42-65m",
                 filter: "pda",
                 curentPrice: 892
-            },        ]
+            },       
+         ]
     }
 
 
@@ -121,14 +122,14 @@ class Home extends Component {
         supratensiuni: false,
         impamantare: false,
         solare: false,
-
         click: 0, 
         leftArrow: this.props.arrowCurent[0],
         rightArrow: this.props.arrowCurent[1],
-
         instalareImg: this.props.imgInstalare[0],
+        wishListElement: [],
+        
 
-        wishListElement: []
+
 
     }
 
@@ -216,6 +217,17 @@ class Home extends Component {
    }
 
 
+
+
+
+
+
+
+   componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
+
     render() { 
         return ( 
             <div>
@@ -230,6 +242,7 @@ class Home extends Component {
             products={this.props.produse}
             onSearchItem={this.searchItem}
             produse={this.props.products}
+            wishList={this.props.elementAded}
             />
                 </div>
 
@@ -420,7 +433,7 @@ class Home extends Component {
 
 
                     {this.state.protectie && 
-                                     <div className="protectie_hover">
+                                     <div className="protectie_hover" onClick={this.protectie}>
 
                                          <div className="protectie_inside">
                                             <h1>Protecție împotriva trăsnetului</h1>
@@ -444,7 +457,7 @@ class Home extends Component {
 
 
                                {this.state.supratensiuni && 
-                                     <div className="protectie_hover">
+                                     <div className="protectie_hover" onClick={this.supratensiuni}>
 
                                          <div className="protectie_inside">
                                             <h1>Protecție la supratensiuni</h1>
@@ -469,7 +482,7 @@ class Home extends Component {
 
 
                           {this.state.impamantare && 
-                                     <div className="protectie_hover">
+                                     <div className="protectie_hover" onClick={this.impamantare} >
 
                                          <div className="protectie_inside">
                                             <h1>Împământare</h1>
@@ -493,7 +506,7 @@ class Home extends Component {
 
 
                                {this.state.solare && 
-                                     <div className="protectie_hover">
+                                     <div className="protectie_hover" onClick={this.solare}>
 
                                          <div className="protectie_inside">
                                             <h1>Balize solare</h1>
@@ -593,7 +606,7 @@ class Home extends Component {
 
                            <div className="element_inside_right2">
 
-                                <div className="element_items btn_inside">
+                                <div className="element_items">
                                         
                                <NavLink className="btn-link" to="/contact"><button>Contacteaza-ne</button></NavLink>
 

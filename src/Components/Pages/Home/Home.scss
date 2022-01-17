@@ -1288,11 +1288,19 @@ section{
             padding: 89px 100px;
             display: flex;
             flex-wrap: wrap;
+
+
+            @include desktopExtraExtraLarge{
+                padding: 50px 75px;
+
+
+                @include medium{
+                    padding: 0;
+                }
+            }
               
 
-            @include medium{
-                padding: 0;
-            }
+
             }
 
 
@@ -1333,9 +1341,15 @@ section{
                         text-align: center;
                         margin: 27px 0 19px 0;
 
-                        @include small{
-                            font-size: 18px;
+                        @include desktopExtraLarge{
+
+                            font-size: 26px;
+
+                            @include small{
+                                font-size: 18px;
+                            }
                         }
+
 
                     }
 
@@ -1367,28 +1381,41 @@ section{
 
 
             .element_inside_right2{
-                width: 684px;
                 display: flex;
                 margin: 56px auto 0 auto;
                 justify-content: space-between;
 
+
                 @include medium{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center; 
                     flex-direction: column-reverse;
-                    width: 100%;  
-                 }
+                }
+
 
                 .element_items{
                     width: 40%;
                     text-align: center;
 
-                    @include medium{
-                        text-align: center;
-                        width: 100%;
-                        margin-bottom: 20px;  
-                     }
+
+                    &:first-of-type{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+
+                    }
+
+
+                    @include desktopExtraExtraLarge{
+                        
+
+
+                        @include medium{
+                            text-align: center;
+                            width: 100%;
+                            margin-bottom: 20px;  
+                         }
+                    }
+
 
                     h2{
                         font-family: Montserrat;
@@ -1427,44 +1454,64 @@ section{
                 }
 
 
-                .btn_inside{
-                    display: flex;
-                    align-items: center;
+                
 
                     .btn-link{
                         width: 100%;
+                        
 
-                        @include medium{
-                            width: 50%;
-                            margin: auto
+                        
 
+                        @include desktopExtraExtraLarge{
+
+                            
+
+                            @include medium{
+                                
+    
+                            }
                         }
 
+
+
+
                         button{
-                            @include btn_click($color-seconds);
                             color: white;
-                
-                            @include large{
-                                font-size: 18px;
-                                color: white;
-                
-                                @include medium{
-                
+                            border: 0;
+                            background-color: #272727;
+                            width: 100%;
+                            padding: 15px 0;
+                            font-size: 18px;
+                            font-family: 'Montserrat', sans-serif;
+
+
+                            @include desktopExtraLarge{
+                                font-size: 14px;
+
+
+
+                                @include large{
                                     font-size: 16px;
                                     color: white;
-                                    width: 160px;
-                
-                                    @include small{
-                
-                
+                    
+                                    @include medium{
+                    
+                                        font-size: 16px;
                                         width: 160px;
-                                        height: 40px;
-                                        font-size: 14px;
-                                        color: white;
+                    
+                                        @include small{
+                    
+                    
+                                            
+                                            
+                                            font-size: 14px;
+                                            color: white;
+                                        }
                                     }
+                    
                                 }
-                
                             }
+                
                             
                         }
 
@@ -1479,7 +1526,7 @@ section{
 
            
         }
-    }
+    
 
 
 

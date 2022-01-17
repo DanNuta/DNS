@@ -27,7 +27,7 @@ const Pages = (props) => {
     const [nume, setNume] = useState("");
     const [email, setEmail] = useState("");
     const [telefon, setTelefon] = useState("");
-    const [valueElement, setValueElement] = useState(0);
+    const [valueElement, setValueElement] = useState("1");
     const [achitaOnline, setAchitaOnline] = useState(false);
     const [btnClick, setBtnClick] = useState(true)
 
@@ -37,6 +37,12 @@ const Pages = (props) => {
         email: email,
         telefon: telefon
     }
+
+
+
+   
+        window.scrollTo(0, 0);
+      
 
    
 
@@ -156,13 +162,17 @@ const Pages = (props) => {
         setBtnClick(false)
     
       
-      
    }
 
 
+
+
+  
+
+
+
+
    
-
-
 
 
   
@@ -250,7 +260,7 @@ const Pages = (props) => {
                           <h2>Cantitate:</h2>
                             
                             <div className="input_contacteaza">
-                                        <input onChange={inputNumber} min={1} type="number" />
+                                        <input onChange={inputNumber} min={1} type="number" value={valueElement} />
                                         <button disabled={!btnClick} className="btn_cos" onClick={achitaOnlineForm}>Achita online</button>
                             </div>
                                 

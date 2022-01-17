@@ -17,6 +17,9 @@ import {Link , animation as scroll} from "react-scroll";
 class Footer extends Component { 
 
 
+    
+
+
     scrollToTop = () =>{
         console.log("HELLO")
 
@@ -48,7 +51,7 @@ class Footer extends Component {
 
                         <nav className='nav_footer'>
                             <ul className="links_active">
-                                <li><NavLink activeClassName="links_click" className="links" to="/">Despre</NavLink></li>
+                                <li><NavLink  activeClassName="links_click" className="links" to="/">Despre</NavLink></li>
                                 <li><NavLink activeClassName="links_click" className="links" to="/products">Produse</NavLink></li>
                                 <li> <a className="links" href="#ce_oferim">Servicii</a></li>
                                 <li><NavLink activeClassName="links_click" className="links" to="/contact">Contacte</NavLink></li>

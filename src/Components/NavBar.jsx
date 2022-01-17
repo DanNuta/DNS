@@ -35,8 +35,8 @@ class NavBar extends Component {
    
 
     deleteItem = (idElemet) =>{
-        
         this.props.onDeleteElementFromWishList(idElemet)
+        
     }
 
 
@@ -49,6 +49,7 @@ class NavBar extends Component {
 
     deleteAllItems = () =>{
         this.props.onDeleteAllArray([])
+        this.setState({wishListHeader: false})
     }
 
     
@@ -58,23 +59,30 @@ class NavBar extends Component {
 
         return (
 
+
+
             this.state.wishListHeader && 
-                <div className={this.props.wishList.length === 0 ? "btn" : "wishListCards"} >
-                            <div className="elementWishList">
-                                    <h3>Preferinte</h3>
-                                    <button onClick={this.deleteAllItems}>Sterge</button>
-                            </div>
+                          
+                          <div>
+                              {this.props.wishList.length === 0 ?
+                              <div className="wishListCards"><h1>Nu exista nici un produs</h1></div>:
 
+                              <div className="wishListCards">
+                                      <div className="elementWishList">
+                                              <h3>Preferinte</h3>
+                                              <button onClick={this.deleteAllItems}>Sterge</button>
+                                      </div>
+                                          {this.props.wishList.map(el =>(           
+                                              <ElementWishList delete={this.deleteItem} item={el}/>
+                                          ))}
 
-                                {this.props.wishList.map(el =>(
-                                                
-                                    <ElementWishList delete={this.deleteItem} item={el}/>
-
-                                ))}
-
-                                            
-                       <button onClick={this.solicitaOferta} className="btn_bottom">Solicită oferta!</button>
-                </div>
+                                <button onClick={this.solicitaOferta} className="btn_bottom">Solicită oferta!</button>
+                             
+                          </div>
+                             
+                              
+                            }
+                        </div>
             
         )
 
@@ -82,11 +90,19 @@ class NavBar extends Component {
 
 
 
+
+
+
+
+
+
     bars = () =>{
         this.setState({burgerMenu: !this.state.burgerMenu})
-
-        console.log("hello")
     }
+
+
+
+
 
 
  
@@ -104,24 +120,26 @@ class NavBar extends Component {
 
                       {
                           this.state.wishListHeader && 
-                          <div className={this.props.wishList.length === 0 ? "btn" : "wishListCards"} >
+                          
+                          <div>
+                              {this.props.wishList.length === 0 ?
+                              <div className="wishListCards"><h1>Nu exista nici un produs</h1></div>:
+
+                              <div className="wishListCards">
                                       <div className="elementWishList">
                                               <h3>Preferinte</h3>
                                               <button onClick={this.deleteAllItems}>Sterge</button>
                                       </div>
-          
-          
-                                          {this.props.wishList.map(el =>(
-                                                          
+                                          {this.props.wishList.map(el =>(           
                                               <ElementWishList delete={this.deleteItem} item={el}/>
-          
                                           ))}
 
-                            <button onClick={this.solicitaOferta} className="btn_bottom">Solicită oferta!</button>
-          
-                                                      
-                                                      
-          
+                                <button onClick={this.solicitaOferta} className="btn_bottom">Solicită oferta!</button>
+                             
+                          </div>
+                             
+                              
+                            }
                           </div>
                       }
 

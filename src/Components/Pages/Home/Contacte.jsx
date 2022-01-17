@@ -97,7 +97,14 @@ class Contacte extends Component {
       this.setState({nume: "", email: "", telefon: "", mesage: ""})
 
    }
-    
+   
+   
+
+
+
+   componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 
 
     render() { 

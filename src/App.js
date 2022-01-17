@@ -2762,9 +2762,13 @@ class App extends Component {
 
 
     exportDataFromHome = (dataHome) =>{
+        let elementAded = this.state.elementAded.map(el => el.id);
 
-        this.setState({elementAded:   [...this.state.elementAded, dataHome]})
-  
+        if(elementAded.includes(dataHome.id)){
+            return;
+        }else{
+            this.setState({elementAded: [...this.state.elementAded, dataHome]})
+        }
     }
 
 
@@ -2919,6 +2923,7 @@ class App extends Component {
                                onExportData={this.exportDataFromHome}
                                onSearchItem={this.searchItem}
                                products={this.props.produse}
+                               elementAded={this.state.elementAded}
                               />}>
 
                         </Route>
@@ -3008,7 +3013,7 @@ class App extends Component {
 
 
 
-                    <Footer/>
+                    <Footer style={{overflowY: 'hidden'}}/>
                     
                 </Router>
 
