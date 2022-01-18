@@ -2945,6 +2945,8 @@ componentDidMount(){
                                onelementFromProducts={this.elementFromProducts} 
                                products={this.props.produse}
                                onProductShop={this.shop}
+                               elementAded={this.state.elementAded}
+                               dataShop={this.state.dataShop}
                                
                                />}>    
                         </Route>
@@ -2990,7 +2992,11 @@ componentDidMount(){
                             
                             <Route   path="/produse/:slug" element={<Pages element={this.props.produse}
                                                                           onCos={this.cos}
-                                                                          onShop={this.shop}/>}>
+                                                                          onShop={this.shop}
+                                                                          elementAded={this.state.elementAded}
+                                                                          dataShop={this.state.dataShop}
+                                                                          
+                                                                          />}>
 
                             </Route>
 

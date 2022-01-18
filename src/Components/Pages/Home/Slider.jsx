@@ -125,16 +125,21 @@ class Slider extends Component {
 
 
     
-    render() { 
+    render() {
 
 
+        
 
-        let list = this.props.wishList.map(el => el.id === this.state.products[0].id);
-        let arr = this.props.wishList.map(el => el.id);
+        
+        let wishList = this.props.wishList.map(el => el.id);
 
-        let item =  !(this.props.wishList.length == 0) || (this.props.wishList.map(el => el.id === this.state.products[0].id));
+        
 
-        console.log( item, 12)
+        
+
+      
+
+       
 
 
 
@@ -487,7 +492,7 @@ class Slider extends Component {
                              <img className="img" src={this.state.products[0].img} alt="Sfredel"  />
                             <ul>
                                 <li onClick={this.searchItem1}><NavLink to={`/produse/${this.state.products[0].id}`}><img src={search} alt="search"/></NavLink></li>
-                                <li onClick={this.selectFirstItem}>{this.props.wishList.map(el => (el.id || null) === this.state.products[0].id ?  <ImagesArrowSvg4/> : <ImagesArrowSvg3/>)}</li>
+                                <li onClick={this.selectFirstItem}>{wishList.includes(this.state.products[0].id) ?  <ImagesArrowSvg4/> : <ImagesArrowSvg3/>}</li>
                             </ul>
                             
                         </div>
@@ -501,7 +506,7 @@ class Slider extends Component {
                              <img className="img" src={this.state.products[1].img} alt="Sfredel"  />
                             <ul>
                                 <li><NavLink to={`/produse/${this.state.products[1].id}`}><img src={search} alt="search"/></NavLink></li>
-                                <li onClick={this.selectFirstItem2}><img src={heart} alt="search"/></li>
+                                <li onClick={this.selectFirstItem2}>{wishList.includes(this.state.products[1].id) ?  <ImagesArrowSvg4/> : <ImagesArrowSvg3/>}</li>
                             </ul>
                             
                         </div>
@@ -517,7 +522,7 @@ class Slider extends Component {
                               <img className="img" src={this.state.products[2].img} alt="Sfredel"  />
                             <ul>
                                 <li ><NavLink to={`/produse/${this.state.products[2].id}`}><img src={search} alt="search"/></NavLink></li>
-                                <li onClick={this.selectFirstItem3}><img src={heart} alt="search"/></li>
+                                <li onClick={this.selectFirstItem3}>{wishList.includes(this.state.products[2].id) ?  <ImagesArrowSvg4/> : <ImagesArrowSvg3/>}</li>
                             </ul>
                             
                         </div>

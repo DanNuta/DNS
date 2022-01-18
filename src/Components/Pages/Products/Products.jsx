@@ -154,7 +154,10 @@ class Products extends Component {
                                 <ProductsItem 
                                     element={el}
                                     onDataItems={this.elementFromItems}
-                                    onElementShop={this.elementShop} 
+                                    onElementShop={this.elementShop}
+                                    elementAded={this.props.elementAded}
+                                    dataShop={this.props.dataShop}
+
                                 />
 
                            

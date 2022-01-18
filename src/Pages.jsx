@@ -12,7 +12,7 @@ import "./Pages.scss";
 import calitate from "../src/Components/Pages/icon/calitate.svg";
 import like from "../src/Components/Pages/icon/like.svg";
 import garantie from "../src/Components/Pages/icon/garantie.svg";
-import {ImagesCalitateSVG, ImagesCalitateSVG2, ImagesCalitateSVG3} from "./CalitateLikeSVG";
+import {ImagesCalitateSVG, ImagesCalitateSVG2, ImagesCalitateSVG3, ImagesCalitateSVGHeart, ImagesCalitateSVGHeartHover, ImagesCalitateSVGShop, ImagesCalitateSVGShopHover} from "./CalitateLikeSVG";
 
 
 
@@ -41,7 +41,7 @@ const Pages = (props) => {
 
 
    
-        window.scrollTo(0, 0);
+        
       
 
    
@@ -109,6 +109,14 @@ const Pages = (props) => {
     setAchitaOnline(false)
  }
 
+
+
+
+
+
+
+    let wishList = props.elementAded.map(el => el.id);
+    let shopList = props.dataShop.map(el => el.id);
 
 
  
@@ -273,8 +281,8 @@ const Pages = (props) => {
                     <div className="add_to_cart">
 
                        
-                            <li onClick={adaugaLaFavorite}><img src={buy} alt="" /> Adauga in cos</li>
-                            <li onClick={adaugaInCos}><img src={heartBlack} alt=""  />Adauga la favorite</li>
+                            <li onClick={adaugaLaFavorite}>{shopList.includes(curentItem.id) ? <ImagesCalitateSVGShopHover/> : <ImagesCalitateSVGShop/>} Adauga in cos</li>
+                            <li onClick={adaugaInCos}>{wishList.includes(curentItem.id) ? <ImagesCalitateSVGHeartHover/> : <ImagesCalitateSVGHeart/>}Adauga la favorite</li>
                        
 
                     </div>

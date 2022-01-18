@@ -83,11 +83,9 @@
         .buy_wishList{
             cursor: pointer;
 
-            img{
-            
-                &:last-of-type{
-                    margin-left: max(15px, 5px);
-                }
+            .buy_wishList_ul{
+                display: flex;
+                gap: 0.9375rem;
             }
         }
 

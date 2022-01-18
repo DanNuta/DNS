@@ -4,6 +4,7 @@ import wishList from "../../Pages/icon/heart_icon.svg";
 import "./ProductsItem.scss";
 import { BrowserRouter as Router, Routes, Route, NavLink, Outlet, useHistory  } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import {ImagesCalitateSVGHeart, ImagesCalitateSVGHeartHover, ImagesCalitateSVGShop, ImagesCalitateSVGShopHover} from "./IconsSvg";
 
 
 class ProductsItem extends Component {
@@ -30,6 +31,13 @@ class ProductsItem extends Component {
     
 
     render() { 
+
+        let wishList = this.props.elementAded.map(el => el.id);
+        let shopList = this.props.dataShop.map(el => el.id);
+
+
+
+
         return ( 
             
                <div className="products">
@@ -65,8 +73,10 @@ class ProductsItem extends Component {
 
                            
                             <div  className="buy_wishList">
-                                <img src={shop} onClick={this.productsFromShoping} alt="" />
-                                <img src={wishList} onClick={this.wishListItem} alt="" />
+                               <ul className='buy_wishList_ul'>
+                                <li onClick={this.productsFromShoping}>{shopList.includes(this.props.element.id) ? <ImagesCalitateSVGShopHover/> : <ImagesCalitateSVGShop/>}</li>
+                                <li onClick={this.wishListItem}>{wishList.includes(this.props.element.id) ? <ImagesCalitateSVGHeartHover/> : <ImagesCalitateSVGHeart/>}</li>
+                               </ul>
 
                             </div>
 
