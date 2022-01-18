@@ -12,7 +12,7 @@ import "./Pages.scss";
 import calitate from "../src/Components/Pages/icon/calitate.svg";
 import like from "../src/Components/Pages/icon/like.svg";
 import garantie from "../src/Components/Pages/icon/garantie.svg";
-import {ImagesCalitateSVG, ImagesCalitateSVG2, ImagesCalitateSVG3, ImagesCalitateSVGHeart, ImagesCalitateSVGHeartHover, ImagesCalitateSVGShop, ImagesCalitateSVGShopHover} from "./CalitateLikeSVG";
+import {ImagesCalitateSVG, ImagesCalitateSVG2, ImagesCalitateSVG3, ImagesCalitateSVGHeart, ImagesCalitateSVGHeartHover, ImagesCalitateSVGShop, ImagesCalitateSVGShopHover, ImagesInPreferinteSVG, ImagesInPreferinteSVGHover} from "./CalitateLikeSVG";
 
 
 
@@ -193,9 +193,9 @@ const Pages = (props) => {
 
             <div className="element_top_item">
                 <div className="item_id">
-                    <p>servici</p>
+                    <p><a className="links-a" href="/#ce_oferim">Servicii</a></p>
                     <p>|</p>
-                    <p>produse si accesorii</p>
+                    <p><NavLink to="/products">produse si accesorii</NavLink></p>
                     <p>|</p>
                     <p>{curentItem.title}</p>
                 </div>
@@ -371,7 +371,7 @@ const Pages = (props) => {
                                      </NavLink>
 
                                      <div onClick={() => adaugaInCosPreferate(item)} className="hover_preferinte">
-                                        <img src={heart} alt="" />
+                                       <li>{wishList.includes(item.id) ? <ImagesInPreferinteSVGHover/> : <ImagesInPreferinteSVG/>}</li>
                                         <p className='preferinte'>In preferinte</p>
                                      </div>
                                  </div>

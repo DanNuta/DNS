@@ -96,7 +96,14 @@ class Products extends Component {
 
 
                 <div className="text_top">
-                    <p>servici | produse si accesorii</p>
+                    <div className="section_nav">
+                        <p><a className="links-a" href="/#ce_oferim">Servicii</a></p>
+                        <p>|</p>
+                        <p><NavLink to="/products">produse si accesorii</NavLink></p>
+                    </div>
+
+
+
                     <h1>PRODUSE SI ACCESORII</h1>
                 </div>
 

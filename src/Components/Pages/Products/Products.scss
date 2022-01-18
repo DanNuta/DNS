@@ -28,8 +28,24 @@
         }
 
         .text_top{
+
+
+            .section_nav{
+                display: grid;
+                grid-auto-columns: max-content;
+                grid-auto-flow: column;
+                grid-gap: 1rem;
+
+                a{
+                    color: #272727;
+                }
+                
+
+            }
             margin-top: 50px;
             grid-column: 1/13;
+            
+            
 
             
     
