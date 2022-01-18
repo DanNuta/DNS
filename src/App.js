@@ -39,6 +39,7 @@ import NewProducts from './NewProducts';
 import ProductsItem from './Components/Pages/Products/ProdusctItem';
 import Pages from './Pages';
 import Politica from './PoliticaDeConfidentialitate';
+import NotFound from './NotFound';
 
 
 
@@ -2736,7 +2737,7 @@ class App extends Component {
     }
 
     state = {
-        coockie: true,
+        coockie: JSON.parse(localStorage.getItem('coockie')),
         elementAded: [], 
         dataShop: [],
         dataItem: "",
@@ -2746,16 +2747,27 @@ class App extends Component {
 
     }
 
+
+  
+componentDidMount(){
+
+    let coockie =  true;
+    localStorage.setItem('coockie', JSON.stringify(coockie))
+    let result = JSON.parse(localStorage.getItem('coockie'))
+
+}
+
+    
+
     
 
 
     coockies = () => {
+        let coockie =  false
+        localStorage.setItem('coockie', JSON.stringify(coockie))
+        let result = JSON.parse(localStorage.getItem('coockie'))
 
-        localStorage.setItem("cokie", JSON.stringify(false))
-
-        let cockie = localStorage.getItem("cokie")
-        cockie = JSON.parse(cockie)
-        this.setState({coockie: cockie})
+        this.setState({coockie: result})
     }
 
 
@@ -2983,6 +2995,9 @@ class App extends Component {
                             </Route>
 
                             <Route path="Privacy" element={<Politica/>}></Route>
+
+
+                            <Route path="*" element={<NotFound/>}></Route>
                         
 
 

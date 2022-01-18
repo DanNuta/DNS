@@ -169,17 +169,29 @@
             margin-top: 55px;
             grid-column: 5/13;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(15rem, 3fr));
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
             grid-row-gap: 40px;
             grid-column-gap: 20px;
 
-            @include large{
-                grid-column: 6/13;
+            @include desktopExtraLarge{
 
-                @include medium{
-                    grid-column: 1/13;
+                grid-template-columns: repeat(2, 1fr);
+
+
+                @include large{
+                    grid-column: 6/13;
+    
+                    @include medium{
+                        grid-column: 1/13;
+
+                        @include small{
+                            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+                        }
+                    }
                 }
             }
+
 
 
             
@@ -190,27 +202,7 @@
 
 
 
-        .description{
-            margin-top: 106px;
-            grid-column: 1/13;
-            grid-row: 3;
-
-
-            .img_text{
-                grid-column: 1/8;
-                margin-top: 46px;
-
-                .img{
-                    width: 340px;
-                    height: 420px;
-                    background-color: #272727;
-
-                    img{
-                        padding: 28px;
-                    }
-                }
-            }
-        }
+        
     
         
     }
