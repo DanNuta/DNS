@@ -56,10 +56,8 @@ class Slider extends Component {
         leftArrow: this.props.arrowCurent[0],
         rightArrow: this.props.arrowCurent[1],
         products: this.props.produse,
-        iconWishList: this.props.svgWishList[0]
-
-        
-        
+        iconWishList: this.props.svgWishList[0],
+        counterSlider: 1
     }
 
 
@@ -76,6 +74,8 @@ class Slider extends Component {
                 this.setState({click: this.props.images.length -1})
                 
             }
+
+            
         
     }
 
@@ -91,6 +91,9 @@ class Slider extends Component {
                 this.setState({click: 0})
                 
             }
+
+
+            this.setState({counterSlider: this.state.counterSlider +1})
     }
 
 
@@ -126,23 +129,10 @@ class Slider extends Component {
 
     
     render() {
-
-
-        
-
         
         let wishList = this.props.wishList.map(el => el.id);
 
         
-
-        
-
-      
-
-       
-
-
-
 
         return ( 
 
@@ -155,7 +145,7 @@ class Slider extends Component {
             <div className="img_out_grid">
                     <div className={this.state.curentSlide.id === 3 ? "animated" : "photo"}>
 
-                            <div className="img_right">
+                            <div className= "img_right">
                                 <img  src={this.state.curentSlide.img} alt={this.state.curentSlide.alt}/>
                             </div>
                         

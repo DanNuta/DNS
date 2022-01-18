@@ -74,6 +74,7 @@
            
 
             .text_right{
+                text-align: left;
 
                 @include large{
                     width: 100%;
@@ -87,6 +88,8 @@
                     font-weight: 800;
                     line-height: 28px;
                     margin-bottom: 10px;
+                    text-align: left;
+                    
 
                     @include medium{
                         font-size: 16px;
@@ -101,6 +104,7 @@
                     font-weight: 400;
                     line-height: 19px;
                     margin-bottom: 10px;
+                    text-align: left;
 
 
                     

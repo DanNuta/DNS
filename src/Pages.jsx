@@ -268,7 +268,7 @@ const Pages = (props) => {
                           <h2>Cantitate:</h2>
                             
                             <div className="input_contacteaza">
-                                        <input onChange={inputNumber} min={1} type="number" value={valueElement} />
+                                        <input type="number"  onChange={inputNumber} min={1}  value={valueElement} />
                                         <button disabled={!btnClick} className="btn_cos" onClick={achitaOnlineForm}>Achita online</button>
                             </div>
                                 

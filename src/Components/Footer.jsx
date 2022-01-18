@@ -40,7 +40,7 @@ class Footer extends Component {
                         <ul>
                             <li><NavLink to="/"><img src={logo} alt="" srcset="" /></NavLink></li>
                             <li>Program: 9:00 AM - 19:00 PM</li>
-                            <li><span><img src={telefon_img}/></span>0767216161</li>
+                            <li><a href="tel:+1123-456-7890"><span><img src={telefon_img}/></span>0767216161</a></li>
                             <li><span><img src={adress_img}/></span>Strada Marta 22A Iasi, Romania</li>
                             <li><span><img src={email_img}/></span>office@dna-electric.ro</li>
                         </ul>
@@ -53,7 +53,7 @@ class Footer extends Component {
                             <ul className="links_active">
                                 <li><NavLink  activeClassName="links_click" className="links" to="/">Despre</NavLink></li>
                                 <li><NavLink activeClassName="links_click" className="links" to="/products">Produse</NavLink></li>
-                                <li> <a className="links" href="#ce_oferim">Servicii</a></li>
+                                <li> <a className="links-a" href="/#ce_oferim">Servicii</a></li>
                                 <li><NavLink activeClassName="links_click" className="links" to="/contact">Contacte</NavLink></li>
                             </ul>
                            

@@ -389,6 +389,7 @@ text-align: left;
                 li{
                     display: flex;
                     align-items: center;
+                    gap: 0.625em;
                     cursor: pointer;
 
                     @include small{

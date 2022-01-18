@@ -2751,7 +2751,7 @@ class App extends Component {
   
 componentDidMount(){
 
-    let coockie =  true;
+    let coockie =  false;
     localStorage.setItem('coockie', JSON.stringify(coockie))
     let result = JSON.parse(localStorage.getItem('coockie'))
 
