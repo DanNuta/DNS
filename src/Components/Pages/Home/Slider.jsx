@@ -31,11 +31,6 @@ class Slider extends Component {
             {id:4, img: AnimatePhoto2},
             {id:5, img: AnimatePhoto3},
         ],
-
-
-
-       
-
         
     }
 
@@ -44,41 +39,31 @@ class Slider extends Component {
 
     state = {
         curentSlide: this.props.images[0],
-        click: 1, 
-        products: this.props.produse,
         click: 0, 
         products: this.props.produse,
-        
-        
+         
     }
 
 
     leftArrow = () =>{
 
-            this.setState({click: this.state.click - 1})
-            this.setState({curentSlide: this.props.images[this.state.click]})
-            
-            
+        this.setState({click: this.state.click == 0 ? this.state.click -1 : this.state.click == this.props.images -1})
+         this.setState({curentSlide: this.props.images[this.state.click]})  
+
+         console.log("left")
 
 
-            
 
-            
-        
     }
+
+
 
     rightArrow = () =>{
 
-            this.setState({click: this.state.click + 1})
-            this.setState({curentSlide: this.props.images[this.state.click]})
-           
-
-
+            
             this.setState({curentSlide: this.props.images[this.state.click]})
             this.setState({click: this.state.click == this.props.images.length -1 ? 0 : this.state.click +1})
-
-
-            this.setState({counterSlider: this.state.counterSlider +1})
+            console.log(this.state.click)
 
     }
 
@@ -140,9 +125,7 @@ class Slider extends Component {
                     <div className={this.state.curentSlide.id == 3 ? "animated" : "photo"}>
 
 
-                            <div className={this.state.click === this.state.curentSlide.id ? " active_anim" : "img_right"}>
-                                <img  src={this.state.curentSlide.img} alt={this.state.curentSlide.alt}/>
-                            </div>
+                            
 
                             {this.props.images.map((el, index) =>{
                                 
