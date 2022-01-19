@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink, Outlet, useParams, useHistory  } from 'react-router-dom';
 import start from "../src/Components/Pages/icon/star1.svg";
 import buy from "../src/Components/Pages/icon/buy.svg";
@@ -172,6 +172,17 @@ const Pages = (props) => {
       
    }
 
+
+
+  
+    window.scrollTo(0, 0)
+
+
+
+useEffect(() => {
+    window.scrollTo(0, 0)
+
+  }, []);
 
 
 

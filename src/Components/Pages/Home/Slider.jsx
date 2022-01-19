@@ -77,24 +77,6 @@ class Slider extends Component {
 
 
 
-   componentDidUpdate(){
-
-    setTimeout(() => {
-        
-       
-            this.setState({click: this.state.click +1})
-        
-
-        this.setState({curentSlide: this.props.images[this.state.click]})
-    }, 4000);
-
-
-    
-   }
-
-
-
-
 
 
     selectFirstItem = () =>{

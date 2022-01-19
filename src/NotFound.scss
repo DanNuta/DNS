@@ -1,7 +1,6 @@
 @import "../src/responsive";
 
-.Error, p{
-    text-align: center;
+
 
     .h1_404{
         color: #272727;
@@ -34,6 +33,7 @@
         font-size: 55px;
         margin: 0 0 35px 0;
         color: #272727;
+        text-align: center;
 
         @include large{
             font-size: 45px;
@@ -50,6 +50,7 @@
         font-size: 40px;
         color: #272727;
         margin-bottom: 35px;
+        text-align: center;
 
         @include large{
             font-size: 35px;
@@ -64,6 +65,7 @@
 
     .use_mavigation{
         font-size: 30px;
+        text-align: center;
 
         @include large{
             font-size: 25px;
@@ -78,4 +80,3 @@
        
     }
 
-}

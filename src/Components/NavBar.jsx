@@ -184,7 +184,7 @@ class NavBar extends Component {
                             </ul>
 
                             <ul onClick={this.bars} className="nav_bar_icons">
-                                <li>0767216161</li>
+                               <li><a href="tel:+1123-456-7890"><span>0767216161</span></a></li>
                                 <li><NavLink to="/shop"><img src={shop} alt="shop" /></NavLink></li>
                                 <li className="wishList" onClick={this.wishList}><img src={heart} alt="wishList" /></li>
                                 <li><a href="https://www.facebook.com/" target="_blank" ><img src={facebook}  alt="facebook" /></a></li>
@@ -196,7 +196,7 @@ class NavBar extends Component {
 
                             <ul className='program'>
                                 <li>Program: 9:00 AM - 19:00 PM</li>
-                                <li>0767216161</li>
+                                <li><a href="tel:+1123-456-7890"><span>0767216161</span></a></li>
                             </ul>
 
                             

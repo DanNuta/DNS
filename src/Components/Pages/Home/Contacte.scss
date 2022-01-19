@@ -92,6 +92,7 @@
     
                         @include small{
                             grid-column: 1/13;
+                            width: 99%;
                             grid-row: 1;
                         }
                     }
