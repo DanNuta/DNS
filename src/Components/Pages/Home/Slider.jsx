@@ -47,26 +47,50 @@ class Slider extends Component {
 
     leftArrow = () =>{
 
-        this.setState({click: this.state.click == 0 ? this.state.click -1 : this.state.click == this.props.images -1})
-         this.setState({curentSlide: this.props.images[this.state.click]})  
 
-         console.log("left")
+        
+        if(this.state.click == 1 || this.state.click == 0){
+            return;
+        }else{
+            this.setState({click: this.state.click -1})
 
+        }
 
-
+        this.setState({curentSlide: this.props.images[this.state.click-2]}) 
+        
     }
 
 
 
     rightArrow = () =>{
 
-            
+
+        if(this.state.click == this.props.images.length -1){
+            this.setState({click: 0})
+        }else{
+            this.setState({click: this.state.click +1})
+
+        }
             this.setState({curentSlide: this.props.images[this.state.click]})
-            this.setState({click: this.state.click == this.props.images.length -1 ? 0 : this.state.click +1})
-            console.log(this.state.click)
 
     }
 
+
+
+   componentDidUpdate(){
+
+    setTimeout(() => {
+        
+       
+            this.setState({click: this.state.click +1})
+        
+
+        this.setState({curentSlide: this.props.images[this.state.click]})
+    }, 4000);
+
+
+    
+   }
 
 
 
@@ -75,10 +99,6 @@ class Slider extends Component {
 
     selectFirstItem = () =>{
         this.props.onExportDate(this.state.products[0])
-
-        
-       
-
     }
 
 
@@ -122,7 +142,7 @@ class Slider extends Component {
 
 
             <div className="img_out_grid">
-                    <div className={this.state.curentSlide.id == 3 ? "animated" : "photo"}>
+                    <div className= "photo">
 
 
                             
@@ -135,17 +155,12 @@ class Slider extends Component {
                                        </div>
                                    )
 
-
-                                   
-
-                                   
-                               
                             })
                              }
 
                         
 
-                        {this.state.curentSlide.id == 3 && 
+                        {this.state.curentSlide.id == 2  && 
                                     <div className='animated_photo'>
                                         <div className="animation_top">
                                             <div className="circle_animation">
@@ -176,7 +191,7 @@ class Slider extends Component {
 
 
 
-                        {this.state.curentSlide.id === 4 && 
+                        {this.state.curentSlide.id === 3 && 
                                     <div className='animated_photo2'>
                                         <div className="animation_top2">
                                             <div className="circle_animation2">
@@ -220,7 +235,7 @@ class Slider extends Component {
 
 
 
-                      {this.state.curentSlide.id === 5 && 
+                      {this.state.curentSlide.id === 4 && 
                                     <div className='animated_photo4'>
                                         <div className="animation_top4">
                                             <div className="circle_animation4">
