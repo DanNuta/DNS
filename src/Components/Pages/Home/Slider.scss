@@ -1321,9 +1321,10 @@
 
 
         .img_right{
-            transition: .5s;
-
+            opacity: 0;
+            transition: opacity ease-in-out .4s;
             height: 100%;
+            transition-duration: 1s ease;
 
 
             img{
@@ -1336,7 +1337,30 @@
                     height: 100%;
                 }
             }
+
+            
         }
+
+
+        .active_anim{
+            
+            animation-name: slider;
+            animation-duration: .5s; 
+        
+        }
+
+        @keyframes slider {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+            
+        }
+
+
+       
 
 
         
@@ -2041,4 +2065,9 @@
 
 
     }
+
+    
 }
+
+
+
