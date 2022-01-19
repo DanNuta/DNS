@@ -1322,9 +1322,17 @@
 
         .img_right{
             opacity: 0;
+
             transition: opacity ease-in-out .4s;
             height: 100%;
             transition-duration: 1s ease;
+
+            transition-duration: 1s ease;
+            height: 100%;
+            position: absolute;
+
+           
+
 
 
             img{
@@ -1360,7 +1368,14 @@
         }
 
 
-       
+
+        .img_right.active{
+            opacity: 1;
+            transition-duration: 1s;
+            
+
+        }
+
 
 
         

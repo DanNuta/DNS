@@ -25,18 +25,18 @@ class Slider extends Component {
 
     static defaultProps = {
         images: [
-            {id:1, img: Fist_Img, alt: "fist"},
-            {id:2, img: Seconds_Img, alt: "second"},
-            {id:3, img: AnimatePhoto, alt: "second"},
-            {id:4, img: AnimatePhoto2, alt: "second"},
-            {id:5, img: AnimatePhoto3, alt: "second"},
-
+            {id:1, img: Fist_Img},
+            {id:2, img: Seconds_Img},
+            {id:3, img: AnimatePhoto},
+            {id:4, img: AnimatePhoto2},
+            {id:5, img: AnimatePhoto3},
         ],
 
 
 
        
- 
+
+        
     }
 
 
@@ -46,6 +46,10 @@ class Slider extends Component {
         curentSlide: this.props.images[0],
         click: 1, 
         products: this.props.produse,
+        click: 0, 
+        products: this.props.produse,
+        
+        
     }
 
 
@@ -57,26 +61,25 @@ class Slider extends Component {
             
 
 
-            if(this.state.click <= 0){
-                this.setState({click: this.props.images.length -1})
-                
-            }
+            
 
             
         
     }
 
     rightArrow = () =>{
+
             this.setState({click: this.state.click + 1})
             this.setState({curentSlide: this.props.images[this.state.click]})
            
 
-            if(this.state.click >= this.props.images.length -1){
-                this.setState({click: 0})
-                
-            }
+
+            this.setState({curentSlide: this.props.images[this.state.click]})
+            this.setState({click: this.state.click == this.props.images.length -1 ? 0 : this.state.click +1})
+
 
             this.setState({counterSlider: this.state.counterSlider +1})
+
     }
 
 
@@ -121,7 +124,7 @@ class Slider extends Component {
 
         
 
-        console.log(this.state.click, this.state.curentSlide.id)
+
 
         
 
@@ -134,14 +137,32 @@ class Slider extends Component {
 
 
             <div className="img_out_grid">
-                    <div className={this.state.curentSlide.id === 3 ? "animated" : "photo"}>
+                    <div className={this.state.curentSlide.id == 3 ? "animated" : "photo"}>
+
 
                             <div className={this.state.click === this.state.curentSlide.id ? " active_anim" : "img_right"}>
                                 <img  src={this.state.curentSlide.img} alt={this.state.curentSlide.alt}/>
                             </div>
+
+                            {this.props.images.map((el, index) =>{
+                                
+                                   return (
+                                       <div className={index == this.state.click ? "img_right active" : "img_right"} key={index}>
+                                           {index === this.state.click && <img src={el.img}/>}
+                                       </div>
+                                   )
+
+
+                                   
+
+                                   
+                               
+                            })
+                             }
+
                         
 
-                        {this.state.curentSlide.id === 3 && 
+                        {this.state.curentSlide.id == 3 && 
                                     <div className='animated_photo'>
                                         <div className="animation_top">
                                             <div className="circle_animation">
