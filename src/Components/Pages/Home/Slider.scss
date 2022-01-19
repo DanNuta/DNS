@@ -1321,9 +1321,13 @@
 
 
         .img_right{
-            transition: .5s;
-
+            opacity: 0;
+            transition-duration: 1s ease;
             height: 100%;
+            position: absolute;
+
+           
+
 
 
             img{
@@ -1337,6 +1341,23 @@
                 }
             }
         }
+
+
+        .img_right.active{
+            opacity: 1;
+            transition-duration: 1s;
+            
+
+        }
+
+
+
+        
+
+
+
+
+        
 
 
         

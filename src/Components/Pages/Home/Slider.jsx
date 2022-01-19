@@ -25,26 +25,13 @@ class Slider extends Component {
 
     static defaultProps = {
         images: [
-            {id:1, img: Fist_Img, alt: "fist"},
-            {id:2, img: Seconds_Img, alt: "second"},
-            {id:3, img: AnimatePhoto, alt: "second"},
-            {id:4, img: AnimatePhoto2, alt: "second"},
-            {id:5, img: AnimatePhoto3, alt: "second"},
+            {id:1, img: Fist_Img},
+            {id:2, img: Seconds_Img},
+            {id:3, img: AnimatePhoto},
+            {id:4, img: AnimatePhoto2},
+            {id:5, img: AnimatePhoto3},
 
-        ],
-
-        arrowCurent: [
-            {img: leftArrow, alt: "Left Arrow"},
-            {img: rightArrow, alt: "Right Arrow"},
-            {img: leftArrowHover, alt: "Left Arrow Hover"},
-            {img: rightArrowHover, alt: "Right Arrow Hover"}
-        ],
-
-        svgWishList: [<ImagesArrowSvg3/>, <ImagesArrowSvg4/>]
-
-
-       
- 
+        ]
     }
 
 
@@ -52,12 +39,10 @@ class Slider extends Component {
 
     state = {
         curentSlide: this.props.images[0],
-        click: 1, 
-        leftArrow: this.props.arrowCurent[0],
-        rightArrow: this.props.arrowCurent[1],
+        click: 0, 
         products: this.props.produse,
-        iconWishList: this.props.svgWishList[0],
-        counterSlider: 1
+        
+        
     }
 
 
@@ -65,35 +50,23 @@ class Slider extends Component {
 
             this.setState({click: this.state.click - 1})
             this.setState({curentSlide: this.props.images[this.state.click]})
-            this.setState({leftArrow: this.props.arrowCurent[2]})
-            this.setState({rightArrow: this.props.arrowCurent[1]})
+            
             
 
 
-            if(this.state.click <= 0){
-                this.setState({click: this.props.images.length -1})
-                
-            }
+            this.setState({click: })
 
             
         
     }
 
     rightArrow = () =>{
-    
-            this.setState({click: this.state.click + 1})
+
             this.setState({curentSlide: this.props.images[this.state.click]})
-            this.setState({rightArrow: this.props.arrowCurent[3]})
-            this.setState({leftArrow: this.props.arrowCurent[0]})
+            this.setState({click: this.state.click == this.props.images.length -1 ? 0 : this.state.click +1})
 
 
-            if(this.state.click >= this.props.images.length -1){
-                this.setState({click: 0})
-                
-            }
-
-
-            this.setState({counterSlider: this.state.counterSlider +1})
+            
     }
 
 
@@ -134,6 +107,12 @@ class Slider extends Component {
 
         
 
+        console.log(this.state.curentSlide)
+
+        
+
+        
+
         return ( 
 
 
@@ -143,14 +122,26 @@ class Slider extends Component {
 
 
             <div className="img_out_grid">
-                    <div className={this.state.curentSlide.id === 3 ? "animated" : "photo"}>
+                    <div className={this.state.curentSlide.id == 3 ? "animated" : "photo"}>
 
-                            <div className= "img_right">
-                                <img  src={this.state.curentSlide.img} alt={this.state.curentSlide.alt}/>
-                            </div>
+                            {this.props.images.map((el, index) =>{
+                                
+                                   return (
+                                       <div className={index == this.state.click ? "img_right active" : "img_right"} key={index}>
+                                           {index === this.state.click && <img src={el.img}/>}
+                                       </div>
+                                   )
+
+
+                                   
+
+                                   
+                               
+                            })
+                             }
                         
 
-                        {this.state.curentSlide.id === 3 && 
+                        {this.state.curentSlide.id == 3 && 
                                     <div className='animated_photo'>
                                         <div className="animation_top">
                                             <div className="circle_animation">
