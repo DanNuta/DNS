@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ProductsItem from './ProdusctItem';
 import "./Products.scss";
-import descriereProdus from "../../Pages/instalarea/despre_produse.png"
+import descriereProdus from "../../Pages/instalarea/despre_produse.png";
+import axios from "axios";
 import { BrowserRouter as Router, Routes, Route, NavLink, Outlet, useParams } from 'react-router-dom';
 
 class Products extends Component {
@@ -14,8 +15,21 @@ class Products extends Component {
         produse: this.props.products,
         filterData: this.props.products,
         dataItems: [],
-        radioBtnCheck: ""
+        radioBtnCheck: "",
+        dataBack: [], 
+        idProducts: []
+        
     }
+
+
+
+    async componentDidMount(){
+        let category = await axios.get("http://localhost:1337/api/categories?populate=*");
+        this.setState({dataBack: category.data.data});
+        
+
+    }
+
 
 
 
@@ -29,17 +43,10 @@ class Products extends Component {
     }
 
 
-
-
-
-   
-
     filterProducts = (elFilter) =>{
-        let pda = this.state.produse.filter(el => el.filter === elFilter);
+        let pda = this.state.produse.filter(el => el.attributes.filter === elFilter);
         this.setState({filterData: pda})
         this.setState({radioBtnCheck: elFilter})
-        console.log(elFilter)
-
     }
 
 
@@ -47,6 +54,23 @@ class Products extends Component {
 
     elementShop = (data) =>{
         this.props.onProductShop(data)
+    }
+
+
+
+    filter = (idF) =>{
+
+        let elementFilter = this.props.products.filter(el => el.attributes.filter == idF);
+
+        this.setState({filterData: elementFilter})
+
+        
+       // let products = this.state.dataBack.filter(el => el.id === idF);
+        //let elementProducts =  products.map(el => el.attributes.products.data);
+        //this.setState({produse: elementProducts})
+       // console.log(elementProducts)
+
+
 
     }
 
@@ -56,9 +80,7 @@ class Products extends Component {
 
 
 
-    componentDidMount() {
-        window.scrollTo(0, 0)
-      }
+    
 
 
 
@@ -68,13 +90,12 @@ class Products extends Component {
         let newArray = [];
 
         {this.state.produse.filter(el => {
-            if(newArray.includes(el.filter)){
+            if(newArray.includes(el.attributes.filter)){
                 return
             }else{
-                newArray.push(el.filter)
+                newArray.push(el.attributes.filter)
             }
 
-            console.log(this.state.radioBtnCheck === el.filter)
         })}
 
        

@@ -13,8 +13,11 @@ class ItemShopItself extends Component {
 
     changeCantity = (e) =>{
 
-        let value = e.target.value
-        this.props.changeEl(value, this.props.element.id)
+        let value = e.target.value;
+        this.props.changeEl(value, this.props.element.attributes.id_produs);
+
+
+       
 
        
 
@@ -38,12 +41,12 @@ class ItemShopItself extends Component {
 
                     <div className="element_products">
                         <div className="img_left">
-                            <img src={this.props.element.img} alt="" />
+                            <img src={`http://localhost:1337${this.props.element.attributes.img_product.data.attributes.url}`} alt="" />
                         </div>
                         <div className="text_right">
-                            <h2>{this.props.element.title}</h2>
-                            <p>Cod: <span>{this.props.element.id}</span></p>
-                            <p><h3>Descriere:</h3>Contorul de trăsnet SLC-01 este conceput pentru detectarea și numărarea trăsnetelor captate de instalatiile paratrasnet. Este montat în general pe un conductor de coborâre</p>
+                            <h2>{this.props.element.attributes.title_product}</h2>
+                            <p>Cod: <span>{this.props.element.attributes.id_produs}</span></p>
+                            <p><h3>Descriere:</h3>{this.props.element.attributes.description.substring(0, 300)}...</p>
                         </div>
                     </div>
 
@@ -52,7 +55,7 @@ class ItemShopItself extends Component {
 
                         <div className="price">
                             
-                            <p>{this.props.element.curentPrice}lei</p>
+                            <p>{this.props.element.attributes.curentPrice}lei</p>
                         </div>
                         <div className="counter">
                             <h3>Cantitate:</h3>
@@ -65,7 +68,7 @@ class ItemShopItself extends Component {
 
                         <div className="price_total">
                             <h3>Pret:</h3>
-                            <p>{this.props.element.price} lei</p>
+                            <p>{this.props.element.attributes.price} lei</p>
                         </div>
 
                         <div className="cancel_products">

@@ -32,8 +32,8 @@ class ProductsItem extends Component {
 
     render() { 
 
-        let wishList = this.props.elementAded.map(el => el.id);
-        let shopList = this.props.dataShop.map(el => el.id);
+        let wishList = this.props.elementAded.map(el => el.attributes.id_produs);
+        let shopList = this.props.dataShop.map(el => el.attributes.id_produs);
 
 
 
@@ -43,16 +43,16 @@ class ProductsItem extends Component {
                <div className="products">
 
 
-                  <NavLink to={`/produse/${this.props.element.id}`}>
+                  <NavLink to={`/produse/${this.props.element.attributes.id_produs}`}>
 
 
 
                         <div className="img_description">
-                               <div className="img">
-                                 <img className="instrument" src={this.props.element.img} alt="" />
+                               <div className="img">                 
+                                 <img className='img' src={`http://localhost:1337${this.props.element.attributes.img_product.data.attributes.url}`} alt="Sfredel"  />
                                </div>
                                 <h3 className='description_products'>
-                                    <p>{this.props.element.title}</p>
+                                    <p>{this.props.element.attributes.title_product}</p>
                                 </h3>
                         </div>
 
@@ -66,7 +66,7 @@ class ProductsItem extends Component {
 
 
                             <div className="price">
-                                    <h2>{this.props.element.curentPrice} lei</h2>
+                                    <h2>{this.props.element.attributes.curentPrice} lei</h2>
                             </div>
 
                             
@@ -74,8 +74,8 @@ class ProductsItem extends Component {
                            
                             <div  className="buy_wishList">
                                <ul className='buy_wishList_ul'>
-                                <li onClick={this.productsFromShoping}>{shopList.includes(this.props.element.id) ? <ImagesCalitateSVGShopHover/> : <ImagesCalitateSVGShop/>}</li>
-                                <li onClick={this.wishListItem}>{wishList.includes(this.props.element.id) ? <ImagesCalitateSVGHeartHover/> : <ImagesCalitateSVGHeart/>}</li>
+                                <li onClick={this.productsFromShoping}>{shopList.includes(this.props.element.attributes.id_produs) ? <ImagesCalitateSVGShopHover/> : <ImagesCalitateSVGShop/>}</li>
+                                <li onClick={this.wishListItem}>{wishList.includes(this.props.element.attributes.id_produs) ? <ImagesCalitateSVGHeartHover/> : <ImagesCalitateSVGHeart/>}</li>
                                </ul>
 
                             </div>

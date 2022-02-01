@@ -29,10 +29,6 @@ import stangaArrow from "../../Pages/icon/header_arrow/left_arrow.svg";
 import dreaptaArrow from "../../Pages/icon/header_arrow/right_arrow.svg";
 import dreaptaArrowHover from "../../Pages/icon/header_arrow/right_arrow_hover.svg";
 import stangaArrowHover from "../../Pages/icon/header_arrow/left_arrow_hover.svg";
-import product1 from "../../Pages/produse/img1.png";
-import product2 from "../../Pages/produse/img2.png";
-import product3 from "../../Pages/produse/img3.png";
-import {HashLink, HashLink as Link} from "react-router-hash-link";
 import {ImagesArrowSvg, ImagesArrowSvg2} from "./ArrowSvg";
 
 
@@ -75,40 +71,6 @@ class Home extends Component {
         ],
 
 
-
-        produse: [
-            {       id: "SLC 01",
-                    title: "Contor de lovituri mecanic SCHWÆRTZ SLC 01",
-                    counter: 1,
-                    img: product1,
-                    price: 892,
-                    description: "Paratrasnet PDA Schwaertz Compact S ΔT=25 µs raza Rp 42-65m",
-                    filter: "pda_sensor",
-                    curentPrice: 892
-            },
-
-            {
-                id: "SLC 02",
-                title: "Contor de lovituri mecanic SCHWÆRTZ SLC 01",
-                counter: 1,
-                img: product2,
-                price: 892,
-                description: "Paratrasnet PDA Schwaertz Compact S ΔT=25 µs raza Rp 42-65m",
-                filter: "pda",
-                curentPrice: 892
-            },
-
-            {
-                id: "SLC 03",
-                title: "Contor de lovituri mecanic SCHWÆRTZ SLC 01",
-                counter: 1,
-                img: product3,
-                price: 892,
-                description: "Paratrasnet PDA Schwaertz Compact S ΔT=25 µs raza Rp 42-65m",
-                filter: "pda",
-                curentPrice: 892
-            },       
-         ]
     }
 
 
@@ -117,7 +79,6 @@ class Home extends Component {
 
 
     state = {
-
         protectie: false,
         supratensiuni: false,
         impamantare: false,
@@ -127,10 +88,6 @@ class Home extends Component {
         rightArrow: this.props.arrowCurent[1],
         instalareImg: this.props.imgInstalare[0],
         wishListElement: [],
-        
-
-
-
     }
 
 
@@ -229,6 +186,10 @@ class Home extends Component {
 
 
     render() { 
+
+        
+
+
         return ( 
             <div>
 
@@ -239,7 +200,6 @@ class Home extends Component {
                 
         <Slider
             onExportDate={this.exportDate}
-            products={this.props.produse}
             onSearchItem={this.searchItem}
             produse={this.props.products}
             wishList={this.props.elementAded}

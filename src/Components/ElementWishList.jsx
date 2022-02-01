@@ -21,12 +21,12 @@ class ElementWishList extends Component {
                 
                     <div className= "elementWish">
                         <div className="img">
-                           <img src={this.props.item.img} alt="" srcset="" />
+                           <img src={`http://localhost:1337${this.props.item.attributes.img_product.data.attributes.url}`} alt="" srcset="" />
                         </div>
 
                         <div className="description">
-                            <p>{this.props.item.title }</p>
-                            <h2>{this.props.item.price} lei</h2>
+                            <p>{this.props.item.attributes.title_product }</p>
+                            <h2>{this.props.item.attributes.curentPrice} lei</h2>
                         </div>
 
                         <img onClick={this.elementDelete} className="close" src={close} alt="" srcset="" />

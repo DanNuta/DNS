@@ -4,6 +4,7 @@ import ItemShopItself from './ShopItemsItself';
 import { send } from 'emailjs-com';
 import heart from "../../Pages/icon/heart.svg";
 import { BrowserRouter as Router, Routes, Route, NavLink, Outlet, useParams, useHistory  } from 'react-router-dom';
+import {ImagesCalitateSVG, ImagesCalitateSVG2, ImagesCalitateSVG3, ImagesCalitateSVGHeart, ImagesCalitateSVGHeartHover, ImagesCalitateSVGShop, ImagesCalitateSVGShopHover, ImagesInPreferinteSVG, ImagesInPreferinteSVGHover} from "../../../CalitateLikeSVG";
 
 
 class Shop extends Component {
@@ -13,7 +14,7 @@ class Shop extends Component {
         nume: "",
         email: "",
         telefon: "",
-        id: this.props.shop.map(el =>el.id),
+        id: this.props.shop.map(el =>el.attributes.id_produs),
         
     }
 
@@ -21,7 +22,6 @@ class Shop extends Component {
     adaugaInCosPreferate = (products) =>{
         this.props.onCos(products)
 
-        console.log(products)
     }
 
 
@@ -100,9 +100,6 @@ class Shop extends Component {
 
 
 
-
-
-
     componentDidMount() {
         window.scrollTo(0, 0)
       }
@@ -115,11 +112,18 @@ class Shop extends Component {
     render() {
 
         let counter = 0;
-        let counterPrice = this.props.shop.map(el => el.price);
+        let counterPrice = this.props.shop.map(el => el.attributes.price);
 
-        for(let i = 0; i < counterPrice.length; i++){
-            counter = counter + counterPrice[i]
-        }
+
+       for(let item of counterPrice){
+           counter = counter + Number(item)
+       }
+
+
+
+
+       let wishList = this.props.elementAded.map(el => el.attributes.id_produs);
+       let shopList = this.props.dataShop.map(el => el.attributes.id_produs);
 
 
 
@@ -153,7 +157,7 @@ class Shop extends Component {
                             }
 
 
-{
+                             {
                                 this.props.onElementWislist.map(el => (
                                 <ItemShopItself element={el}
                                                 deleteItem={this.deleteItem}
@@ -225,17 +229,17 @@ class Shop extends Component {
                              
                             
                                  <div className="item_p">
-                                 <NavLink to={`/produse/${item.id}`}>
+                                 <NavLink to={`/produse/${item.attributes.id_produs}`}>
                                      <div className="products_el">
                                          <div className="images_products">
-                                            <img src={item.img} alt="" />
+                                         <img className='img' src={`http://localhost:1337${item.attributes.img_product.data.attributes.url}`} alt="Sfredel"  />
                                          </div>
-                                         <p className='description_i'>{item.title}</p>
+                                         <p className='description_i'>{item.attributes.title_product}</p>
                                      </div>
                                      </NavLink>
 
                                      <div onClick={() => this.adaugaInCosPreferate(item)} className="hover_preferinte">
-                                        <img src={heart} alt="" />
+                                     <li>{wishList.includes(item.attributes.id_produs) ? <ImagesInPreferinteSVGHover/> : <ImagesInPreferinteSVG/>}</li>
                                         <p className='preferinte'>In preferinte</p>
                                      </div>
                                  </div>

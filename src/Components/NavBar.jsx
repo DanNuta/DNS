@@ -10,6 +10,7 @@ import Home from './Pages/Home/home';
 import ElementWishList from './ElementWishList';
 import menu from "../../src/Components/Pages/icon/menu.svg";
 import cancel from "../../src/Components/Pages/icon/cancel.svg";
+import axios from 'axios';
 
 
 class NavBar extends Component {
@@ -20,9 +21,24 @@ class NavBar extends Component {
         item: [],
         shop: [],
         burgerMenu: false,
-        screen: window.innerWidth
+        screen: window.innerWidth,
+        backNav: []
        
     }
+
+
+
+    async componentDidMount(){
+        let res = await axios.get("http://localhost:1337/api/navbars?populate=*");
+        this.setState({backNav: res.data.data})
+
+        console.log(this.state.backNav)
+
+    }
+
+
+
+   
 
 
     
@@ -106,7 +122,26 @@ class NavBar extends Component {
 
 
  
-    render() { 
+    render() {
+        
+        
+        let data = this.state.backNav.map(el => el);
+
+        let element = data.map(el => el.attributes)
+
+        console.log("Element",element)
+
+
+        
+
+        
+
+        
+       
+        
+
+
+        
 
         return ( 
 
@@ -146,62 +181,70 @@ class NavBar extends Component {
 
 
 
-                           <div className="mobile_elements">
+                          {this.state.backNav.map(el =>(
+                              <React.Fragment>
+                                   <div className="mobile_elements">
 
-                                <ul className="mobile_logo">
-                                        <li><NavLink to="/"><img src={logo} alt="Logo"/></NavLink></li>
-                                 </ul>
+                                    <ul className="mobile_logo">
+                                            <li><NavLink to="/"><img src={logo} alt="Logo"/></NavLink></li>
+                                    </ul>
 
-                                  <ul className='bars_shop'>
-                                        <li className='li'><img onClick={this.bars} src={menu} alt="" /></li>
-                                        <li>9:00 AM - 19:00 PM</li>
-                                        <li><NavLink to="/shop"><img src={shop} alt="shop" /></NavLink></li>
-                                  </ul>
-                            </div>
-
-                           
+                                    <ul className='bars_shop'>
+                                            <li className='li'><img onClick={this.bars} src={menu} alt="" /></li>
+                                            <li>9:00 AM - 19:00 PM</li>
+                                            <li><NavLink to="/shop"><img src={shop} alt="shop" /></NavLink></li>
+                                    </ul>
+                                    </div>
 
 
 
-                        <nav  className={this.state.burgerMenu ? "active_mobile nav_bar" : "nav_bar"}>
 
-                            
 
-                            <ul className="logo">
-                                <li><NavLink to="/"><img src={logo} alt="Logo"/></NavLink></li>
-                                <li>9:00-19:00</li>
-                            </ul>
+                                    <nav  className={this.state.burgerMenu ? "active_mobile nav_bar" : "nav_bar"}>
+                                    
 
-                            <div onClick={this.bars} className="cancel">
-                                <img src={cancel} alt="" />
-                            </div>
 
-                            <ul onClick={this.bars} className="nav_bar_links">
-                                <li><NavLink activeClassName="active" className="links-a" to="/">Despre</NavLink></li>
-                                <li><NavLink activeClassName="active" className="links-a" to="/products">Produse</NavLink></li>
-                                <li> <a className="links-a" href="/#ce_oferim">Servicii</a></li>
-                                <li><NavLink activeClassName="active" className="links-a" to="/contact">Contacte</NavLink></li>
-                            </ul>
 
-                            <ul onClick={this.bars} className="nav_bar_icons">
-                                <li>0767216161</li>
-                                <li><NavLink to="/shop"><img src={shop} alt="shop" /></NavLink></li>
-                                <li className="wishList" onClick={this.wishList}><img src={heart} alt="wishList" /></li>
-                                <li><a href="https://www.facebook.com/" target="_blank" ><img src={facebook}  alt="facebook" /></a></li>
-                                <li><a href="https://www.youtube.com/" target="_blank" ><img src={youtube} alt="facebook"/></a></li>
+                                    <ul className="logo">
+                                    <li><NavLink to="/"><img src={`http://localhost:1337${el.attributes.Logo.data.attributes.url}`} alt="Logo"/></NavLink></li>
+                                    <li>9:00-19:00</li>
+                                    </ul>
 
-                           
-                                
-                            </ul>
+                                    <div onClick={this.bars} className="cancel">
+                                    <img src={cancel} alt="" />
+                                    </div>
 
-                            <ul className='program'>
-                                <li>Program: 9:00 AM - 19:00 PM</li>
-                                <li>0767216161</li>
-                            </ul>
+                                    <ul onClick={this.bars} className="nav_bar_links">
+                                    <li><NavLink activeClassName="active" className="links-a" to="/">{el.attributes.despre}</NavLink></li>
+                                    <li><NavLink activeClassName="active" className="links-a" to="/products">{el.attributes.produse}</NavLink></li>
+                                    <li> <a className="links-a" href="/#ce_oferim">Servicii</a></li>
+                                    <li><NavLink activeClassName="active" className="links-a" to="/contact">{el.attributes.contacte}</NavLink></li>
+                                    </ul>
 
-                            
-                       
-                        </nav>
+                                    <ul onClick={this.bars} className="nav_bar_icons">
+                                    {data.map(el => (
+                                        <li>{el.attributes.tel}</li>
+                                    ))}
+                                    <li><NavLink to="/shop"><img src={shop} alt="shop" /></NavLink></li>
+                                    <li className="wishList" onClick={this.wishList}><img src={heart} alt="wishList" /></li>
+                                    <li><a href={el.attributes.link_facebook} target="_blank" ><img src={facebook}  alt="facebook" /></a></li>
+                                    <li><a href={el.attributes.link_youtube} target="_blank" ><img src={youtube} alt="facebook"/></a></li>
+
+
+
+                                    </ul>
+
+                                    <ul className='program'>
+                                    <li>Program: 9:00 AM - 19:00 PM</li>
+                                    <li>{el.attributes.tel}</li>
+
+                                    </ul>
+
+
+
+                                    </nav>
+                              </React.Fragment>
+                          ))}
 
 
                         
