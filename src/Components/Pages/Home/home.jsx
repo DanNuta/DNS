@@ -187,9 +187,7 @@ class Home extends Component {
 
     render() { 
 
-        
-
-
+    
         return ( 
             <div>
 
@@ -291,7 +289,7 @@ class Home extends Component {
                          <div className="despre_noi_left">
                              <p className="p">Oferim soluții și dispozitive de protecție împotriva supratensiunii TVSS pentru o varietate de aplicatii si industrii. De la infrastructura medicală pana la aplicatii militare, oferim protecție industrială împotriva supratensiunii. Asigurarea protecției cu paratrasnet PDA împotriva trăsnetelor pentru case, biserici, scoli, facilități, infrastructură și companii.</p>
 
-                             <img src={despre_noi_right} alt="" />
+                             <img src={despre_noi_right} />
                          </div>
                 </section>
 
@@ -385,7 +383,7 @@ class Home extends Component {
                         <div className="img_right"></div>
 
                         <div className="img_right_photo">
-                            <img src={solare_img} alt="" />
+                            <img src={solare_img} alt="solare" />
                         </div>
                     </div>
 
@@ -537,7 +535,7 @@ class Home extends Component {
                 <section className="calitate center">
 
                     <div className="calitate_img_left">
-                        <img src={caliteate} alt="" />
+                        <img src={caliteate} alt="calitate" />
                     </div>
 
                     <div className="calitate_right_elements">
@@ -621,7 +619,7 @@ class Home extends Component {
 
 
                         <div className="etapa_img">
-                            <img src={this.state.instalareImg[0].img} alt="" />
+                            <img src={this.state.instalareImg[0].img} alt="instalare1" />
                        </div>
 
 
@@ -633,7 +631,7 @@ class Home extends Component {
                         
 
                         <div className="etapa_img">
-                            <img src={this.state.instalareImg[1].img} alt="" />
+                            <img src={this.state.instalareImg[1].img} alt="instalare2" />
                        </div>
 
 
@@ -646,7 +644,7 @@ class Home extends Component {
 
 
                         <div className="etapa_img">
-                            <img src={this.state.instalareImg[2].img} alt="" />
+                            <img src={this.state.instalareImg[2].img} alt="instalare3" />
                        </div>
 
 

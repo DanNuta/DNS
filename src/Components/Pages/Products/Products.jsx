@@ -8,9 +8,6 @@ import { BrowserRouter as Router, Routes, Route, NavLink, Outlet, useParams } fr
 class Products extends Component {
 
 
-    
-
-
     state = {
         produse: this.props.products,
         filterData: this.props.products,
@@ -23,12 +20,24 @@ class Products extends Component {
 
 
 
-    async componentDidMount(){
-        let category = await axios.get("http://localhost:1337/api/categories?populate=*");
-        this.setState({dataBack: category.data.data});
-        
+     async componentDidMount(){
+         let category = await axios.get("http://localhost:1337/api/categories?populate=*");
+         this.setState({dataBack: category.data.data});
+     }
 
+
+     componentDidUpdate(previousProps, previousState) {
+        if (previousProps.products !== this.props.products) {
+            this.setState({filterData: this.props.products})
+        }
+
+        if (previousProps.products !== this.props.products) {
+            this.setState({produse: this.props.products})
+        }
     }
+
+
+  
 
 
 
@@ -44,7 +53,7 @@ class Products extends Component {
 
 
     filterProducts = (elFilter) =>{
-        let pda = this.state.produse.filter(el => el.attributes.filter === elFilter);
+        let pda = this.state.produse.filter(el => el.filter === elFilter);
         this.setState({filterData: pda})
         this.setState({radioBtnCheck: elFilter})
     }
@@ -60,8 +69,7 @@ class Products extends Component {
 
     filter = (idF) =>{
 
-        let elementFilter = this.props.products.filter(el => el.attributes.filter == idF);
-
+        let elementFilter = this.state.produse.filter(el => el.filter == idF);
         this.setState({filterData: elementFilter})
 
         
@@ -76,27 +84,22 @@ class Products extends Component {
 
 
 
-
-
-
-
-    
-
-
-
    
     render() {
 
         let newArray = [];
 
         {this.state.produse.filter(el => {
-            if(newArray.includes(el.attributes.filter)){
+            if(newArray.includes(el.filter)){
                 return
             }else{
-                newArray.push(el.attributes.filter)
+                newArray.push(el.filter)
             }
 
         })}
+
+
+        
 
        
         
@@ -185,13 +188,9 @@ class Products extends Component {
                                     onElementShop={this.elementShop}
                                     elementAded={this.props.elementAded}
                                     dataShop={this.props.dataShop}
-
                                 />
 
                            
-                                
-                               
-                            
                         ))}
                     </div>
 

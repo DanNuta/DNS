@@ -9,6 +9,7 @@
         align-items: center;
         justify-content: space-between;
         margin: 30px 0 30px 0;
+        position: relative;
         
         @include large{
 
@@ -188,18 +189,19 @@
 
 
             .cancel_products{
+                cursor: pointer;
                 @include large{
                     position: absolute;
-                    top: 350px;
+                    top: -25px;
                     z-index: 999;
-                    right: 25px;
+                    right: 0px;
 
 
                     @include small{
                         position: absolute;
-                        top: 280px;
+                        top: 0px;
                         z-index: 999;
-                        right: 25px;
+                        right: 0px;
                     }
                 }
             }

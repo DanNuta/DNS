@@ -32,7 +32,7 @@ class NavBar extends Component {
         let res = await axios.get("http://localhost:1337/api/navbars?populate=*");
         this.setState({backNav: res.data.data})
 
-        console.log(this.state.backNav)
+      
 
     }
 
@@ -52,6 +52,9 @@ class NavBar extends Component {
 
     deleteItem = (idElemet) =>{
         this.props.onDeleteElementFromWishList(idElemet)
+
+
+       
         
     }
 
@@ -129,7 +132,7 @@ class NavBar extends Component {
 
         let element = data.map(el => el.attributes)
 
-        console.log("Element",element)
+        
 
 
         
@@ -183,14 +186,14 @@ class NavBar extends Component {
 
                           {this.state.backNav.map(el =>(
                               <React.Fragment>
-                                   <div className="mobile_elements">
+                                   <div key={el} className="mobile_elements">
 
                                     <ul className="mobile_logo">
                                             <li><NavLink to="/"><img src={logo} alt="Logo"/></NavLink></li>
                                     </ul>
 
                                     <ul className='bars_shop'>
-                                            <li className='li'><img onClick={this.bars} src={menu} alt="" /></li>
+                                            <li className='li'><img onClick={this.bars} src={menu}  /></li>
                                             <li>9:00 AM - 19:00 PM</li>
                                             <li><NavLink to="/shop"><img src={shop} alt="shop" /></NavLink></li>
                                     </ul>
@@ -211,14 +214,14 @@ class NavBar extends Component {
                                     </ul>
 
                                     <div onClick={this.bars} className="cancel">
-                                    <img src={cancel} alt="" />
+                                    <img src={cancel} />
                                     </div>
 
                                     <ul onClick={this.bars} className="nav_bar_links">
-                                    <li><NavLink activeClassName="active" className="links-a" to="/">{el.attributes.despre}</NavLink></li>
-                                    <li><NavLink activeClassName="active" className="links-a" to="/products">{el.attributes.produse}</NavLink></li>
+                                    <li><NavLink activelcassname="active" className="links-a" to="/">{el.attributes.despre}</NavLink></li>
+                                    <li><NavLink activeclassname="active" className="links-a" to="/products">{el.attributes.produse}</NavLink></li>
                                     <li> <a className="links-a" href="/#ce_oferim">Servicii</a></li>
-                                    <li><NavLink activeClassName="active" className="links-a" to="/contact">{el.attributes.contacte}</NavLink></li>
+                                    <li><NavLink activeclassname="active" className="links-a" to="/contact">{el.attributes.contacte}</NavLink></li>
                                     </ul>
 
                                     <ul onClick={this.bars} className="nav_bar_icons">

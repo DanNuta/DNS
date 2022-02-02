@@ -9,6 +9,8 @@ class ElementWishList extends Component {
     elementDelete = () =>{
         this.props.delete(this.props.item)
 
+        console.log("el")
+
     }
 
     
@@ -21,15 +23,15 @@ class ElementWishList extends Component {
                 
                     <div className= "elementWish">
                         <div className="img">
-                           <img src={`http://localhost:1337${this.props.item.attributes.img_product.data.attributes.url}`} alt="" srcset="" />
+                           <img src={`http://localhost:1337${this.props.item.img_product.data.attributes.url}`} alt="" />
                         </div>
 
                         <div className="description">
-                            <p>{this.props.item.attributes.title_product }</p>
-                            <h2>{this.props.item.attributes.curentPrice} lei</h2>
+                            <p>{this.props.item.title_product }</p>
+                            <h2>{this.props.item.curentPrice} lei</h2>
                         </div>
 
-                        <img onClick={this.elementDelete} className="close" src={close} alt="" srcset="" />
+                        <img onClick={this.elementDelete} className="close" src={close} alt="" />
                         
                     </div>
                

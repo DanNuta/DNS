@@ -14,7 +14,7 @@ class Shop extends Component {
         nume: "",
         email: "",
         telefon: "",
-        id: this.props.shop.map(el =>el.attributes.id_produs),
+        id: this.props.shop.map(el =>el.id_produs),
         
     }
 
@@ -112,7 +112,7 @@ class Shop extends Component {
     render() {
 
         let counter = 0;
-        let counterPrice = this.props.shop.map(el => el.attributes.price);
+        let counterPrice = this.props.shop.map(el => el.price);
 
 
        for(let item of counterPrice){
@@ -122,8 +122,8 @@ class Shop extends Component {
 
 
 
-       let wishList = this.props.elementAded.map(el => el.attributes.id_produs);
-       let shopList = this.props.dataShop.map(el => el.attributes.id_produs);
+       let wishList = this.props.elementAded.map(el => el.id_produs);
+       let shopList = this.props.dataShop.map(el => el.id_produs);
 
 
 
@@ -228,18 +228,18 @@ class Shop extends Component {
                          return (
                              
                             
-                                 <div className="item_p">
-                                 <NavLink to={`/produse/${item.attributes.id_produs}`}>
+                                 <div key={item} className="item_p">
+                                 <NavLink to={`/produse/${item.id_produs}`}>
                                      <div className="products_el">
                                          <div className="images_products">
-                                         <img className='img' src={`http://localhost:1337${item.attributes.img_product.data.attributes.url}`} alt="Sfredel"  />
+                                         <img className='img' src={`http://localhost:1337${item.img_product.data.attributes.url}`} alt="Sfredel"  />
                                          </div>
-                                         <p className='description_i'>{item.attributes.title_product}</p>
+                                         <p className='description_i'>{item.title_product}</p>
                                      </div>
                                      </NavLink>
 
                                      <div onClick={() => this.adaugaInCosPreferate(item)} className="hover_preferinte">
-                                     <li>{wishList.includes(item.attributes.id_produs) ? <ImagesInPreferinteSVGHover/> : <ImagesInPreferinteSVG/>}</li>
+                                     <li>{wishList.includes(item.id_produs) ? <ImagesInPreferinteSVGHover/> : <ImagesInPreferinteSVG/>}</li>
                                         <p className='preferinte'>In preferinte</p>
                                      </div>
                                  </div>

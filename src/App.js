@@ -28,11 +28,7 @@ import NotFound from './NotFound';
 class App extends Component {
 
 
-    static defaultProps = {
-
-        produse: [],
-
-    }
+    
 
     state = {
         coockie: JSON.parse(localStorage.getItem('coockie')),
@@ -42,7 +38,8 @@ class App extends Component {
         elementWishListShop: [],
         firstPages: [],
         localStorageElement: [],
-        itemSection: ""
+        itemSection: "",
+        produse: [],
 
     }
 
@@ -52,13 +49,16 @@ class App extends Component {
     let products = await axios.get("http://localhost:1337/api/products?populate=*");
     let dataItem = await products.data.data;
 
-
-    
-
     for(let item of dataItem){
-        this.props.produse.push(item)
+        this.setState({produse: [...this.state.produse, item.attributes] }) 
+        console.log("Item inside mount", item)
 
     }
+
+
+    console.log("Produse_API",dataItem)
+
+   
     
  }
 
@@ -67,9 +67,9 @@ class App extends Component {
     
 
     exportDataFromHome = (dataHome) =>{
-        let elementAded = this.state.elementAded.map(el => el.id);
+        let elementAded = this.state.elementAded.map(el => el.id_produs);
 
-        if(elementAded.includes(dataHome.id)){
+        if(elementAded.includes(dataHome.id_produs)){
             return;
         }else{
             this.setState({elementAded: [...this.state.elementAded, dataHome]})
@@ -80,10 +80,11 @@ class App extends Component {
 
 
     elementFromProducts = (dataItem) =>{
+        
 
-        let elementAded = this.state.elementAded.map(el => el.id);
+        let elementAded = this.state.elementAded.map(el => el.id_produs);
 
-        if(elementAded.includes(dataItem.id)){
+        if(elementAded.includes(dataItem.id_produs)){
             return;
         }else{
             this.setState({elementAded: [...this.state.elementAded, dataItem]})
@@ -102,8 +103,8 @@ class App extends Component {
 
 
     deleteItemFromShop = (data) =>{
-        let idShop = data.id;
-        let newArray = this.state.dataShop.filter(el => el.id !== idShop);
+        let idShop = data.id_produs;
+        let newArray = this.state.dataShop.filter(el => el.id_produs !== idShop);
         
         this.setState({dataShop: newArray})
 
@@ -111,8 +112,8 @@ class App extends Component {
 
 
     deleteElementFromWishList = (data) =>{
-        let idElement = data.id;
-        let newArray = this.state.elementAded.filter(el => el.id !== idElement)
+        let idElement = data.id_produs;
+        let newArray = this.state.elementAded.filter(el => el.id_produs !== idElement)
 
         this.setState({elementAded: newArray})
 
@@ -124,7 +125,7 @@ class App extends Component {
 
         //this.setState({dataShop:  item.map(el => (el.id_produs === idShop) ? {...el, price: el.curentPrice * data, counter: el.counter+1} : el)})
 
-        this.setState({dataShop: this.state.dataShop.map(el => el.attributes.id_produs == idShop ? {...el, price: Number(el.curentPrice * data), counter: el.counter + 1} : el)})
+        this.setState({dataShop: this.state.dataShop.map(el => el.id_produs == idShop ? {...el, price: Number(el.curentPrice * data), counter: el.counter + 1} : el)})
     
        
     }
@@ -142,9 +143,9 @@ class App extends Component {
 
 
     cos = (data) =>{
-        let elementAded = this.state.elementAded.map(el => el.id);
+        let elementAded = this.state.elementAded.map(el => el.id_produs);
 
-        if(elementAded.includes(data.id)){
+        if(elementAded.includes(data.id_produs)){
             return;
         }else{
             this.setState({elementAded: [...this.state.elementAded, data]})
@@ -159,9 +160,9 @@ class App extends Component {
 
     shop = (data) =>{
 
-        let elementAded = this.state.dataShop.map(el => el.id);
+        let elementAded = this.state.dataShop.map(el => el.id_produs);
 
-        if(elementAded.includes(data.id)){
+        if(elementAded.includes(data.id_produs)){
             return;
         }else{
             this.setState({dataShop: [...this.state.dataShop, data]})
@@ -204,10 +205,6 @@ class App extends Component {
     render() { 
 
 
-       
-
-
-       
 
 
         return ( 
@@ -228,7 +225,7 @@ class App extends Component {
                         <Route exact path='/' element={<Home 
                                onExportData={this.exportDataFromHome}
                                onSearchItem={this.searchItem}
-                               products={this.props.produse}
+                               products={this.state.produse}
                                elementAded={this.state.elementAded}
                               />}>
 
@@ -237,7 +234,7 @@ class App extends Component {
 
                         <Route exact path="/products" element={<Products
                                onelementFromProducts={this.elementFromProducts} 
-                               products={this.props.produse}
+                               products={this.state.produse}
                                onProductShop={this.shop}
                                elementAded={this.state.elementAded}
                                dataShop={this.state.dataShop}
@@ -253,7 +250,7 @@ class App extends Component {
                                 deleteItemFromShop={this.deleteItemFromShop}
                                 expenseElement={this.addNewPrice}
                                 onElementWislist={this.state.elementWishListShop}
-                                products={this.props.produse}
+                                products={this.state.produse}
                                 onCos={this.cos}
                                 onShop={this.shop}
                                 elementAded={this.state.elementAded}
@@ -286,7 +283,7 @@ class App extends Component {
 
 
                             
-                            <Route   path="/produse/:slug" element={<Pages element={this.props.produse}
+                            <Route   path="/produse/:slug" element={<Pages element={this.state.produse}
                                                                           onCos={this.cos}
                                                                           onShop={this.shop}
                                                                           elementAded={this.state.elementAded}
@@ -330,7 +327,7 @@ class App extends Component {
 
 
 
-                    <Footer style={{overflowY: 'hidden'}}/>
+                    <Footer/>
                     
                 </Router>
 

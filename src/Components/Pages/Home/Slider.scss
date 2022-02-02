@@ -272,7 +272,7 @@
                         &:hover{
                             svg{
                                 path{
-                                    fill-opacity: 1;
+                                    fill-Opacity: 1;
                                 }
                             }
                         }
@@ -1322,8 +1322,8 @@
 
         .img_right{
             position: absolute;
-            opacity: 0;
-            transition: opacity ease-in-out .5s;
+            opacity: 0.3;
+            transition: opacity ease-in-out 1s ease-in-out;
             height: 100%;
 
             img{
@@ -1347,7 +1347,7 @@
 
         .img_right.active{
             opacity: 1;
-            transition-duration: .5s;
+            transition-duration: 1s;
             
 
         }

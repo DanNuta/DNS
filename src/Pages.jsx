@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink, Outlet, useParams, useHistory  } from 'react-router-dom';
 import start from "../src/Components/Pages/icon/star1.svg";
 import buy from "../src/Components/Pages/icon/buy.svg";
@@ -20,31 +20,43 @@ import {ImagesCalitateSVG, ImagesCalitateSVG2, ImagesCalitateSVG3, ImagesCalitat
 const Pages = (props) => {
 
     const { slug } = useParams();
-    let products = props.element;
-    let curentItem = products.find(item => item.attributes.id_produs === slug);
-
+    
+    
     
     const [nume, setNume] = useState("");
     const [email, setEmail] = useState("");
     const [telefon, setTelefon] = useState("");
     const [valueElement, setValueElement] = useState("1");
     const [achitaOnline, setAchitaOnline] = useState(false);
-    const [btnClick, setBtnClick] = useState(true)
-
+    const [btnClick, setBtnClick] = useState(true);
+    const [products, setProducts] = useState(props.element)
+    
+    let curentItem = products.find(item => item.id_produs === slug);
 
     const elementForm = {
         nume: nume,
         email: email,
         telefon: telefon
+
     }
 
+    useEffect(() =>{
+        setProducts(props.element)
+    }, [props.element])
 
 
    
-        
-      
+
+
+    
+
+
+
+    
+
 
    
+    
 
 
     const numeChange = (e) =>{
@@ -115,8 +127,8 @@ const Pages = (props) => {
 
 
 
-    let wishList = props.elementAded.map(el => el.attributes.id_produs);
-    let shopList = props.dataShop.map(el => el.attributes.id_produs);
+    let wishList = props.elementAded.map(el => el.id_produs);
+    let shopList = props.dataShop.map(el => el.id_produs);
 
 
  
@@ -174,6 +186,17 @@ const Pages = (props) => {
 
 
 
+  
+    window.scrollTo(0, 0)
+
+
+
+useEffect(() => {
+    window.scrollTo(0, 0)
+
+  }, []);
+
+
 
   
 
@@ -197,7 +220,7 @@ const Pages = (props) => {
                     <p>|</p>
                     <p><NavLink to="/products">produse si accesorii</NavLink></p>
                     <p>|</p>
-                    <p>{curentItem.attributes.title_product}</p>
+                    <p>{curentItem.title_product}</p>
                 </div>
             </div>
                 
@@ -208,15 +231,15 @@ const Pages = (props) => {
             
                 <div className='card_items'>
 
-                <h4 className='title_responsive'>{curentItem.attributes.title_product}</h4>
+                <h4 className='title_responsive'>{curentItem.title_product}</h4>
 
 
                 <div className="left_images">
-                <img className='img' src={`http://localhost:1337${curentItem.attributes.img_product.data.attributes.url}`} alt="Sfredel"  />
+                <img className='img' src={`http://localhost:1337${curentItem.img_product.data.attributes.url}`} alt="Sfredel"  />
                 </div>
 
                 <div className="right_text">
-                    <h4>{curentItem.attributes.title_product}</h4>
+                    <h4>{curentItem.title_product}</h4>
 
                     <div className="element_about_products">
 
@@ -245,12 +268,12 @@ const Pages = (props) => {
 
                         <div className="verify_element_stock">
                             <span><img src={verify} alt="" /> In stoc</span>
-                            <p>Cod: <span> {curentItem.attributes.id_produs}</span></p>
+                            <p>Cod: <span> {curentItem.id_produs}</span></p>
                         </div>
 
 
                         <div className="price">
-                            <span><h1 className='price_id'>{curentItem.attributes.price} lei</h1> <sup>{curentItem.attributes.price} lei</sup></span>
+                            <span><h1 className='price_id'>{curentItem.price} lei</h1> <sup>{curentItem.price} lei</sup></span>
                         </div>
 
                     </div>
@@ -259,7 +282,7 @@ const Pages = (props) => {
                     <div className="description">
                         <hr />
                         <h2>Description:</h2>
-                        <p>{curentItem.attributes.description}</p>
+                        <p>{curentItem.description}</p>
                     </div>
 
 
@@ -281,8 +304,8 @@ const Pages = (props) => {
                     <div className="add_to_cart">
 
                        
-                            <li onClick={adaugaLaFavorite}>{shopList.includes(curentItem.attributes.id_produs) ? <ImagesCalitateSVGShopHover/> : <ImagesCalitateSVGShop/>} Adauga in cos</li>
-                            <li onClick={adaugaInCos}>{wishList.includes(curentItem.attributes.id_produs) ? <ImagesCalitateSVGHeartHover/> : <ImagesCalitateSVGHeart/>}Adauga la favorite</li>
+                            <li onClick={adaugaLaFavorite}>{shopList.includes(curentItem.id_produs) ? <ImagesCalitateSVGShopHover/> : <ImagesCalitateSVGShop/>} Adauga in cos</li>
+                            <li onClick={adaugaInCos}>{wishList.includes(curentItem.id_produs) ? <ImagesCalitateSVGHeartHover/> : <ImagesCalitateSVGHeart/>}Adauga la favorite</li>
                        
 
                     </div>
@@ -315,24 +338,24 @@ const Pages = (props) => {
 
 
             <div className='item_sililar'>
-            {products.filter((item, index) => (index < 4) && (item.attributes.filter === curentItem.attributes.filter))
+            {products.filter((item, index) => (index < 4) && (item.filter === curentItem.filter))
                      .map((item) => {
                          return (
                              
                              
                         
                                  <div className="item_p">
-                                 <NavLink to={`/produse/${item.attributes.id_produs}`}>
+                                 <NavLink to={`/produse/${item.id_produs}`}>
                                      <div className="products_el">
                                          <div className="images_products">
-                                         <img className='img' src={`http://localhost:1337${item.attributes.img_product.data.attributes.url}`} alt="Sfredel"  />
+                                         <img className='img' src={`http://localhost:1337${item.img_product.data.attributes.url}`} alt="Sfredel"  />
                                          </div>
-                                         <p className='description_i'>{item.attributes.title_product}</p>
+                                         <p className='description_i'>{item.title_product}</p>
                                      </div>
                                      </NavLink>
 
                                      <div onClick={() => adaugaInCosPreferate(item)} className="hover_preferinte">
-                                       <li>{wishList.includes(item.attributes.id_produs) ? <ImagesInPreferinteSVGHover/> : <ImagesInPreferinteSVG/>}</li>
+                                       <li>{wishList.includes(item.id_produs) ? <ImagesInPreferinteSVGHover/> : <ImagesInPreferinteSVG/>}</li>
                                         <p className='preferinte'>In preferinte</p>
                                      </div>
                                  </div>

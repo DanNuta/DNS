@@ -164,7 +164,7 @@ class Contacte extends Component {
                                    <div className="despre_noi_info">
 
                                        <div className="tel despre">
-                                           <img src={tel} alt="" srcset="" />
+                                           <img src={tel} alt=""  />
                                            <p>0767216161</p>
                                        </div>
 

@@ -21,7 +21,7 @@ class Footer extends Component {
 
 
     scrollToTop = () =>{
-        console.log("HELLO")
+        
 
         window.scrollTo({
             top: 0,
@@ -51,17 +51,17 @@ class Footer extends Component {
 
                         <nav className='nav_footer'>
                             <ul className="links_active">
-                                <li><NavLink  activeClassName="links_click" className="links" to="/">Despre</NavLink></li>
-                                <li><NavLink activeClassName="links_click" className="links" to="/products">Produse</NavLink></li>
+                                <li><NavLink  activeclassname="links_click" className="links" to="/">Despre</NavLink></li>
+                                <li><NavLink activeclassname="links_click" className="links" to="/products">Produse</NavLink></li>
                                 <li> <a className="links-a" href="/#ce_oferim">Servicii</a></li>
-                                <li><NavLink activeClassName="links_click" className="links" to="/contact">Contacte</NavLink></li>
+                                <li><NavLink activeclassname="links_click" className="links" to="/contact">Contacte</NavLink></li>
                             </ul>
                            
 
 
                             <ul className="links_icon">
                                 <li><a href="https://www.facebook.com/"  target="_blank" ><img src={facebook} alt="" /></a></li>
-                                <li><a href="https://www.youtube.com/" target="_blank"><img src={youtube} alt="" srcset="" /></a></li>
+                                <li><a href="https://www.youtube.com/" target="_blank"><img src={youtube} alt="" /></a></li>
                             </ul>
                         </nav>
 
@@ -77,7 +77,7 @@ class Footer extends Component {
 
 
                     <div className="arrow_right">
-                            <img onClick={this.scrollToTop} src={arrow_img} alt="" />
+                            <img onClick={this.scrollToTop} src={arrow_img}  />
                     </div>
 
 
